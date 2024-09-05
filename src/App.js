@@ -26,6 +26,13 @@ function App() {
 
   const batchSize = 38;
 
+  const arabicLetterValues = {
+    'ا': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
+    'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
+    'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900,
+    'غ': 1000
+  };
+
   useEffect(() => {
     let qmap = {};
     let tqmap = {};
@@ -363,18 +370,21 @@ function App() {
                   acc.elements.push(
                     <div
                       key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                      className={`p-1 shadow-md rounded w-11 ml-1 mb-1 cursor-pointer bg-neutral-800 flex flex-col items-center`}
+                      className={`p-1 shadow-md rounded w-12 ml-1 mb-1 cursor-pointer bg-neutral-800 flex flex-col items-center`}
                       dir="rtl"
                     >
                       {/* Show the index only if the letter is not a space */}
                       {displayIndex && (
-                        <div className={`p-1 shadow-md rounded mb-1 text-base w-9 bg-neutral-600`}>
+                        <div className={`p-1 shadow-md rounded mb-1 text-base w-9 bg-neutral-500`}>
                           {displayIndex}
                         </div>
                       )}
                       {/* Show the letter or an empty div for spaces */}
                       <div className={`py-2 w-full`} style={{ color: colorMap[letter] }}>
                         {isSpace ? <div className="w-5 h-9"></div> : letter}
+                      </div>
+                      <div className={`p-1 shadow-md rounded text-base w-9 ${isSpace ? `` : `bg-neutral-700`}`} >
+                        {isSpace ? <div className="w-5 h-9 "></div> : arabicLetterValues[letter]}
                       </div>
                     </div>
                   );
