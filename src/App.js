@@ -31,6 +31,12 @@ function App() {
     'ء': 1,
   }), []);
 
+  const arabicLetters = [
+    'ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز',
+    'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك',
+    'ل', 'م', 'ن', 'ه', 'و', 'ي'
+  ];
+
   useEffect(() => {
     let qmap = {};
     let tqmap = {};
@@ -278,6 +284,14 @@ function App() {
     }
   }, [formula]);
 
+  const verseText = (quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]) || '';
+  const lc = verseText.split('').reduce((counts, letter) => {
+    if (letter !== ' ') {
+      counts[letter] = (counts[letter] || 0) + 1;
+    }
+    return counts;
+  }, {});
+
   return (
     <div className="App fixed text-xl w-screen h-screen bg-neutral-400 text-neutral-100 flex ">
 
@@ -349,7 +363,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full my-1 space-y-1 ">
+      <div className="flex flex-col w-full my-1 space-y-1 relative">
         <div className="flex w-full px-0.5">
           <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 mb-2 bg-green-500 text-neutral-900 flex flex-wrap justify-between ">
 
@@ -370,7 +384,7 @@ function App() {
           </div>
 
         </div>
-        <div className={`overflow-auto `}>
+        <div className={`overflow-auto h-full pb-14`}>
           {selectedVerse &&
             <div className={`flex flex-col space-y-2 px-1`}>
               <div
@@ -406,7 +420,7 @@ function App() {
                   acc.elements.push(
                     <div
                       key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                      className={`p-0.5 rounded ml-1 mb-1 cursor-pointer h-28 ${isSpace ? `w-4` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
+                      className={`p-0.5 rounded ml-0.5 mb-1 cursor-pointer h-28 ${isSpace ? `w-3` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
                       dir="rtl"
                     >
                       {/* Show the index only if the letter is not a space */}
@@ -431,12 +445,31 @@ function App() {
                   return acc;
                 }, { currentIndex: 0, elements: [] }).elements}
               </div>
+
             </div>
           }
           {formula !== '' &&
             <div className="flex flex-col space-y-2 px-1">
             </div>
           }
+          <div dir={'rtl'} className={`flex w-full items-stretch absolute -bottom-1 -left-0.5`}>
+            {arabicLetters.map((letter, index) => (
+              <div
+                key={`${index}${letter}`}
+                className={` rounded mb-1 ml-0.5 cursor-pointer h-14 w-full bg-neutral-900 flex flex-col items-center border-spacing-0.5 border border-neutral-500`}
+                dir="rtl"
+              >
+                {/* Show the letter */}
+                <div className={`text-2xl w-full h-full flex items-center justify-center brightness-75`} style={{ color: colorMap[letter] }}>
+                  {letter}
+                </div>
+                {/* Show the letter's value from arabicLetterValues */}
+                <div className={` text-xs w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`}`} >
+                  {lc[letter] || 0}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
