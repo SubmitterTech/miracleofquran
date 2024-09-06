@@ -11,6 +11,9 @@ function App() {
   const [selectedVerse, setSelectedVerse] = useState(null);
   const [filter, setFilter] = useState(null);
 
+  const [formula, setFormula] = useState('');
+
+
   const [filteredVerses, setFilteredVerses] = useState([]);
   const [loadedVerses, setLoadedVerses] = useState([]);
 
@@ -226,26 +229,24 @@ function App() {
   }, [filteredVerses]);
 
   return (
-    <div className="App fixed text-xl w-screen h-screen bg-neutral-400 text-neutral-100 flex space-x-1 ">
-      <div className="flex flex-col w-full overflow-auto my-1 space-y-1 pr-4">
+    <div className="App fixed text-xl w-screen h-screen bg-neutral-400 text-neutral-100 flex ">
 
-        <div className="rounded text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start ml-1 mb-2 bg-cyan-500 text-neutral-900 sticky top-0 flex justify-between">
-          <div >
-            Filter: {filter ? filter : "N / A"}
-          </div>
-          <div>
-            {`Occurance:${occ}`}
-          </div>
-          <div>
-            {`Verses:` + filteredVerses.length}
-          </div>
+      <div className="flex flex-col w-full my-1 space-y-1 ">
+        <div className="flex w-full px-0.5">
+          <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start mb-2 bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
+            <div>
+              {`Verses: ` + filteredVerses.length}
+            </div>
+            <div>
+              {`Occurance: ${occ}`}
+            </div>
 
+
+          </div>
         </div>
-
-        <div>
-          <div
-            className={`text-sm md:text-base text-justify hyphens-auto w-full text-neutral-100 `}>
-            <div className={`flex flex-col space-y-1 ml-1 `}>
+        <div className={`overflow-auto`}>
+          <div className={`text-sm md:text-base text-justify w-full h-full text-neutral-100 px-1`}>
+            <div className={`flex flex-col space-y-1 `}>
               {
                 loadedVerses.map(({ sno, vno, verse }, index) => {
                   const isbesmele = parseInt(sno) !== 1 && parseInt(sno) !== 9 && parseInt(vno) === 1;
@@ -295,96 +296,94 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full overflow-auto my-1 pr-4">
-        <div className="w-full ">
+      <div className="flex flex-col w-full my-1 space-y-1 ">
+        <div className="flex w-full px-0.5">
+          <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 mb-2 bg-green-500 text-neutral-900 flex flex-wrap justify-between ">
 
-          <div className="p-1.5 sticky top-0 bg-amber-300 text-neutral-900 text-2xl mb-3 rounded shadow-lg flex space-x-2 justify-center">
-            {/* Input for Sura */}
-            <input
-              type="number"
-              className="w-20 p-0.5 text-center bg-white rounded shadow-md"
-              value={selectedSura || ''}
-              onChange={(e) => setSelectedSura(e.target.value)}
-              placeholder="Sura"
-            />
-
-            <span>:</span>
-
-            {/* Input for Verse */}
-            <input
-              type="number"
-              className="w-20 p-0.5 text-center bg-white rounded shadow-md"
-              value={selectedVerse || ''}
-              onChange={(e) => setSelectedVerse(e.target.value)}
-              placeholder="Verse"
-            />
+            <div className={`flex items-center space-x-2 w-full md:w-3/4 justify-between`}>
+              <div>Formula:</div>
+              <input
+                type="text"
+                className=" w-full p-0.5 px-2 text-start bg-green-600/80 rounded shadow-md placeholder:text-neutral-100/50"
+                value={formula || ''}
+                onChange={(e) => setFormula(e.target.value)}
+                placeholder="formula e.g. 3:18 33:7 33:40"
+              />
+            </div>
+            <div className={`flex items-center`}>
+              Filter: {filter ? filter : "N / A"}
+            </div>
           </div>
-          {selectedVerse &&
-            <div className="flex flex-col space-y-2">
-              <div
+
+        </div>
+        <div className={`overflow-auto `}>
+          <div className="flex flex-col space-y-2 px-1">
+            {/* <div
                 key={"selected_" + selectedSura + ":" + selectedVerse}
                 className="w-full p-2 sticky top-12 rounded shadow-lg bg-neutral-100 text-neutral-900 text-start"
                 dir="rtl">
                 {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.toString()}
-              </div>
+              </div> */}
+            {selectedVerse &&
               <div
                 key={"tselected_" + selectedSura + ":" + selectedVerse}
                 className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
                 dir="ltr">
                 {tquranMap && tquranMap[selectedSura] && tquranMap[selectedSura][selectedVerse]?.toString()}
-              </div>
-              <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3  rounded `}>
-                {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
-                  <div
-                    onClick={() => handleSelectedWord(word.trim())}
-                    key={selectedSura + selectedVerse + index + word}
-                    className={`p-1 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-800 "}`}
-                    dir="rtl">
-                    <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? " text-sky-500 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
-                      {index + 1}
-                    </div>
-                    <div className={`p-1 w-full `} >
-                      {word}
-                    </div>
+              </div>}
+            <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3  rounded `}>
+              {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
+                <div
+                  onClick={() => handleSelectedWord(word.trim())}
+                  key={selectedSura + selectedVerse + index + word}
+                  className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-800 "}`}
+                  dir="rtl">
+                  <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? " text-neutral-100 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
+                    {index + 1}
                   </div>
-                ))}
-              </div>
-              <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3 rounded`}>
-                {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
-                  // Only increment the displayIndex for non-space characters
-                  const isSpace = letter === ' ';
-                  const displayIndex = isSpace ? null : acc.currentIndex + 1;
-
-                  acc.currentIndex = isSpace ? acc.currentIndex : displayIndex;
-
-                  acc.elements.push(
-                    <div
-                      key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                      className={`p-1  rounded w-12 ml-1 mb-1 cursor-pointer bg-neutral-800 h-28 ${isSpace ? `` : `bg-neutral-800 shadow-md`}  flex flex-col items-center`}
-                      dir="rtl"
-                    >
-                      {/* Show the index only if the letter is not a space */}
-                      {displayIndex && (
-                        <div className={`p-1 shadow-md rounded mb-1 text-base w-9 bg-neutral-700`}>
-                          {displayIndex}
-                        </div>
-                      )}
-                      {/* Show the letter or an empty div for spaces */}
-                      <div className={`py-2 w-full`} style={{ color: colorMap[letter] }}>
-                        {isSpace ? <div className="w-5 h-9"></div> : letter}
-                      </div>
-                      <div className={`p-0.5  rounded text-sm w-9 ${isSpace ? `` : `bg-neutral-500 shadow-md`}`} >
-                        {isSpace ? <div className="w-5 h-9 "></div> : arabicLetterValues[letter]}
-                      </div>
-                    </div>
-                  );
-
-                  return acc;
-                }, { currentIndex: 0, elements: [] }).elements}
-              </div>
+                  <div className={`p-1.5 w-full `} >
+                    {word}
+                  </div>
+                </div>
+              ))}
             </div>
-          }
+            <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3 rounded`}>
+              {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
+                // Only increment the displayIndex for non-space characters
+                const isSpace = letter === ' ';
+                const displayIndex = isSpace ? null : acc.currentIndex + 1;
 
+                acc.currentIndex = isSpace ? acc.currentIndex : displayIndex;
+
+                acc.elements.push(
+                  <div
+                    key={`${selectedSura}${selectedVerse}${index}${letter}`}
+                    className={`p-0.5 rounded ml-1 mb-1 cursor-pointer h-28 ${isSpace ? `w-4` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
+                    dir="rtl"
+                  >
+                    {/* Show the index only if the letter is not a space */}
+                    {displayIndex && (
+                      <div className={`p-1 w-full rounded text-base bg-neutral-700`}>
+                        {displayIndex}
+                      </div>
+                    )}
+                    {/* Show the letter or an empty div for spaces */}
+                    <div className={` text-2xl w-full h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
+                      {letter}
+                    </div>
+
+                    {displayIndex && (
+                      <div className={`p-0.5 text-sm w-full`} >
+                        {arabicLetterValues[letter]}
+                      </div>
+                    )}
+                  </div>
+                );
+
+                return acc;
+              }, { currentIndex: 0, elements: [] }).elements}
+            </div>
+          </div>
         </div>
       </div>
 
