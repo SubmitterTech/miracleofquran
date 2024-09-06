@@ -2,8 +2,6 @@ import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import quranData from './assets/qurantft.json';
 import './App.css';
 import colorMap from './utils/ColorMap';
-import Stemmer from 'arabic-stem'
-
 
 function App() {
   const [tquranMap, setTquranMap] = useState({});
@@ -19,18 +17,17 @@ function App() {
   const [occ, setOcc] = useState(0);
 
   const observerVerses = useRef();
-  const stemmer = useMemo(() => new Stemmer(), []);
-
-  void stemmer;
 
   const batchSize = 38;
 
-  const arabicLetterValues = {
+  const arabicLetterValues = useMemo(() =>
+  ({
     'ا': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
     'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
     'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900,
-    'غ': 1000, 'ة': 5
-  };
+    'غ': 1000,
+    'ء': 1,
+  }), []);
 
   useEffect(() => {
     let qmap = {};
@@ -64,7 +61,6 @@ function App() {
 
   function normalizeArabicPrefix(text) {
     // Normalize Alef variations only at the start of the word
-
 
 
     // // Normalize Ta Marbuta to Ha only at the end of the word
@@ -104,7 +100,6 @@ function App() {
     let verseList = [];
     let count = 0;
 
-
     Object.values(quranData).forEach((page) => {
       Object.entries(page.sura).forEach(([sno, content]) => {
         Object.entries(content.encrypted).forEach(([vno, verse]) => {
@@ -116,16 +111,12 @@ function App() {
             // Create the regex with the escaped filter
             const regex = getRegex(normalizedFilter);
 
-
-
             // Match the normalized verse using the regex
             const matches = verse.match(regex);
 
             if (matches) {
               count += matches.length;
               verseList.push({ sno, vno, verse });
-              console.log(`C:`, count, `O:`, matches.length, sno + `:` + vno);
-
             }
           } else {
             verseList.push({ sno, vno, verse });
@@ -134,10 +125,9 @@ function App() {
       });
     });
 
-    console.log(filter, normalizeArabicPrefix(filter), count); // Output the filter and its count
     setOcc(count);
     setFilteredVerses(verseList);
-  }, [filter]);
+  }, [filter, arabicLetterValues]);
 
   // const countLetterInSura = async (sura, l) => {
   //   let cnt = 0;
