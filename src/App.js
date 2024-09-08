@@ -320,7 +320,7 @@ function App() {
   }, [formula]);
 
   return (
-    <div className="App fixed w-screen h-screen ">
+    <div className="App fixed w-screen h-full ">
       <div className={`w-full h-full bg-neutral-400 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
         <div className={`row-span-10 lg:row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-2`}>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
