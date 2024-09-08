@@ -74,7 +74,7 @@ function App() {
 
   function getRegex(f) {
     const sunLetters = 'تثدذرزسشصضطظن';
-    return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f.slice(-1) === 'ه' || f.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
+    return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
   }
 
   function normalizeArabicPrefix(text) {
@@ -263,38 +263,76 @@ function App() {
   }
 
   const lightMatchWords = useCallback((verse) => {
-    if (!filter) {
+    if (!filter && selectedLetters.length === 0) {
       return verse;
     }
-
+  
     // Stem the filter word
     const normalizedFilter = normalizeArabicPrefix(filter);
-
-
+  
     const regex = getRegex(normalizedFilter);
-
-
+  
     // Split the verse into words (preserving spaces)
     const words = verse.split(/(\s+)/).map((word, index) => {
-
+      const wordContainsSelectedLetter = selectedLetters.some((letter) =>
+        word.includes(letter)
+      );
+  
+      // Highlight individual letters
+      const highlightLetters = (word, baseColor) => {
+        return word.split('').map((char, charIndex) => {
+          if (selectedLetters.includes(char)) {
+            return (
+              <span key={`${index}-${charIndex}`} style={{ color: colorMap[char] }}>
+                {char}
+              </span>
+            );
+          } else {
+            return (
+              <span key={`${index}-${charIndex}`} style={{ color: baseColor }}>
+                {char}
+              </span>
+            );
+          }
+        });
+      };
+  
       // Exact match
       if (word === filter) {
-        return <span key={index} className="text-sky-500">{word}</span>;
+        return (
+          <span key={index}>
+            {highlightLetters(word, 'skyblue')}
+          </span>
+        );
       }
-
+  
       // Common stem match
       else if (word.match(regex)) {
-        return <span key={index} className="text-green-500">{word}</span>;
+        return (
+          <span key={index}>
+            {highlightLetters(word, 'green')}
+          </span>
+        );
       }
-
+  
+      // Word contains a selected letter
+      else if (wordContainsSelectedLetter) {
+        return (
+          <span key={index}>
+            {highlightLetters(word, '')}
+          </span>
+        );
+      }
+  
       // No match
       else {
         return <span key={index}>{word}</span>;
       }
     });
-
+  
     return <div dir="rtl">{words}</div>;
-  }, [filter]);
+  }, [filter, selectedLetters]);
+  
 
   const lastVerseElementRef = useCallback(node => {
     if (observerVerses.current) observerVerses.current.disconnect();
@@ -366,7 +404,7 @@ function App() {
                             className={`text-start w-full flex justify-between space-x-1`}>
                             <div
                               onClick={() => handleSelectedVerse(sno, vno)}
-                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? "bg-neutral-100 text-neutral-900" : "bg-neutral-800"}`}>
+                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? "bg-neutral-500 text-neutral-900" : "bg-neutral-800"}`}>
                               <div className={`flex w-full space-x-1.5`}>
                                 <div dir="ltr" className={`text-sky-500`}>
                                   {sno}:{vno}
