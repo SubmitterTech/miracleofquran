@@ -22,6 +22,16 @@ function App() {
 
   const batchSize = 38;
 
+  const [selectedLetters, setSelectedLetters] = useState([]);
+
+  const toggleLetterSelection = (letter) => {
+    setSelectedLetters((prevSelected) =>
+      prevSelected.includes(letter)
+        ? prevSelected.filter((l) => l !== letter)
+        : [...prevSelected, letter]
+    );
+  };
+
   const arabicLetterValues = useMemo(() =>
   ({
     'ا': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
@@ -104,6 +114,37 @@ function App() {
     return text;
   }
 
+  const verseText = (quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]) || '';
+
+  const lc = useMemo(() => {
+    // If a selectedVerse exists, calculate the letter counts for it, regardless of the formula
+    if (selectedVerse !== null) {
+      return verseText.split('').reduce((counts, letter) => {
+        if (letter !== ' ') {
+          if (letter === 'ء') {
+            letter = 'ا'; // Normalize 'ء' to 'ا'
+          }
+          counts[letter] = (counts[letter] || 0) + 1;
+        }
+        return counts;
+      }, {});
+    }
+
+    // When no selectedVerse and formula is provided, sum up the letter counts from filteredVerses
+    if (formula.trim() !== '') {
+      return filteredVerses.reduce((totalCounts, verseObj) => {
+        Object.entries(verseObj.c).forEach(([letter, count]) => {
+          totalCounts[letter] = (totalCounts[letter] || 0) + count;
+        });
+        return totalCounts;
+      }, {});
+    }
+
+    // Default case if no selectedVerse and no formula
+    return {};
+  }, [verseText, filteredVerses, formula, selectedVerse]);
+
+
   useEffect(() => {
     let verseList = [];
     let count = 0;
@@ -111,6 +152,22 @@ function App() {
     Object.values(quranData).forEach((page) => {
       Object.entries(page.sura).forEach(([sno, content]) => {
         Object.entries(content.encrypted).forEach(([vno, verse]) => {
+
+          // Function to calculate letter counts
+          const getLetterCounts = (verse) => {
+            return verse.split('').reduce((counts, letter) => {
+              if (letter !== ' ') {
+                // Normalize the letter "ء" to "ا"
+                if (letter === 'ء') {
+                  letter = 'ا';
+                }
+                counts[letter] = (counts[letter] || 0) + 1;
+              }
+              return counts;
+            }, {});
+          };
+
+          let letterCounts = getLetterCounts(verse); // Calculate the letter counts
 
           if (filter) {
             // Normalize only the prefix of the filter and the verse
@@ -124,7 +181,7 @@ function App() {
 
             if (matches) {
               count += matches.length;
-              verseList.push({ sno, vno, verse, c: matches.length });
+              verseList.push({ sno, vno, verse, hc: matches.length, c: letterCounts });
             }
           } else if (formula.trim() !== '') {
             const sf = formula.trim().split(' ');
@@ -142,7 +199,7 @@ function App() {
                 if (vrange === '') {
                   // Single verse case (like "2:"), meaning all verses of surah 2
                   if (Number(s) === sn) {
-                    verseList.push({ sno, vno, verse, c: 0 });
+                    verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
                   }
                 } else if (vrange.includes('-')) {
                   const [vstart, vend] = vrange.split('-').map(Number);
@@ -150,29 +207,29 @@ function App() {
                   if (vstart !== 0 && vend === 0) {
                     // Case where start is defined, and the end is open (like "2:5-")
                     if (Number(s) === sn && vstart <= vn) {
-                      verseList.push({ sno, vno, verse, c: 0 });
+                      verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
                     }
                   } else if (vstart === 0 && vend !== 0) {
                     // Case where start is open, but the end is defined (like "2:-5")
                     if (Number(s) <= sn && sn <= vend) {
-                      verseList.push({ sno, vno, verse, c: 0 });
+                      verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
                     }
                   } else {
                     // Standard range case (like "2:3-7")
                     if (Number(s) === sn && vstart <= vn && vn <= vend) {
-                      verseList.push({ sno, vno, verse, c: 0 });
+                      verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
                     }
                   }
                 } else {
                   // Single verse case (like "2:5")
                   if (Number(s) === sn && vn === Number(vrange)) {
-                    verseList.push({ sno, vno, verse, c: 0 });
+                    verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
                   }
                 }
               }
             });
           } else {
-            verseList.push({ sno, vno, verse, c: 0 });
+            verseList.push({ sno, vno, verse, hc: 0, c: letterCounts });
           }
         });
       });
@@ -182,26 +239,6 @@ function App() {
     setFilteredVerses(verseList);
   }, [filter, formula]);
 
-  // const countLetterInSura = async (sura, l) => {
-  //   let cnt = 0;
-
-  //   // Convert the task to asynchronous using Promise
-  //   await new Promise(resolve => {
-  //     Object.values(quranMap[sura]).forEach((verse) => {
-  //       // Count the occurrences of the letter in each verse
-  //       for (const char of verse) {
-  //         if (char === l) {
-  //           cnt++;
-  //         }
-  //       }
-  //       // console.log(verse, l, cnt)
-
-  //     });
-  //     resolve();
-  //   });
-
-  //   return cnt;
-  // };
 
   const handleSelectedVerse = (s, v) => {
     if (selectedSura === s && selectedVerse === v) {
@@ -259,8 +296,6 @@ function App() {
     return <div dir="rtl">{words}</div>;
   }, [filter]);
 
-
-
   const lastVerseElementRef = useCallback(node => {
     if (observerVerses.current) observerVerses.current.disconnect();
     observerVerses.current = new IntersectionObserver(entries => {
@@ -284,187 +319,180 @@ function App() {
     }
   }, [formula]);
 
-  const verseText = (quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]) || '';
-  const lc = verseText.split('').reduce((counts, letter) => {
-    if (letter !== ' ') {
-      counts[letter] = (counts[letter] || 0) + 1;
-    }
-    return counts;
-  }, {});
-
   return (
-    <div className="App fixed text-xl w-screen h-screen bg-neutral-400 text-neutral-100 flex ">
-
-      <div className="flex flex-col w-full my-1 space-y-1 ">
-        <div className="flex w-full px-0.5">
-          <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start mb-2 bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
-            <div>
-              {`Verses: ` + filteredVerses.length}
+    <div className="App fixed w-screen h-screen ">
+      <div className={`w-full h-full bg-neutral-400 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
+        <div className={`row-span-10 lg:row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-2`}>
+          <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
+            <div className="flex w-full lg:px-0.5">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
+                <div>
+                  {`Verses: ` + filteredVerses.length}
+                </div>
+                <div>
+                  {`Occurance: ${occ}`}
+                </div>
+              </div>
             </div>
-            <div>
-              {`Occurance: ${occ}`}
-            </div>
-
-
-          </div>
-        </div>
-        <div className={`overflow-auto`}>
-          <div className={`text-sm md:text-base text-justify w-full h-full text-neutral-100 px-1`}>
-            <div className={`flex flex-col space-y-1 `}>
-              {
-                loadedVerses.map(({ sno, vno, verse }, index) => {
-                  const isbesmele = parseInt(sno) !== 1 && parseInt(sno) !== 9 && parseInt(vno) === 1;
-                  return (
-                    <div
-                      ref={index === loadedVerses.length - 1 ? lastVerseElementRef : null}
-                      key={`verse-${sno}:${vno}-index`}
-                    >
-                      {
-                        isbesmele && !filter &&
+            <div className={`h-full w-full overflow-auto`}>
+              <div className={`text-sm md:text-base text-justify w-full h-full px-1 `}>
+                <div className={`flex flex-col space-y-1 `}>
+                  {
+                    loadedVerses.map(({ sno, vno, verse }, index) => {
+                      const isbesmele = parseInt(sno) !== 1 && parseInt(sno) !== 9 && parseInt(vno) === 1;
+                      return (
                         <div
-                          className={`text-start w-full flex justify-between space-x-1 mb-1`}>
-                          <div
-                            className={`w-full p-2 rounded shadow-md bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-500 text-neutral-900`}>
-                            <div className={`flex w-full space-x-2`}>
-                              <div dir="ltr" className={`text-neutral-900`}>
-                                {sno}:{0}
+                          ref={index === loadedVerses.length - 1 ? lastVerseElementRef : null}
+                          key={`verse-${sno}:${vno}-index`}
+                        >
+                          {
+                            isbesmele && !filter &&
+                            <div
+                              className={`text-start w-full flex justify-between space-x-1 mb-1`}>
+                              <div
+                                className={`w-full p-2 rounded shadow-md bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-500 text-neutral-900`}>
+                                <div className={`flex w-full space-x-2`}>
+                                  <div dir="ltr" className={`text-neutral-900`}>
+                                    {sno}:{0}
+                                  </div>
+                                  <div dir="rtl" className={`w-full`}>
+                                    {besmele}
+                                  </div>
+                                </div>
                               </div>
-                              <div dir="rtl" className={`w-full`}>
-                                {besmele}
+                            </div>
+                          }
+                          <div
+                            className={`text-start w-full flex justify-between space-x-1`}>
+                            <div
+                              onClick={() => handleSelectedVerse(sno, vno)}
+                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? "bg-neutral-100 text-neutral-900" : "bg-neutral-800"}`}>
+                              <div className={`flex w-full space-x-1.5`}>
+                                <div dir="ltr" className={`text-sky-500`}>
+                                  {sno}:{vno}
+                                </div>
+                                <div dir="rtl" className={`w-full`}>
+                                  {lightMatchWords(verse)}
+                                </div>
+                                <div dir="ltr" className={`text-amber-500 text-xs flex items-center`}>
+                                  {index + 1}
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      }
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
+            <div className="flex w-full lg:px-0.5">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 bg-green-500 text-neutral-900 flex flex-wrap justify-between ">
+
+                <div className={`flex items-center space-x-2 w-2/3 lg:w-3/4 justify-between`}>
+                  <div>Formula:</div>
+                  <input
+                    type="text"
+                    disabled={filter}
+                    className=" w-full p-0.5 px-2 text-start bg-green-600/80 rounded shadow-inner placeholder:text-neutral-100/50"
+                    value={formula || ''}
+                    onChange={(e) => setFormula(e.target.value)}
+                    placeholder={`${selectedVerse ? `${selectedSura}:${selectedVerse}` : `formula e.g. 3:18 33:7 33:40`}`}
+                  />
+                </div>
+                <div className={`flex items-center`}>
+                  Filter: {filter ? filter : "N / A"}
+                </div>
+              </div>
+
+            </div>
+            <div className={`overflow-auto h-full w-full`}>
+              {selectedVerse &&
+                <div className={`flex flex-col space-y-2 px-1`}>
+                  <div
+                    key={"tselected_" + selectedSura + ":" + selectedVerse}
+                    className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
+                    dir="ltr">
+                    {tquranMap && tquranMap[selectedSura] && tquranMap[selectedSura][selectedVerse]?.toString()}
+                  </div>
+                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded `}>
+                    {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
                       <div
-                        className={`text-start w-full flex justify-between space-x-1`}>
-                        <div
-                          onClick={() => handleSelectedVerse(sno, vno)}
-                          className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? "bg-neutral-100 text-neutral-900" : "bg-neutral-800"}`}>
-                          <div className={`flex w-full space-x-1.5`}>
-                            <div dir="ltr" className={`text-sky-500`}>
-                              {sno}:{vno}
-                            </div>
-                            <div dir="rtl" className={`w-full`}>
-                              {lightMatchWords(verse)}
-                            </div>
-                            <div dir="ltr" className={`text-amber-500 text-xs flex items-center`}>
-                              {index + 1}
-                            </div>
-                          </div>
+                        onClick={() => handleSelectedWord(word.trim())}
+                        key={selectedSura + selectedVerse + index + word}
+                        className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-800 "}`}
+                        dir="rtl">
+                        <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? "text-neutral-100 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
+                          {index + 1}
+                        </div>
+                        <div className={`p-1.5 w-full `} >
+                          {word}
                         </div>
                       </div>
-                    </div>
-                  );
-                })
+                    ))}
+                  </div>
+                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded`}>
+                    {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
+                      // Only increment the displayIndex for non-space characters
+                      const isSpace = letter === ' ';
+                      const displayIndex = isSpace ? null : acc.currentIndex + 1;
+
+                      acc.currentIndex = isSpace ? acc.currentIndex : displayIndex;
+
+                      acc.elements.push(
+                        <div
+                          key={`${selectedSura}${selectedVerse}${index}${letter}`}
+                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
+                          dir="rtl"
+                        >
+                          {/* Show the index only if the letter is not a space */}
+                          {displayIndex && (
+                            <div className={`p-1 w-full rounded text-base bg-neutral-700`}>
+                              {displayIndex}
+                            </div>
+                          )}
+                          {/* Show the letter or an empty div for spaces */}
+                          <div className={` text-2xl w-full h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
+                            {letter}
+                          </div>
+
+                          {displayIndex && (
+                            <div className={`p-0.5 text-sm w-full`} >
+                              {arabicLetterValues[letter]}
+                            </div>
+                          )}
+                        </div>
+                      );
+
+                      return acc;
+                    }, { currentIndex: 0, elements: [] }).elements}
+                  </div>
+
+                </div>
+              }
+              {formula !== '' &&
+                <div className="flex flex-col space-y-2 px-1">
+                </div>
               }
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-col w-full my-1 space-y-1 relative">
-        <div className="flex w-full px-0.5">
-          <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 mb-2 bg-green-500 text-neutral-900 flex flex-wrap justify-between ">
-
-            <div className={`flex items-center space-x-2 w-full md:w-3/4 justify-between`}>
-              <div>Formula:</div>
-              <input
-                type="text"
-                disabled={filter}
-                className=" w-full p-0.5 px-2 text-start bg-green-600/80 rounded shadow-md placeholder:text-neutral-100/50"
-                value={formula || ''}
-                onChange={(e) => setFormula(e.target.value)}
-                placeholder={`${selectedVerse ? `${selectedSura}:${selectedVerse}` : `formula e.g. 3:18 33:7 33:40`}`}
-              />
-            </div>
-            <div className={`flex items-center`}>
-              Filter: {filter ? filter : "N / A"}
-            </div>
-          </div>
-
-        </div>
-        <div className={`overflow-auto h-full pb-14`}>
-          {selectedVerse &&
-            <div className={`flex flex-col space-y-2 px-1`}>
-              <div
-                key={"tselected_" + selectedSura + ":" + selectedVerse}
-                className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
-                dir="ltr">
-                {tquranMap && tquranMap[selectedSura] && tquranMap[selectedSura][selectedVerse]?.toString()}
-              </div>
-              <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3 rounded `}>
-                {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
-                  <div
-                    onClick={() => handleSelectedWord(word.trim())}
-                    key={selectedSura + selectedVerse + index + word}
-                    className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-800 "}`}
-                    dir="rtl">
-                    <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? "text-neutral-100 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
-                      {index + 1}
-                    </div>
-                    <div className={`p-1.5 w-full `} >
-                      {word}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start pb-3 rounded`}>
-                {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
-                  // Only increment the displayIndex for non-space characters
-                  const isSpace = letter === ' ';
-                  const displayIndex = isSpace ? null : acc.currentIndex + 1;
-
-                  acc.currentIndex = isSpace ? acc.currentIndex : displayIndex;
-
-                  acc.elements.push(
-                    <div
-                      key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                      className={`p-0.5 rounded ml-0.5 mb-1 cursor-pointer h-28 ${isSpace ? `w-3` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
-                      dir="rtl"
-                    >
-                      {/* Show the index only if the letter is not a space */}
-                      {displayIndex && (
-                        <div className={`p-1 w-full rounded text-base bg-neutral-700`}>
-                          {displayIndex}
-                        </div>
-                      )}
-                      {/* Show the letter or an empty div for spaces */}
-                      <div className={` text-2xl w-full h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
-                        {letter}
-                      </div>
-
-                      {displayIndex && (
-                        <div className={`p-0.5 text-sm w-full`} >
-                          {arabicLetterValues[letter]}
-                        </div>
-                      )}
-                    </div>
-                  );
-
-                  return acc;
-                }, { currentIndex: 0, elements: [] }).elements}
-              </div>
-
-            </div>
-          }
-          {formula !== '' &&
-            <div className="flex flex-col space-y-2 px-1">
-            </div>
-          }
-          <div dir={'rtl'} className={`flex w-full items-stretch absolute -bottom-1 -left-0.5`}>
+        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative`}>
+          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute select-none`}>
             {arabicLetters.map((letter, index) => (
               <div
                 key={`${index}${letter}`}
-                className={` rounded mb-1 ml-0.5 cursor-pointer h-14 w-full bg-neutral-900 flex flex-col items-center border-spacing-0.5 border border-neutral-500`}
+                onClick={() => toggleLetterSelection(letter)}
+                className={`grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800`}`}
                 dir="rtl"
               >
-                {/* Show the letter */}
-                <div className={`text-2xl w-full h-full flex items-center justify-center brightness-75`} style={{ color: colorMap[letter] }}>
+                <div className={`text-lg md:text-xl lg:text-2xl min-w-6 w-full flex items-center md:items-end justify-center brightness-75`} style={{ color: colorMap[letter] }}>
                   {letter}
                 </div>
-                {/* Show the letter's value from arabicLetterValues */}
-                <div className={` text-xs w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`}`} >
+                <div className={`pb-0.5 text-xs md:text-sm w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
                   {lc[letter] || 0}
                 </div>
               </div>
@@ -472,7 +500,6 @@ function App() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
