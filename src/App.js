@@ -266,18 +266,14 @@ function App() {
     if (!filter && selectedLetters.length === 0) {
       return verse;
     }
-  
     // Stem the filter word
     const normalizedFilter = normalizeArabicPrefix(filter);
-  
     const regex = getRegex(normalizedFilter);
-  
     // Split the verse into words (preserving spaces)
     const words = verse.split(/(\s+)/).map((word, index) => {
       const wordContainsSelectedLetter = selectedLetters.some((letter) =>
         word.includes(letter)
       );
-  
       // Highlight individual letters
       const highlightLetters = (word, baseColor) => {
         return word.split('').map((char, charIndex) => {
@@ -296,43 +292,31 @@ function App() {
           }
         });
       };
-  
       // Exact match
       if (word === filter) {
         return (
-          <span key={index}>
-            {highlightLetters(word, 'skyblue')}
-          </span>
+          highlightLetters(word, '#0ea5e9')
         );
       }
-  
       // Common stem match
       else if (word.match(regex)) {
         return (
-          <span key={index}>
-            {highlightLetters(word, 'green')}
-          </span>
+          highlightLetters(word, '#22c55e')
         );
       }
-  
       // Word contains a selected letter
       else if (wordContainsSelectedLetter) {
         return (
-          <span key={index}>
-            {highlightLetters(word, '')}
-          </span>
+          highlightLetters(word, '')
         );
       }
-  
       // No match
       else {
         return <span key={index}>{word}</span>;
       }
     });
-  
     return <div dir="rtl">{words}</div>;
   }, [filter, selectedLetters]);
-  
 
   const lastVerseElementRef = useCallback(node => {
     if (observerVerses.current) observerVerses.current.disconnect();
@@ -357,18 +341,26 @@ function App() {
     }
   }, [formula]);
 
+  const formatDivisibility = (count) => {
+    const factor = 19;
+    if (count % factor === 0 && count !== 0) {
+      return `${count} (${factor} x ${count / factor})`;
+    }
+    return count;
+  };
+
   return (
     <div className="App fixed w-screen h-full ">
-      <div className={`w-full h-full bg-neutral-400 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
+      <div className={`w-full h-full bg-neutral-700 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
         <div className={`row-span-10 lg:row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-2`}>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
               <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
                 <div>
-                  {`Verses: ` + filteredVerses.length}
+                  {`Verses: ` + formatDivisibility(filteredVerses.length)}
                 </div>
                 <div>
-                  {`Occurance: ${occ}`}
+                  {`Occurance: ` + formatDivisibility(occ)}
                 </div>
               </div>
             </div>
@@ -404,7 +396,7 @@ function App() {
                             className={`text-start w-full flex justify-between space-x-1`}>
                             <div
                               onClick={() => handleSelectedVerse(sno, vno)}
-                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? "bg-neutral-500 text-neutral-900" : "bg-neutral-800"}`}>
+                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? `bg-sky-900` : `bg-neutral-900`}`}>
                               <div className={`flex w-full space-x-1.5`}>
                                 <div dir="ltr" className={`text-sky-500`}>
                                   {sno}:{vno}
@@ -412,7 +404,7 @@ function App() {
                                 <div dir="rtl" className={`w-full`}>
                                   {lightMatchWords(verse)}
                                 </div>
-                                <div dir="ltr" className={`text-amber-500 text-xs flex items-center`}>
+                                <div dir="ltr" className={`text-amber-400 text-xs flex items-center`}>
                                   {index + 1}
                                 </div>
                               </div>
@@ -461,7 +453,7 @@ function App() {
                       <div
                         onClick={() => handleSelectedWord(word.trim())}
                         key={selectedSura + selectedVerse + index + word}
-                        className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-800 "}`}
+                        className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-900 "}`}
                         dir="rtl">
                         <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? "text-neutral-100 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
                           {index + 1}
@@ -483,7 +475,7 @@ function App() {
                       acc.elements.push(
                         <div
                           key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` w-12 bg-neutral-900 shadow-md`}  flex flex-col items-center`}
+                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` w-12 shadow-md bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
                           dir="rtl"
                         >
                           {/* Show the index only if the letter is not a space */}
