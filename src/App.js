@@ -21,6 +21,7 @@ function App() {
   const observerVerses = useRef();
 
   const batchSize = 38;
+  const factor = 19;
 
   const [selectedLetters, setSelectedLetters] = useState([]);
 
@@ -70,8 +71,6 @@ function App() {
     setQuranMap(qmap);
   }, []);
 
-  const besmele = (quranMap && quranMap['1']) ? quranMap['1']['1'] : null;
-
   function getRegex(f) {
     const sunLetters = 'تثدذرزسشصضطظن';
     return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
@@ -114,6 +113,7 @@ function App() {
     return text;
   }
 
+  const besmele = (quranMap && quranMap['1']) ? quranMap['1']['1'] : null;
   const verseText = (quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]) || '';
 
   const lc = useMemo(() => {
@@ -129,11 +129,46 @@ function App() {
         return counts;
       }, {});
     }
+    // Helper function to count letters
+    const countLetters = (text) => {
+      return text.split('').reduce((counts, letter) => {
+        if (letter !== ' ') {
+          if (letter === 'ء') {
+            letter = 'ا'; // Normalize 'ء' to 'ا'
+          }
+          counts[letter] = (counts[letter] || 0) + 1;
+        }
+        return counts;
+      }, {});
+    };
+
+    // Helper function to check if all verses of a Surah are included
+    const isCompleteSurahIncluded = (sno) => {
+      const surahVerses = filteredVerses.filter(verseObj => verseObj.sno === sno);
+      const totalVersesInSurah = Object.keys(quranMap[sno]).length; // Get total number of verses in the Surah
+      return surahVerses.length === totalVersesInSurah;
+    };
 
     // When no selectedVerse and formula is provided, sum up the letter counts from filteredVerses
     if (formula.trim() !== '') {
+      // Keep track of surahs that have already had Besmele included
+      let includedSurahs = new Set();
+
       return filteredVerses.reduce((totalCounts, verseObj) => {
-        Object.entries(verseObj.c).forEach(([letter, count]) => {
+        const { sno, verse } = verseObj;
+        let fullText = verse;
+
+        // Include "Besmele" only once per Surah (if Surah is not 1 or 9, and all verses of the Surah are included)
+        if (sno !== '1' && sno !== '9' && !includedSurahs.has(sno) && isCompleteSurahIncluded(sno)) {
+          fullText = besmele + verse;
+          includedSurahs.add(sno); // Mark this Surah as having Besmele included
+        }
+
+        // Count the letters for this verse (with or without Besmele)
+        const verseLetterCounts = countLetters(fullText);
+
+        // Add the verse's letter counts to the total counts
+        Object.entries(verseLetterCounts).forEach(([letter, count]) => {
           totalCounts[letter] = (totalCounts[letter] || 0) + count;
         });
         return totalCounts;
@@ -142,7 +177,7 @@ function App() {
 
     // Default case if no selectedVerse and no formula
     return {};
-  }, [verseText, filteredVerses, formula, selectedVerse]);
+  }, [filteredVerses, formula, besmele, quranMap, verseText, selectedVerse]);
 
 
   useEffect(() => {
@@ -341,10 +376,23 @@ function App() {
     }
   }, [formula]);
 
-  const formatDivisibility = (count) => {
-    const factor = 19;
-    if (count % factor === 0 && count !== 0) {
+  const isDivisible = (f, n) => {
+    n = Number(n);
+    return (n > 0 && n % f === 0);
+  };
+
+  const formatDivisible = (count) => {
+
+    if (isDivisible(factor, count)) {
       return `${count} (${factor} x ${count / factor})`;
+    }
+    return count;
+  };
+
+  const formatDivisibleOnlyMultiplier = (count) => {
+
+    if (isDivisible(factor, count)) {
+      return `${factor} x ${count / factor}`;
     }
     return count;
   };
@@ -357,10 +405,10 @@ function App() {
             <div className="flex w-full lg:px-0.5">
               <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
                 <div>
-                  {`Verses: ` + formatDivisibility(filteredVerses.length)}
+                  {`Verses: ` + formatDivisible(filteredVerses.length)}
                 </div>
                 <div>
-                  {`Occurance: ` + formatDivisibility(occ)}
+                  {`Occurance: ` + formatDivisible(occ)}
                 </div>
               </div>
             </div>
@@ -380,13 +428,13 @@ function App() {
                             <div
                               className={`text-start w-full flex justify-between space-x-1 mb-1`}>
                               <div
-                                className={`w-full p-2 rounded shadow-md bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-500 text-neutral-900`}>
+                                className={`w-full p-2 rounded shadow-md bg-gradient-to-r from-cyan-400 to-neutral-950 text-neutral-100`}>
                                 <div className={`flex w-full space-x-2`}>
                                   <div dir="ltr" className={`text-neutral-900`}>
                                     {sno}:{0}
                                   </div>
                                   <div dir="rtl" className={`w-full`}>
-                                    {besmele}
+                                    {lightMatchWords(besmele)}
                                   </div>
                                 </div>
                               </div>
@@ -516,13 +564,17 @@ function App() {
               <div
                 key={`${index}${letter}`}
                 onClick={() => toggleLetterSelection(letter)}
-                className={`grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800`}`}
+                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500`:``}  `}
                 dir="rtl"
               >
                 <div className={`text-lg md:text-xl lg:text-2xl min-w-6 w-full flex items-center md:items-end justify-center brightness-75`} style={{ color: colorMap[letter] }}>
                   {letter}
                 </div>
-                <div className={`pb-0.5 text-xs md:text-sm w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
+                {isDivisible(factor, lc[letter]) &&
+                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full p-1 bg-sky-500 rounded text-neutral-950`}>
+                    {formatDivisibleOnlyMultiplier(lc[letter])}
+                  </div>}
+                <div className={`text-xs md:text-sm w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
                   {lc[letter] || 0}
                 </div>
               </div>
