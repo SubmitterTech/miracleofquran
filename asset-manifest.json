@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/miracleofquran/static/css/main.9c7fe0d4.css",
-    "main.js": "/miracleofquran/static/js/main.7cd0fdf3.js",
+    "main.css": "/miracleofquran/static/css/main.8c189e0d.css",
+    "main.js": "/miracleofquran/static/js/main.d8a80f04.js",
     "static/js/787.ae228536.chunk.js": "/miracleofquran/static/js/787.ae228536.chunk.js",
     "index.html": "/miracleofquran/index.html",
-    "main.9c7fe0d4.css.map": "/miracleofquran/static/css/main.9c7fe0d4.css.map",
-    "main.7cd0fdf3.js.map": "/miracleofquran/static/js/main.7cd0fdf3.js.map",
+    "main.8c189e0d.css.map": "/miracleofquran/static/css/main.8c189e0d.css.map",
+    "main.d8a80f04.js.map": "/miracleofquran/static/js/main.d8a80f04.js.map",
     "787.ae228536.chunk.js.map": "/miracleofquran/static/js/787.ae228536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c7fe0d4.css",
-    "static/js/main.7cd0fdf3.js"
+    "static/css/main.8c189e0d.css",
+    "static/js/main.d8a80f04.js"
   ]
 }
