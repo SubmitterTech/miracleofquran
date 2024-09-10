@@ -512,7 +512,7 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded`}>
+                  <div dir="rtl" className={`w-full flex overflow-x-auto items-center justify-start rounded pb-4`}>
                     {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
                       // Only increment the displayIndex for non-space characters
                       const isSpace = letter === ' ';
@@ -523,7 +523,7 @@ function App() {
                       acc.elements.push(
                         <div
                           key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` w-12 shadow-md bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
+                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` shadow-md bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
                           dir="rtl"
                         >
                           {/* Show the index only if the letter is not a space */}
@@ -533,7 +533,7 @@ function App() {
                             </div>
                           )}
                           {/* Show the letter or an empty div for spaces */}
-                          <div className={` text-2xl w-full h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
+                          <div className={` text-2xl h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
                             {letter}
                           </div>
 
@@ -571,10 +571,10 @@ function App() {
                   {letter}
                 </div>
                 {isDivisible(factor, lc[letter]) &&
-                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full p-1 bg-sky-500 rounded text-neutral-950`}>
+                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full py-1 bg-sky-500 rounded text-neutral-950`}>
                     {formatDivisibleOnlyMultiplier(lc[letter])}
                   </div>}
-                <div className={`text-xs md:text-sm w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
+                <div className={`text-xs w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
                   {lc[letter] || 0}
                 </div>
               </div>
