@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import quranData from './assets/qurantft.json';
 import './App.css';
 import colorMap from './utils/ColorMap';
+import VerseDetail from './components/VerseDetail';
 
 function App() {
   // const [tquranMap, setTquranMap] = useState({});
@@ -15,10 +16,12 @@ function App() {
 
   const [filteredVerses, setFilteredVerses] = useState([]);
   const [loadedVerses, setLoadedVerses] = useState([]);
+  const [loadedVerseDetails, setLoadedVerseDetails] = useState([]);
 
   const [occ, setOcc] = useState(0);
 
   const observerVerses = useRef();
+  const observerVerseDetails = useRef();
 
   const batchSize = 38;
   const factor = 19;
@@ -366,8 +369,22 @@ function App() {
     if (node) observerVerses.current.observe(node);
   }, [filteredVerses, loadedVerses]);
 
+  const lastVerseDetailElementRef = useCallback(node => {
+    if (observerVerseDetails.current) observerVerseDetails.current.disconnect();
+    observerVerseDetails.current = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && loadedVerseDetails.length < filteredVerses.length) {
+        setLoadedVerseDetails(prevLoaded => [
+          ...prevLoaded,
+          ...filteredVerses.slice(prevLoaded.length, prevLoaded.length + batchSize)
+        ]);
+      }
+    });
+    if (node) observerVerseDetails.current.observe(node);
+  }, [filteredVerses, loadedVerseDetails]);
+
   useEffect(() => {
     setLoadedVerses(filteredVerses.slice(0, batchSize));
+    setLoadedVerseDetails(filteredVerses.slice(0, 5));
   }, [filteredVerses]);
 
   useEffect(() => {
@@ -488,73 +505,39 @@ function App() {
 
             </div>
             <div className={`overflow-auto h-full w-full`}>
-              {selectedVerse &&
-                <div className={`flex flex-col space-y-2 px-1`}>
-                  {/* <div
-                    key={"tselected_" + selectedSura + ":" + selectedVerse}
-                    className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
-                    dir="ltr">
-                    {tquranMap && tquranMap[selectedSura] && tquranMap[selectedSura][selectedVerse]?.toString()}
-                  </div> */}
-                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded pt-2`}>
-                    {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
-                      <div
-                        onClick={() => handleSelectedWord(word.trim())}
-                        key={selectedSura + selectedVerse + index + word}
-                        className={`p-0.5 rounded text-start ml-1.5 mb-1.5 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900 " : "bg-sky-800 shadow-md shadow-neutral-900 "}`}
-                        dir="rtl">
-                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-sky-700 " : "text-amber-400  "}`}>
-                          {index + 1}
-                        </div>
-                        <div className={`p-1.5 w-full `} >
-                          {word}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div dir="rtl" className={`w-full flex overflow-x-auto items-center justify-start rounded pb-4 pt-0.5`}>
-                    {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
-                      // Only increment the displayIndex for non-space characters
-                      const isSpace = letter === ' ';
-                      const displayIndex = isSpace ? null : acc.currentIndex + 1;
-
-                      acc.currentIndex = isSpace ? acc.currentIndex : displayIndex;
-
-                      acc.elements.push(
+              {selectedVerse ?
+                (
+                  <VerseDetail
+                    quranMap={quranMap}
+                    handleSelectedWord={handleSelectedWord}
+                    filter={filter}
+                    selectedLetters={selectedLetters}
+                    arabicLetterValues={arabicLetterValues}
+                    surano={selectedSura}
+                    verseno={selectedVerse}
+                  />
+                ) : (
+                  formula !== '' && (
+                    <div className="flex flex-col space-y-2 px-1">
+                      {loadedVerseDetails.map(({ sno, vno, verse }, index) => (
                         <div
-                          key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                          className={`p-0.5 rounded ml-0.5 mb-1 ${isSpace ? `w-3` : ` bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
-                          dir="rtl"
-                        >
-                          {/* Show the index only if the letter is not a space */}
-                          {displayIndex && (
-                            <div className={`p-1 w-full text-base`}>
-                              {displayIndex}
-                            </div>
-                          )}
-                          {/* Show the letter or an empty div for spaces */}
-                          <div className={` text-2xl h-full w-9 mb-2 flex items-center justify-center`} style={{ color: colorMap[letter] }}>
-                            {letter}
-                          </div>
-
-                          {displayIndex && (
-                            <div className={`px-0.5 pt-0.5 text-sm w-full rounded bg-neutral-400/60 text-neutral-900 shadow-neutral-950 shadow-inner`} >
-                              {arabicLetterValues[letter]}
-                            </div>
-                          )}
+                          ref={index === loadedVerseDetails.length - 1 ? lastVerseDetailElementRef : null}
+                          key={`${sno}-${vno}-detail`}>
+                          <VerseDetail
+                            quranMap={quranMap}
+                            handleSelectedWord={handleSelectedWord}
+                            filter={filter}
+                            selectedLetters={selectedLetters}
+                            arabicLetterValues={arabicLetterValues}
+                            surano={sno}
+                            verseno={vno}
+                          />
                         </div>
-                      );
-
-                      return acc;
-                    }, { currentIndex: 0, elements: [] }).elements}
-                  </div>
-
-                </div>
+                      ))}
+                    </div>
+                  ))
               }
-              {formula !== '' &&
-                <div className="flex flex-col space-y-2 px-1">
-                </div>
-              }
+
             </div>
           </div>
         </div>
@@ -564,7 +547,7 @@ function App() {
               <div
                 key={`${index}${letter}`}
                 onClick={() => toggleLetterSelection(letter)}
-                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500`:``}  `}
+                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500` : ``}  `}
                 dir="rtl"
               >
                 <div className={`text-lg md:text-xl lg:text-3xl min-w-6 w-full flex items-center md:items-end justify-center  ${lc[letter] ? ` brightness-100` : ` brightness-50`}`} style={{ color: colorMap[letter] }}>
