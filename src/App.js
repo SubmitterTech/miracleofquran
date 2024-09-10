@@ -429,7 +429,7 @@ function App() {
     <div className="App fixed w-screen h-full ">
       <div className={`w-full h-full bg-neutral-600 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
         <div className={`row-span-10 col-span-2 lg:row-span-11 h-full w-full grid grid-cols-2 grid-rows-8`}>
-          <div className="col-span-2 row-span-3 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
+          <div className="col-span-2 row-span-3 lg:col-span-1 lg:row-span-8 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
               <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-neutral-400 text-neutral-900 flex flex-wrap justify-between">
                 <div>
@@ -494,7 +494,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="col-span-2 row-span-5 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
+          <div className="col-span-2 row-span-5 lg:col-span-1 lg:row-span-8 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
               <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg shadow-neutral-800 text-center px-2 py-1.5 bg-neutral-400 text-neutral-900 flex flex-wrap justify-between ">
 
