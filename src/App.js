@@ -4,7 +4,7 @@ import './App.css';
 import colorMap from './utils/ColorMap';
 
 function App() {
-  const [tquranMap, setTquranMap] = useState({});
+  // const [tquranMap, setTquranMap] = useState({});
   const [quranMap, setQuranMap] = useState({});
 
   const [selectedSura, setSelectedSura] = useState(null);
@@ -60,14 +60,14 @@ function App() {
           qmap[sno][vno] = verse;
 
         });
-        Object.entries(content.verses).forEach(([vno, verse]) => {
-          tqmap[sno][vno] = verse;
+        // Object.entries(content.verses).forEach(([vno, verse]) => {
+        //   tqmap[sno][vno] = verse;
 
-        });
+        // });
       });
     });
 
-    setTquranMap(tqmap);
+    // setTquranMap(tqmap);
     setQuranMap(qmap);
   }, []);
 
@@ -399,7 +399,7 @@ function App() {
 
   return (
     <div className="App fixed w-screen h-full ">
-      <div className={`w-full h-full bg-neutral-700 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
+      <div className={`w-full h-full bg-neutral-600 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
         <div className={`row-span-10 lg:row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-2`}>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
@@ -414,7 +414,7 @@ function App() {
             </div>
             <div className={`h-full w-full overflow-auto`}>
               <div className={`text-sm md:text-base text-justify w-full h-full px-1 `}>
-                <div className={`flex flex-col space-y-1 `}>
+                <div className={`flex flex-col space-y-1 pt-1`}>
                   {
                     loadedVerses.map(({ sno, vno, verse }, index) => {
                       const isbesmele = parseInt(sno) !== 1 && parseInt(sno) !== 9 && parseInt(vno) === 1;
@@ -444,7 +444,7 @@ function App() {
                             className={`text-start w-full flex justify-between space-x-1`}>
                             <div
                               onClick={() => handleSelectedVerse(sno, vno)}
-                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? `bg-sky-900` : `bg-neutral-900`}`}>
+                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? `bg-sky-900 ring-1 ring-sky-200` : `bg-neutral-900`}`}>
                               <div className={`flex w-full space-x-1.5`}>
                                 <div dir="ltr" className={`text-sky-500`}>
                                   {sno}:{vno}
@@ -468,14 +468,14 @@ function App() {
           </div>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
-              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 bg-green-500 text-neutral-900 flex flex-wrap justify-between ">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 bg-green-600 text-neutral-900 flex flex-wrap justify-between ">
 
                 <div className={`flex items-center space-x-2 w-2/3 lg:w-3/4 justify-between`}>
                   <div>Formula:</div>
                   <input
                     type="text"
                     disabled={filter}
-                    className=" w-full p-0.5 px-2 text-start bg-green-600/80 rounded shadow-inner placeholder:text-neutral-100/50"
+                    className=" w-full p-0.5 px-2 text-start bg-green-700/80 rounded shadow-inner placeholder:text-neutral-100/50"
                     value={formula || ''}
                     onChange={(e) => setFormula(e.target.value)}
                     placeholder={`${selectedVerse ? `${selectedSura}:${selectedVerse}` : `formula e.g. 3:18 33:7 33:40`}`}
@@ -490,20 +490,20 @@ function App() {
             <div className={`overflow-auto h-full w-full`}>
               {selectedVerse &&
                 <div className={`flex flex-col space-y-2 px-1`}>
-                  <div
+                  {/* <div
                     key={"tselected_" + selectedSura + ":" + selectedVerse}
                     className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
                     dir="ltr">
                     {tquranMap && tquranMap[selectedSura] && tquranMap[selectedSura][selectedVerse]?.toString()}
-                  </div>
-                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded `}>
+                  </div> */}
+                  <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded pt-2`}>
                     {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split(' ').map((word, index) => (
                       <div
                         onClick={() => handleSelectedWord(word.trim())}
                         key={selectedSura + selectedVerse + index + word}
-                        className={`p-0.5 shadow-md rounded text-start ml-1 mb-1 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900" : "bg-sky-900 "}`}
+                        className={`p-0.5 rounded text-start ml-1.5 mb-1.5 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900 " : "bg-sky-800 shadow-md shadow-neutral-900 "}`}
                         dir="rtl">
-                        <div className={`p-1 shadow-md rounded mb-1 text-base w-full text-center  ${filter === word.trim() ? "text-neutral-100 bg-neutral-700" : "text-neutral-900 bg-neutral-400 "}`}>
+                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-sky-700 " : "text-amber-400  "}`}>
                           {index + 1}
                         </div>
                         <div className={`p-1.5 w-full `} >
@@ -512,7 +512,7 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  <div dir="rtl" className={`w-full flex overflow-x-auto items-center justify-start rounded pb-4`}>
+                  <div dir="rtl" className={`w-full flex overflow-x-auto items-center justify-start rounded pb-4 pt-0.5`}>
                     {quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]?.split('').reduce((acc, letter, index) => {
                       // Only increment the displayIndex for non-space characters
                       const isSpace = letter === ' ';
@@ -523,22 +523,22 @@ function App() {
                       acc.elements.push(
                         <div
                           key={`${selectedSura}${selectedVerse}${index}${letter}`}
-                          className={`p-0.5 rounded ml-0.5 mb-1 h-24 ${isSpace ? `w-3` : ` shadow-md bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
+                          className={`p-0.5 rounded ml-0.5 mb-1 ${isSpace ? `w-3` : ` bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
                           dir="rtl"
                         >
                           {/* Show the index only if the letter is not a space */}
                           {displayIndex && (
-                            <div className={`p-1 w-full rounded text-base bg-neutral-700`}>
+                            <div className={`p-1 w-full text-base`}>
                               {displayIndex}
                             </div>
                           )}
                           {/* Show the letter or an empty div for spaces */}
-                          <div className={` text-2xl h-full flex items-center justify-center`} style={{ color: colorMap[letter] }}>
+                          <div className={` text-2xl h-full w-9 mb-2 flex items-center justify-center`} style={{ color: colorMap[letter] }}>
                             {letter}
                           </div>
 
                           {displayIndex && (
-                            <div className={`p-0.5 text-sm w-full`} >
+                            <div className={`px-0.5 pt-0.5 text-sm w-full rounded bg-neutral-400/60 text-neutral-900 shadow-neutral-950 shadow-inner`} >
                               {arabicLetterValues[letter]}
                             </div>
                           )}
@@ -564,10 +564,10 @@ function App() {
               <div
                 key={`${index}${letter}`}
                 onClick={() => toggleLetterSelection(letter)}
-                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500`:``}  `}
+                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500`:``}  `}
                 dir="rtl"
               >
-                <div className={`text-lg md:text-xl lg:text-2xl min-w-6 w-full flex items-center md:items-end justify-center brightness-75`} style={{ color: colorMap[letter] }}>
+                <div className={`text-lg md:text-xl lg:text-3xl min-w-6 w-full flex items-center md:items-end justify-center  ${lc[letter] ? ` brightness-100` : ` brightness-50`}`} style={{ color: colorMap[letter] }}>
                   {letter}
                 </div>
                 {isDivisible(factor, lc[letter]) &&
