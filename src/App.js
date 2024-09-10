@@ -23,6 +23,7 @@ function App() {
   const observerVerses = useRef();
   const observerVerseDetails = useRef();
 
+  const detailBatchSize = 7;
   const batchSize = 38;
   const factor = 19;
 
@@ -296,7 +297,7 @@ function App() {
       setOcc(0);
     } else {
       setFilter(w);
-      setFormula('');
+      //setFormula('');
     }
   }
 
@@ -375,7 +376,7 @@ function App() {
       if (entries[0].isIntersecting && loadedVerseDetails.length < filteredVerses.length) {
         setLoadedVerseDetails(prevLoaded => [
           ...prevLoaded,
-          ...filteredVerses.slice(prevLoaded.length, prevLoaded.length + batchSize)
+          ...filteredVerses.slice(prevLoaded.length, prevLoaded.length + detailBatchSize)
         ]);
       }
     });
@@ -384,7 +385,7 @@ function App() {
 
   useEffect(() => {
     setLoadedVerses(filteredVerses.slice(0, batchSize));
-    setLoadedVerseDetails(filteredVerses.slice(0, 5));
+    setLoadedVerseDetails(filteredVerses.slice(0, detailBatchSize));
   }, [filteredVerses]);
 
   useEffect(() => {
@@ -420,7 +421,7 @@ function App() {
         <div className={`row-span-10 lg:row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-2`}>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
-              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-cyan-500 text-neutral-900 flex flex-wrap justify-between">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-neutral-400 text-neutral-900 flex flex-wrap justify-between">
                 <div>
                   {`Verses: ` + formatDivisible(filteredVerses.length)}
                 </div>
@@ -485,14 +486,14 @@ function App() {
           </div>
           <div className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
-              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg text-center px-2 py-1.5 bg-green-600 text-neutral-900 flex flex-wrap justify-between ">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg shadow-neutral-800 text-center px-2 py-1.5 bg-neutral-400 text-neutral-900 flex flex-wrap justify-between ">
 
                 <div className={`flex items-center space-x-2 w-2/3 lg:w-3/4 justify-between`}>
                   <div>Formula:</div>
                   <input
                     type="text"
                     disabled={filter}
-                    className=" w-full p-0.5 px-2 text-start bg-green-700/80 rounded shadow-inner placeholder:text-neutral-100/50"
+                    className=" w-full p-0.5 px-2 text-start bg-neutral-500/80 rounded shadow-inner placeholder:text-neutral-100/50"
                     value={formula || ''}
                     onChange={(e) => setFormula(e.target.value)}
                     placeholder={`${selectedVerse ? `${selectedSura}:${selectedVerse}` : `formula e.g. 3:18 33:7 33:40`}`}
@@ -504,7 +505,7 @@ function App() {
               </div>
 
             </div>
-            <div className={`overflow-auto h-full w-full`}>
+            <div className={`overflow-auto h-full w-full pt-2`}>
               {selectedVerse ?
                 (
                   <VerseDetail
@@ -531,6 +532,7 @@ function App() {
                             arabicLetterValues={arabicLetterValues}
                             surano={sno}
                             verseno={vno}
+                            single={false}
                           />
                         </div>
                       ))}
@@ -541,8 +543,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative`}>
-          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute select-none`}>
+        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative `}>
+          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute select-none `}>
             {arabicLetters.map((letter, index) => (
               <div
                 key={`${index}${letter}`}

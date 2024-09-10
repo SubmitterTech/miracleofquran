@@ -1,24 +1,28 @@
 import colorMap from '../utils/ColorMap';
 
-const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, arabicLetterValues, surano, verseno }) => {
+const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, arabicLetterValues, surano, verseno, single = true }) => {
 
 
     return (
-        <div className={`flex flex-col space-y-2 px-1`}>
+        <div className={`flex flex-col space-y-1 px-1 rounded border border-black relative w-full mx-1`}>
             {/* <div
                     key={"tselected_" + surano + ":" + verseno}
                     className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
                     dir="ltr">
                     {tquranMap && tquranMap[surano] && tquranMap[surano][verseno]?.toString()}
                   </div> */}
-            <div dir="rtl" className={`w-full flex flex-wrap items-center justify-start rounded pt-2`}>
+
+            <div className={`absolute -top-2 -left-1 z-10 rounded px-1 border border-black text-sm bg-neutral-600`}>
+                {surano + `:` + verseno}
+            </div>
+            <div dir="rtl" className={`w-full flex ${single ? `flex-wrap` : `overflow-x-auto pb-4`} items-center justify-start rounded pt-1`}>
                 {quranMap && quranMap[surano] && quranMap[surano][verseno]?.split(' ').map((word, index) => (
                     <div
                         onClick={() => handleSelectedWord(word.trim())}
                         key={surano + verseno + index + word}
                         className={`p-0.5 rounded text-start ml-1.5 mb-1.5 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900 " : "bg-sky-800 shadow-md shadow-neutral-900 "}`}
                         dir="rtl">
-                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-sky-700 " : "text-amber-400  "}`}>
+                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-orange-600 " : "text-amber-400  "}`}>
                             {index + 1}
                         </div>
                         <div className={`p-1.5 w-full `} >
@@ -27,7 +31,7 @@ const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, ar
                     </div>
                 ))}
             </div>
-            <div dir="rtl" className={`w-full flex overflow-x-auto items-center justify-start rounded pb-4 pt-0.5`}>
+            <div dir="rtl" className={`w-full flex ${single ? `flex-wrap` : `overflow-x-auto pb-4`} items-center justify-start rounded pt-0.5`}>
                 {quranMap && quranMap[surano] && quranMap[surano][verseno]?.split('').reduce((acc, letter, index) => {
                     const isSpace = letter === ' ';
                     const displayIndex = isSpace ? null : acc.currentIndex + 1;
