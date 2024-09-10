@@ -19,6 +19,7 @@ function App() {
   const [loadedVerseDetails, setLoadedVerseDetails] = useState([]);
 
   const [occ, setOcc] = useState(0);
+  const [sosl, setSosl] = useState(0);
 
   const observerVerses = useRef();
   const observerVerseDetails = useRef();
@@ -394,13 +395,22 @@ function App() {
     }
   }, [formula]);
 
+  useEffect(() => {
+    if (selectedLetters.length > 0) {
+      let t = 0;
+      selectedLetters.forEach((l) => {
+        t = t + lc[l];
+      });
+      setSosl(t);
+    }
+  }, [selectedLetters, lc]);
+
   const isDivisible = (f, n) => {
     n = Number(n);
     return (n > 0 && n % f === 0);
   };
 
   const formatDivisible = (count) => {
-
     if (isDivisible(factor, count)) {
       return `${count} (${factor} x ${count / factor})`;
     }
@@ -505,7 +515,7 @@ function App() {
               </div>
 
             </div>
-            <div className={`overflow-auto h-full w-full pt-2`}>
+            <div className={`overflow-auto h-full w-full pt-2 pr-0.5 pl-1`}>
               {selectedVerse ?
                 (
                   <VerseDetail
@@ -519,7 +529,7 @@ function App() {
                   />
                 ) : (
                   formula !== '' && (
-                    <div className="flex flex-col space-y-2 px-1">
+                    <div className="flex flex-col space-y-2 ">
                       {loadedVerseDetails.map(({ sno, vno, verse }, index) => (
                         <div
                           ref={index === loadedVerseDetails.length - 1 ? lastVerseDetailElementRef : null}
@@ -549,16 +559,16 @@ function App() {
               <div
                 key={`${index}${letter}`}
                 onClick={() => toggleLetterSelection(letter)}
-                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) ? `border-t-4 border-sky-500` : ``}  `}
-                dir="rtl"
-              >
+                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) || (isDivisible(factor, sosl) && selectedLetters.includes(letter)) ? `border-t-4 border-sky-500` : ``}  `}
+                dir="rtl">
                 <div className={`text-lg md:text-xl lg:text-3xl min-w-6 w-full flex items-center md:items-end justify-center  ${lc[letter] ? ` brightness-100` : ` brightness-50`}`} style={{ color: colorMap[letter] }}>
                   {letter}
                 </div>
                 {isDivisible(factor, lc[letter]) &&
                   <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full py-1 bg-sky-500 rounded text-neutral-950`}>
                     {formatDivisibleOnlyMultiplier(lc[letter])}
-                  </div>}
+                  </div>
+                }
                 <div className={`text-xs w-full ${lc[letter] ? `text-neutral-100` : `text-neutral-500`} `}>
                   {lc[letter] || 0}
                 </div>
@@ -566,6 +576,10 @@ function App() {
             ))}
           </div>
         </div>
+        {isDivisible(factor, sosl) &&
+          <div className={`absolute z-20 text-3xl bg-sky-500 p-3 rounded-lg bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
+            {formatDivisible(sosl)}
+          </div>}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, ar
 
 
     return (
-        <div className={`flex flex-col space-y-1 px-1 rounded border border-black relative w-full mx-1`}>
+        <div className={`flex flex-col space-y-1 px-1 rounded border border-black relative w-full`}>
             {/* <div
                     key={"tselected_" + surano + ":" + verseno}
                     className="w-full p-2 px-3 rounded shadow-lg bg-neutral-800 text-start"
