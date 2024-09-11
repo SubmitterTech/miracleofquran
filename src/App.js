@@ -48,7 +48,7 @@ function App() {
   }), []);
 
   const arabicLetters = [
-    'ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز',
+    'ا', 'ء', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز',
     'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك',
     'ل', 'م', 'ن', 'ه', 'و', 'ي'
   ];
@@ -126,9 +126,9 @@ function App() {
     if (selectedVerse !== null) {
       return verseText.split('').reduce((counts, letter) => {
         if (letter !== ' ') {
-          if (letter === 'ء') {
-            letter = 'ا'; // Normalize 'ء' to 'ا'
-          }
+          // if (letter === 'ء') {
+          //   letter = 'ا'; // Normalize 'ء' to 'ا'
+          // }
           counts[letter] = (counts[letter] || 0) + 1;
         }
         return counts;
@@ -138,9 +138,9 @@ function App() {
     const countLetters = (text) => {
       return text.split('').reduce((counts, letter) => {
         if (letter !== ' ') {
-          if (letter === 'ء') {
-            letter = 'ا'; // Normalize 'ء' to 'ا'
-          }
+          // if (letter === 'ء') {
+          //   letter = 'ا'; // Normalize 'ء' to 'ا'
+          // }
           counts[letter] = (counts[letter] || 0) + 1;
         }
         return counts;
@@ -198,9 +198,9 @@ function App() {
             return verse.split('').reduce((counts, letter) => {
               if (letter !== ' ') {
                 // Normalize the letter "ء" to "ا"
-                if (letter === 'ء') {
-                  letter = 'ا';
-                }
+                // if (letter === 'ء') {
+                //   letter = 'ا';
+                // }
                 counts[letter] = (counts[letter] || 0) + 1;
               }
               return counts;
