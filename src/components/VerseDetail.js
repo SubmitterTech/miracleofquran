@@ -41,7 +41,7 @@ const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, ar
                     acc.elements.push(
                         <div
                             key={`${surano}${verseno}${index}${letter}`}
-                            className={`p-0.5 rounded ml-0.5 mb-1 ${isSpace ? `w-3` : ` bg-neutral-900 ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
+                            className={`p-0.5 rounded ml-0.5 mb-1 ${isSpace ? `w-3` : ` ${letter === 'ئ' ? `bg-lime-700` : `bg-neutral-900`}   ${selectedLetters.includes(letter) ? `ring-sky-500 ring-2` : ``}`}  flex flex-col items-center`}
                             dir="rtl"
                         >
                             {/* Show the index only if the letter is not a space */}
