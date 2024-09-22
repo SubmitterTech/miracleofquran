@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/miracleofquran/static/css/main.bbd1f0bf.css",
-    "main.js": "/miracleofquran/static/js/main.9f8705b1.js",
-    "static/js/787.ae228536.chunk.js": "/miracleofquran/static/js/787.ae228536.chunk.js",
+    "main.css": "/miracleofquran/static/css/main.9ab6d818.css",
+    "main.js": "/miracleofquran/static/js/main.be2dd880.js",
+    "static/js/453.7c4ce6d8.chunk.js": "/miracleofquran/static/js/453.7c4ce6d8.chunk.js",
     "index.html": "/miracleofquran/index.html",
-    "main.bbd1f0bf.css.map": "/miracleofquran/static/css/main.bbd1f0bf.css.map",
-    "main.9f8705b1.js.map": "/miracleofquran/static/js/main.9f8705b1.js.map",
-    "787.ae228536.chunk.js.map": "/miracleofquran/static/js/787.ae228536.chunk.js.map"
+    "main.9ab6d818.css.map": "/miracleofquran/static/css/main.9ab6d818.css.map",
+    "main.be2dd880.js.map": "/miracleofquran/static/js/main.be2dd880.js.map",
+    "453.7c4ce6d8.chunk.js.map": "/miracleofquran/static/js/453.7c4ce6d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbd1f0bf.css",
-    "static/js/main.9f8705b1.js"
+    "static/css/main.9ab6d818.css",
+    "static/js/main.be2dd880.js"
   ]
 }
