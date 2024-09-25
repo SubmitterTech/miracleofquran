@@ -38,18 +38,18 @@ function Dev() {
   const ys = counts["YS"];
 
 
-  const almlist = useMemo(() => (['29', '31']), []);
-  const alrlist = useMemo(() => ([]), []);
-  const almrlist = useMemo(() => ([]), []);
-  const almslist = useMemo(() => ([]), []);
-  const khyaslist = useMemo(() => ([]), []);
-  const yslist = useMemo(() => ([]), []);
-  // const almlist = useMemo(() => (['2', '3', '29', '30', '31', '32']), []);
-  // const alrlist = useMemo(() => (['10', '11', '12', '14', '15']), []);
-  // const almrlist = useMemo(() => (['13']), []);
-  // const almslist = useMemo(() => (['7']), []);
-  // const khyaslist = useMemo(() => (['19']), []);
-  // const yslist = useMemo(() => (['36']), []);
+  // const almlist = useMemo(() => ([]), []);
+  // const alrlist = useMemo(() => ([]), []);
+  // const almrlist = useMemo(() => ([]), []);
+  // const almslist = useMemo(() => ([]), []);
+  // const khyaslist = useMemo(() => ([]), []);
+  // const yslist = useMemo(() => ([]), []);
+  const almlist = useMemo(() => (['2', '3', '29', '30', '31', '32']), []);
+  const alrlist = useMemo(() => (['10', '11', '12', '14', '15']), []);
+  const almrlist = useMemo(() => (['13']), []);
+  const almslist = useMemo(() => (['7']), []);
+  const khyaslist = useMemo(() => (['19']), []);
+  const yslist = useMemo(() => (['36']), []);
 
 
   const [checkHM, setCheckHM] = useState(true);
