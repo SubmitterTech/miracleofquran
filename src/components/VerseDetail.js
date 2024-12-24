@@ -1,7 +1,27 @@
 import colorMap from '../utils/ColorMap';
+import React, { useState, useEffect } from 'react';
 
-const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, arabicLetterValues, surano, verseno, single = true }) => {
+const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, arabicLetterValues, surano, verseno, lightMatchWords, single = true }) => {
+    // 1. Keep track of total gematrical value in a React state
+    const [totalGemValue, setTotalGemValue] = useState(0);
 
+    // 2. Calculate total gem value whenever relevant props change
+    useEffect(() => {
+        if (quranMap && quranMap[surano] && quranMap[surano][verseno]) {
+            const total = quranMap[surano][verseno]
+                .split('')
+                .reduce((acc, letter) => {
+                    // skip spaces or letters not in the values map
+                    if (letter === ' ') return acc;
+                    return acc + (arabicLetterValues[letter] || 0);
+                }, 0);
+
+            setTotalGemValue(total);
+        } else {
+            // fallback if data not present
+            setTotalGemValue(0);
+        }
+    }, [quranMap, surano, verseno, arabicLetterValues]);
 
     return (
         <div className={`flex flex-col space-y-1 px-1 rounded border border-black relative w-full`}>
@@ -15,18 +35,21 @@ const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, ar
             <div className={`absolute -top-2 -left-1 z-10 rounded px-1 border border-black text-sm bg-neutral-600`}>
                 {surano + `:` + verseno}
             </div>
+            <div className={`absolute -bottom-1 -right-1 z-10 rounded px-1 border border-black text-sm bg-neutral-600`}>
+                {`GV:`+ totalGemValue}
+            </div>
             <div dir="rtl" className={`w-full flex ${single ? `flex-wrap` : `overflow-x-auto pb-4`} items-center justify-start rounded pt-1`}>
                 {quranMap && quranMap[surano] && quranMap[surano][verseno]?.split(' ').map((word, index) => (
                     <div
                         onClick={() => handleSelectedWord(word.trim())}
                         key={surano + verseno + index + word}
-                        className={`p-0.5 rounded text-start ml-1.5 mb-1.5 cursor-pointer ${filter === word.trim() ? "bg-sky-300 text-neutral-900 " : "bg-sky-800 shadow-md shadow-neutral-900 "}`}
+                        className={`p-0.5 rounded text-start ml-1.5 mb-1.5 cursor-pointer ${filter === word.trim() ? "bg-white text-neutral-900 ring-1 ring-sky-400 " : "bg-sky-950 shadow-md shadow-neutral-900 "}`}
                         dir="rtl">
-                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-orange-600 " : "text-amber-400  "}`}>
+                        <div className={`px-1 text-lg w-full text-center font-semibold ${filter === word.trim() ? "text-amber-600 " : "text-amber-400  "}`}>
                             {index + 1}
                         </div>
                         <div className={`p-1.5 w-full `} >
-                            {word}
+                            {lightMatchWords(word)}
                         </div>
                     </div>
                 ))}

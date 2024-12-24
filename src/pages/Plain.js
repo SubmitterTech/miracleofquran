@@ -428,7 +428,7 @@ function Plain() {
   return (
     <div className="App fixed w-screen h-full ">
       <div className={`w-full h-full bg-neutral-600 text-neutral-100 overflow-auto text-xl grid grid-cols-2 grid-rows-12 gap-y-0.5`}>
-        <div className={`row-span-10 col-span-2 lg:row-span-11 h-full w-full grid grid-cols-2 grid-rows-8`}>
+        <div className={`row-span-11 col-span-2 h-full w-full grid grid-cols-2 grid-rows-8`}>
           <div className="col-span-2 row-span-3 lg:col-span-1 lg:row-span-8 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
               <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg p-2 text-start bg-neutral-400 text-neutral-900 flex flex-wrap justify-between">
@@ -472,12 +472,12 @@ function Plain() {
                             className={`text-start w-full flex justify-between space-x-1`}>
                             <div
                               onClick={() => handleSelectedVerse(sno, vno)}
-                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? `bg-sky-900 ring-1 ring-sky-200` : `bg-neutral-900`}`}>
+                              className={`w-full p-2 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno ? `ring-1 ring-sky-400 ` : `bg-neutral-900 `}`}>
                               <div className={`flex w-full space-x-1.5`}>
-                                <div dir="ltr" className={`text-sky-500`}>
+                                <div dir="ltr" className={`text-sky-400`}>
                                   {sno}:{vno}
                                 </div>
-                                <div dir="rtl" className={`w-full`}>
+                                <div dir="rtl" className={`w-full `}>
                                   {lightMatchWords(verse)}
                                 </div>
                                 <div dir="ltr" className={`text-amber-400 text-xs flex items-center`}>
@@ -496,7 +496,7 @@ function Plain() {
           </div>
           <div className="col-span-2 row-span-5 lg:col-span-1 lg:row-span-8 w-full h-full flex flex-col space-y-1 ">
             <div className="flex w-full lg:px-0.5">
-              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg shadow-neutral-800 text-center px-2 py-1.5 bg-neutral-400 text-neutral-900 flex flex-wrap justify-between ">
+              <div className="rounded w-full text-lg md:text-xl lg:text-2xl shadow-lg shadow-neutral-800 text-center pl-2 py-1.5 bg-neutral-400 text-neutral-900 flex justify-between ">
 
                 <div className={`flex items-center space-x-2 w-2/3 lg:w-3/4 justify-between`}>
                   <div>Formula:</div>
@@ -509,13 +509,29 @@ function Plain() {
                     placeholder={`${selectedVerse ? `${selectedSura}:${selectedVerse}` : `formula e.g. 3:18 33:7 33:40`}`}
                   />
                 </div>
-                <div className={`flex items-center`}>
-                  Filter: {filter ? filter : "N / A"}
+                <div className={`flex items-center w-1/2 pl-2`}>
+
+                  <div className=" w-full flex items-center space-x-2">
+                    <div>Filter:</div>
+                    <input
+                      type="text"
+                      dir={`rtl`}
+                      className=" w-full p-0.5 px-2 text-start bg-neutral-500/80 rounded shadow-inner placeholder:text-neutral-100/50"
+                      value={filter}
+                      onChange={(e) => setFilter(e.target.value)}
+                      placeholder={`N / A`}
+                    />
+                  </div>
+                  <button className={`flex justify-center`} onClick={() => setFilter('')}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8`}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
               </div>
 
             </div>
-            <div className={`overflow-auto h-full w-full pt-2 pr-0.5 pl-1`}>
+            <div className={`overflow-auto h-full w-full pt-2 px-1`}>
               {selectedVerse ?
                 (
                   <VerseDetail
@@ -526,6 +542,7 @@ function Plain() {
                     arabicLetterValues={arabicLetterValues}
                     surano={selectedSura}
                     verseno={selectedVerse}
+                    lightMatchWords={lightMatchWords}
                   />
                 ) : (
                   formula !== '' && (
@@ -542,6 +559,7 @@ function Plain() {
                             arabicLetterValues={arabicLetterValues}
                             surano={sno}
                             verseno={vno}
+                            lightMatchWords={lightMatchWords}
                             single={false}
                           />
                         </div>
@@ -553,19 +571,20 @@ function Plain() {
             </div>
           </div>
         </div>
-        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative `}>
-          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute select-none `}>
+        <div className={`col-span-2 row-span-1 w-full h-full bg-neutral-600 relative `}>
+
+          <div dir={'ltr'} className={`h-full w-full flex p-0.5 gap-0.5 absolute select-none overflow-x-auto lg:overflow-visible`}>
             {arabicLetters.map((letter, index) => (
               <div
                 key={`${index}${letter}`}
                 onClick={() => toggleLetterSelection(letter)}
-                className={`relative grow rounded cursor-pointer flex flex-col justify-between py-1 transition-transform ${selectedLetters.includes(letter) ? `-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) || (isDivisible(factor, sosl) && selectedLetters.includes(letter)) ? `border-t-4 border-sky-500` : ``}  `}
+                className={`relative min-w-12 lg:grow lg:min-w-fit rounded cursor-pointer flex flex-col justify-between py-0.5 lg:py-1 transition-transform ${selectedLetters.includes(letter) ? `lg:-translate-y-7 ring-1 ring-sky-500` : ``}  ${lc[letter] ? `bg-neutral-900` : `bg-neutral-800/50`}  ${isDivisible(factor, lc[letter]) || (isDivisible(factor, sosl) && selectedLetters.includes(letter)) ? ` border-t-2 lg:border-t-4 border-sky-500` : ``}  `}
                 dir="rtl">
                 <div className={`text-lg md:text-xl lg:text-3xl min-w-6 w-full flex items-center md:items-end justify-center  ${lc[letter] ? ` brightness-100` : ` brightness-50`}`} style={{ color: colorMap[letter] }}>
                   {letter}
                 </div>
                 {isDivisible(factor, lc[letter]) &&
-                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full py-1 bg-sky-500 rounded text-neutral-950`}>
+                  <div dir="ltr" className={`absolute whitespace-pre-line lg:-top-8 top-9 left-0 text-xs text-nowrap w-full py-0 lg:py-1 bg-sky-500 rounded text-neutral-950`}>
                     {formatDivisibleOnlyMultiplier(lc[letter])}
                   </div>
                 }
@@ -576,8 +595,8 @@ function Plain() {
             ))}
           </div>
         </div>
-        {isDivisible(factor, sosl) &&
-          <div className={`absolute z-20 text-3xl bg-sky-500 p-3 rounded-lg bottom-36 lg:bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
+        {(selectedLetters.length > 0 && isDivisible(factor, sosl)) &&
+          <div className={`absolute z-20 text-xl lg:text-3xl bg-sky-500 p-1.5 lg:p-3 rounded-lg bottom-20 lg:bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
             {formatDivisible(sosl)}
           </div>}
       </div>
