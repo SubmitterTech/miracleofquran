@@ -70,27 +70,31 @@ function Dev() {
     'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
     'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900,
     'غ': 1000,
-    'ء': 1,
+    'ء': 1, 'ئ': 10,
   }), []);
 
   const arabicLetters = [
-    'ا', 'ء', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز',
-    'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك',
-    'ل', 'م', 'ن', 'ه', 'و', 'ي',
-    'ئ'
+    'ا', 'ء',
+    'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك','ل', 'م', 'ن', 'ه', 'و',
+    'ئ', 'ي'
   ];
 
   useEffect(() => {
     let qmap = {};
-    let tqmap = {};
-
+    //let tqmap = {};
+    let bsml = '';
     Object.values(quranData).forEach((page) => {
       Object.entries(page.sura).forEach(([sno, content]) => {
         if (!qmap[sno]) { qmap[sno] = {}; }
-        if (!tqmap[sno]) { tqmap[sno] = {}; }
+        //if (!tqmap[sno]) { tqmap[sno] = {}; }
         Object.entries(content.encrypted).forEach(([vno, verse]) => {
+          if (sno === '1' && vno === '1') {
+            bsml = verse;
+          }
+          if ((sno !== '1' && sno !== '9') && vno === '1') {
+            qmap[sno]['0'] = bsml;
+          }
           qmap[sno][vno] = verse;
-
         });
         // Object.entries(content.verses).forEach(([vno, verse]) => {
         //   tqmap[sno][vno] = verse;
@@ -254,8 +258,11 @@ function Dev() {
                 let cCount = 0;
 
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -277,8 +284,11 @@ function Dev() {
                 let cCount = 0;
 
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -300,8 +310,11 @@ function Dev() {
                 let cCount = 0;
 
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -323,8 +336,11 @@ function Dev() {
                 let cCount = 0;
 
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -346,8 +362,11 @@ function Dev() {
                 let cCount = 0;
 
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -390,17 +409,17 @@ function Dev() {
             if (filter) {
 
               // Normalize only the prefix of the filter and the verse
-              //const normalizedFilter = normalizeArabicPrefix(filter);
+              const normalizedFilter = normalizeArabicPrefix(filter);
 
               // Create the regex with the escaped filter
-              //const regex = getRegex(normalizedFilter);
+              const regex = getRegex(normalizedFilter);
 
               // Match the normalized verse using the regex
-              const matches = verse.match(filter);
+              const matches = verse.match(regex);
 
               if (verse.includes(filter)) {
-                count += matches.length;
-                verseList.push({ sno, vno, verse, hc: matches.length, c, ns });
+                count += matches ? matches.length : 0;
+                verseList.push({ sno, vno, verse, hc: matches ? matches.length : 0, c, ns });
               }
 
             } else if (formula.trim() !== '') {
@@ -493,7 +512,7 @@ function Dev() {
     }
     // Stem the filter word
     const normalizedFilter = normalizeArabicPrefix(filter);
-    const regex = getRegex(normalizedFilter);
+    //const regex = getRegex(normalizedFilter);
     // Split the verse into words (preserving spaces)
     const words = verse.split(/(\s+)/).map((word, index) => {
       const wordContainsSelectedLetter = selectedLetters.some((letter) =>
@@ -524,7 +543,7 @@ function Dev() {
         );
       }
       // Common stem match
-      else if (word.includes(filter)) {
+      else if (word.includes(normalizedFilter)) {
         return (
           highlightLetters(word, '#22c55e')
         );
@@ -641,7 +660,7 @@ function Dev() {
                         countsObj = alm[sno];
 
                       } else if (alrlist.includes(sno)) {
-                        letters = ['ر', 'ل', 'ا']; // 'ر' is the Arabic letter 'R'
+                        letters = ['ر', 'ل', 'ا'];
                         countsObj = alr[sno];
 
                       } else if (almrlist.includes(sno)) {
@@ -666,7 +685,7 @@ function Dev() {
                         countsObj = {};
                       }
 
-                      if (checkHM && formula) {
+                      if (formula) {
 
                         // Initialize expected and actual counts
                         const ht_counts = {};
@@ -681,6 +700,9 @@ function Dev() {
                           if (letter === 'ا') {
                             // For Alif, sum both Hamza (ء) and Alif (ا)
                             actual_counts['ا'] = (c['ء'] || 0) + (c['ا'] || 0);
+                          } else if (letter === 'ي') {
+                            // For Ye, sum both Ye (ي) and hidden Ye (ئ)
+                            actual_counts['ي'] = (c['ئ'] || 0) + (c['ي'] || 0);
                           } else {
                             actual_counts[letter] = c[letter] || 0;
                           }
@@ -747,7 +769,7 @@ function Dev() {
                             <div
                               onClick={() => handleSelectedVerse(sno, vno)}
                               className={`w-full p-1 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno
-                                ? 'bg-sky-900 ring-1 ring-sky-200'
+                                ? 'bg-neutral-900 ring-1 ring-neutral-100'
                                 : 'bg-neutral-900'
                                 }`}
                             >
@@ -766,21 +788,21 @@ function Dev() {
                                 >
                                   {index + 1}
                                 </div>
-                                {checkHM && (
-                                  <div
-                                    dir="ltr"
-                                    className="w-1/3 flex flex-col space-y-1 text-base"
-                                  >
-                                    <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
-                                      <div className="text-neutral-500 text-xs">{`HAS TO BE`}</div>
-                                      <div dir="rtl">{hastobe}</div>
-                                    </div>
-                                    <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
-                                      <div className="text-neutral-500 text-xs">{`HAS`}</div>
-                                      <div dir="rtl">{has}</div>
-                                    </div>
+
+                                <div
+                                  dir="ltr"
+                                  className="w-1/3 flex flex-col space-y-1 text-sm"
+                                >
+                                  <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
+                                    <div className="text-neutral-500 text-xs">{`HAS TO BE`}</div>
+                                    <div dir="rtl">{hastobe}</div>
                                   </div>
-                                )}
+                                  <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
+                                    <div className="text-neutral-500 text-xs">{`HAS`}</div>
+                                    <div dir="rtl">{has}</div>
+                                  </div>
+                                </div>
+
                               </div>
                             </div>
                           </div>
@@ -810,7 +832,7 @@ function Dev() {
                 <div className={`flex items-center w-1/2 pl-2`}>
                   <button className={`flex justify-center`} onClick={() => setCheckHM(!checkHM)}>
                     {checkHM ?
-                      (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                      (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-8 h-8`}>
                         <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z" clipRule="evenodd" />
                       </svg>)
                       :
@@ -819,7 +841,7 @@ function Dev() {
                       </svg>)}
                   </button>
 
-                  <button className={`flex justify-center`} onClick={() => setFilter(null)}>
+                  <button className={`flex justify-center`} onClick={() => setFilter('')}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8`}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -850,6 +872,7 @@ function Dev() {
                     arabicLetterValues={arabicLetterValues}
                     surano={selectedSura}
                     verseno={selectedVerse}
+                    lightMatchWords={lightMatchWords}
                   />
                 ) : (
                   formula !== '' && (
@@ -866,6 +889,7 @@ function Dev() {
                             arabicLetterValues={arabicLetterValues}
                             surano={sno}
                             verseno={vno}
+                            lightMatchWords={lightMatchWords}
                             single={false}
                           />
                         </div>
@@ -878,7 +902,7 @@ function Dev() {
           </div>
         </div>
         <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative `}>
-          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute select-none `}>
+          <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute `}>
             {arabicLetters.map((letter, index) => (
               <div
                 key={`${index}${letter}`}
@@ -889,7 +913,7 @@ function Dev() {
                   {letter}
                 </div>
                 {isDivisible(factor, lc[letter]) &&
-                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full py-1  rounded text-neutral-950 ${selectedLetters.includes(letter) ? `bg-sky-500` : `bg-sky-500/40`}`}>
+                  <div dir="ltr" className={`absolute whitespace-pre-line -top-8 left-0 text-xs text-nowrap w-full py-1  rounded text-neutral-950 ${selectedLetters.includes(letter) ? `bg-sky-500` : `bg-sky-500/90`}`}>
                     {formatDivisibleOnlyMultiplier(lc[letter])}
                   </div>
                 }
