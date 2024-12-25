@@ -1,0 +1,614 @@
+d4921fd Initial commit, shipped from quran-tft 02.07.2024
+eb2b9b7 update qurantft.json from quran-tft project
+1d74a43 Fix some listing issues and adjust the mechanism to filter properly
+aa68246 Fix all frontall issues
+6264cd6 Add numeric values of values
+5974321 Fix crashes about out of range sura verse selection, add besmele
+4ae08a6 Fix FATIHA verse numbers and along with all matching keys with excess ALIFs
+ccb4021 covert every letter into default old arabic letter from tatweel and remove diacritics
+da4eaf3 get rid of all arabic helper libraries since they are useless
+1574638 Adjust appereance to prepare for formulating system
+586adaa Implement verse filtering upon formulation and prepare for counting
+a6e1a8d Prepare an array of arabic letters visual for individual letter counting
+f5dadac Count each letter and show them properly and consider responsive design as well
+088dccd Attempt to enable github pages
+4323b5f Update manifest and logo and index.html
+e81cb9d Fix mobil view cant show bottom part
+3548b86 Make sure when a letter selected highlight it on the filtered list
+559a174 Add 19 divisibility formatter and adjust colors
+04b34e7 Include besmele for letter counting when a whole sura is in formula and show 19 multiplier above bottom letters
+e8ba6a1 purify encrypted arabic values using the numeric quran
+12166c4 Show letter details in a single row for more readability
+6e9ff3c Fix AHIRETIH , AYETI, and ELE words
+1a2c866 Adjust colors and comment out the translation for better readability
+365b321 Introduce VerseDetail component to do separation of concern and better multiple verse detail visuals
+9fb918c Fix verse detail scroll loading problem, update bar colors, put border around detail for better visual
+9699614 Introduce summing up and visualising selected letters total divisability
+9eafd9f Adjust grid sections against mobil view
+47ad63b Fix desktop view
+921fb90 Roll back to initial mushaf gathered from quran.com in order to respect to calculation in 41:53 leave hamze elifs as is and rollback all numerical quran replacements
+6c06f2f Fix MALiK and SiRAT words
+6d2ad8d Fix YESTEHZIUN word with the help of 36:30 and knowing YASIN sura has no hidden YE
+0b6cad3 Fix SHEYEN word with the help of 36:23,54,82 and knowing YASIN sura has no hidden YE
+53f7ae3 Fix ALARAEK, MUTAKIUN, TAIRUKUM, AIN and LYN  words with the help of 36:18,19,56 and knowing YASIN sura has no hidden YE
+4270d1b Fix BIDAEAYIK, VARAIY, JYT, AULAYIKE, ALNABIYIN, FANADIHA, ATINI, ISRAIYL, VEEVSANIY, VERAIYA  words with the help of 19:4,5,24,27,30,58,60,74  and knowing MERYEM must have only 343 obvious YE
+9da51ca Fix KITABE, ELSALATEH, ELAHIRAH, EBSARIHIM, GISHAVEH, AMENNA  words with the help of 2:2,3,4,7,8  and knowing BAKARA must have only 4502 ALIF
+e7c57a8 Fix AMINU word with the help of 2:13  and knowing BAKARA must have only 4502 ALIF
+162a533 Fix AMENE word with the help of 2:13  and knowing BAKARA must have only 4502 ALIF
+2ae4947 Fix YESTAHZIY and TUGHYANIHIM words with the help of 2:15  and knowing BAKARA must have only 4502 ALIF
+0d02f7a Fix DDALALEHE, DDALALIHI, TIJARAH words with the help of 2:16  and knowing BAKARA must have only 4502 ALIF
+6b3c2b5 Fix ZULUMAT word with the help of 2:17  and knowing BAKARA must have only 4502 ALIF
+f01a003 Fix ASABIHUM, EZANIHIM, ELSAVAIG, KAFIRYN words with the help of 2:19 and knowing BAKARA must have only 4502 ALIF
+15ece38 Fix YAEYYUHA word with the help of 2:21 and knowing BAKARA must have only 4502 ALIF
+dbf76b3 Fix FIRASHA, SUMERAT words with the help of 2:22 and knowing BAKARA must have only 4502 ALIF
+3076430 Fix SADIGYN  words with the help of 2:23 and knowing BAKARA must have only 4502 ALIF
+959cbdc Fix SALIHAT, JENNETI, ENHAR, MUTESHABIHA, EZVAJ, HGALIDUN  words with the help of 2:25 and knowing BAKARA must have only 4502 ALIF
+6d6b40d Fix FASIGYN  words with the help of 2:26 and knowing BAKARA must have only 4502 ALIF
+e335de8 Fix MYSAGIH, HGASIRUN words with the help of 2:27 and knowing BAKARA must have only 4502 ALIF
+8524d4a Fix EMVATA, AHYAKUM words with the help of 2:28 and knowing BAKARA must have only 4502 ALIF
+0332fe3 Fix FESEVVAHUN, SAMAVAT  words with the help of 2:29 and knowing BAKARA must have only 4502 ALIF
+aaf760e Fix MELAIKETIH  words with the help of 2:30 and knowing BAKARA must have only 4502 ALIF
+5f96d1f Fix ENBIUNY words with the help of 2:31 and knowing BAKARA must have only 4502 ALIF
+5d87a7f Fix SUBHANEKE words with the help of 2:32 and knowing BAKARA must have only 4502 ALIF
+2d30f29 Fix LIADEME words with the help of 2:34 and knowing BAKARA must have only 4502 ALIF
+d95b803 Fix SHI'TUMA, ZALIMIYN words with the help of 2:35 and knowing BAKARA must have only 4502 ALIF
+db5e07f Fix MATA_A words with the help of 2:36 and knowing BAKARA must have only 4502 ALIF
+32530f4 Fix AYATINA, ASHAB  words with the help of 2:39 and knowing BAKARA must have only 4502 ALIF
+36d99f0 Fix YABENIY, ISRAIYL, IYYAYE  words with the help of 2:40 and knowing BAKARA must have only 4502 ALIF
+51d44fe Fix AMINU' words with the help of 2:41 and knowing BAKARA must have only 4502 ALIF
+f8c8fab Fix ELBATIL words with the help of 2:42 and knowing BAKARA must have only 4502 ALIF
+3227f30 Fix ELRAKIIYN words with the help of 2:43 and knowing BAKARA must have only 4502 ALIF
+c0fcc3d Fix RAJIUN words with the help of 2:46 and knowing BAKARA must have only 4502 ALIF
+89e7e81 Fix SHEFAAH words with the help of 2:48 and knowing BAKARA must have only 4502 ALIF
+94f1f71 Fix VAADNA, ZALIMUN words with the help of 2:51 and knowing BAKARA must have only 4502 ALIF
+ac99ece Fix ATAYNA words with the help of 2:53 and knowing BAKARA must have only 4502 ALIF
+61e125e Fix YAGAVMI words with the help of 2:54 and knowing BAKARA must have only 4502 ALIF
+c077290 Fix YAMUSA, SAIGAH  words with the help of 2:55 and knowing BAKARA must have only 4502 ALIF
+4b5c18b Fix BEASNAKUM word with the help of 2:56 and knowing BAKARA must have only 4502 ALIF
+9df364d Fix TAYYIBATI, RAZAGNAKUM  words with the help of 2:57 and knowing BAKARA must have only 4502 ALIF
+375c6f6 Fix SHI'TUM, HATAYAKUM words with the help of 2:58 and knowing BAKARA must have only 4502 ALIF
+025bca0 Fix VAHID, BIAYAT, VEBAEU words with the help of 2:61 and knowing BAKARA must have only 4502 ALIF
+e6ad087 Fix SALIHA, NASARA, SABIIYN words with the help of 2:62 and knowing BAKARA must have only 4502 ALIF
+e87af53 Fix MISAGAKUM, ATAYNAKUM  words with the help of 2:63 and knowing BAKARA must have only 4502 ALIF
+f036980 Fix HASIRUN words with the help of 2:64 and knowing BAKARA must have only 4502 ALIF
+9c36eff Fix HASIIYN  words with the help of 2:65 and knowing BAKARA must have only 4502 ALIF
+e4a7d80 Fix CEALNAHA, NEKALA words with the help of 2:66 and knowing BAKARA must have only 4502 ALIF
+449eeb7 Fix CAHILIYN  words with the help of 2:67 and knowing BAKARA must have only 4502 ALIF
+6accdaf Fix NAZIRIYN  words with the help of 2:69 and knowing BAKARA must have only 4502 ALIF
+3039518 Fix TESHABEHE words with the help of 2:70 and knowing BAKARA must have only 4502 ALIF
+d51eb9a Fix FADDARAETUM words with the help of 2:72 and knowing BAKARA must have only 4502 ALIF
+3d0ed9d Fix GHAFIL words with the help of 2:74 and knowing BAKARA must have only 4502 ALIF
+9ba3a7c Fix KELAM words with the help of 2:75 and knowing BAKARA must have only 4502 ALIF
+254f6da Fix VEEHATAT, SEYYIAH, HATIYETUHU  words with the help of 2:81 and knowing BAKARA must have only 4502 ALIF
+1e1bb00 Fix MESAKIYN, MISAGA, VALIDEYN, YETAMA, VEATU, ZEKAT words with the help of 2:83 and knowing BAKARA must have only 4502 ALIF
+f9d3080 Fix DIYARIKUM words with the help of 2:84 and knowing BAKARA must have only 4502 ALIF
+072b485 Fix DIYARIHIM, TEZAHERUN, UDVANI, USARA, TUFADUHUM, HAYATI, GIYAMEH,  words with the help of 2:85 and knowing BAKARA must have only 4502 ALIF
+f8d4e64 Fix BEYYINAT, YEDNAHU words with the help of 2:87 and knowing BAKARA must have only 4502 ALIF
+5c5cf3a Fix BI'SAMA words with the help of 2:90 and knowing BAKARA must have only 4502 ALIF
+89f6f20 Fix IMANUKUM words with the help of 2:93 and knowing BAKARA must have only 4502 ALIF
+9cb630c Fix HAYATIN words with the help of 2:96 and knowing BAKARA must have only 4502 ALIF
+ba8a4b6 Fix MELAIKETIH, MIKAIL words with the help of 2:98 and knowing BAKARA must have only 4502 ALIF
+7535367 Fix AYETI, BEYYINAT, ELFASIGUN  words with the help of 2:99 and knowing BAKARA must have only 4502 ALIF
+857039e Fix AHADA  words with the help of 2:100 and knowing BAKARA must have only 4502 ALIF
+d10d373 Fix SHEYATINE, HARUT, MARUT, ESHTERAHU, BI'SA, SULEYMAN  words with the help of 2:102 and knowing BAKARA must have only 4502 ALIF
+5b5105b Fix RAINA  words with the help of 2:104 and knowing BAKARA must have only 4502 ALIF
+a4ad00d Fix AYAH  words with the help of 2:106 and knowing BAKARA must have only 4502 ALIF
+c22eac8 Fix HANEKUM, NASARA words with the help of 2:111 and knowing BAKARA must have only 4502 ALIF
+064d1eb Fix MESACIDE words with the help of 2:114 and knowing BAKARA must have only 4502 ALIF
+bca15ae Fix VASIU words with the help of 2:115 and knowing BAKARA must have only 4502 ALIF
+94ddcf3 Fix SUBHANEH, GANITUN words with the help of 2:116 and knowing BAKARA must have only 4502 ALIF
+997c07d Fix ELAYATI words with the help of 2:118 and knowing BAKARA must have only 4502 ALIF
+1195c18 Fix ERSELNAKE words with the help of 2:119 and knowing BAKARA must have only 4502 ALIF
+34eb0ff Fix ATEYNAHUM words with the help of 2:121 and knowing BAKARA must have only 4502 ALIF
+c271ead Fix IBRAHYM, KELIMATIN words with the help of 2:124 and knowing BAKARA must have only 4502 ALIF
+63cf062 Fix VELAKIFIN, ISMAIL, TAIFIN words with the help of 2:125 and knowing BAKARA must have only 4502 ALIF
+6380a70 Fix AYETIKE, YETLUV words with the help of 2:129 and knowing BAKARA must have only 4502 ALIF
+03e0973 Fix SALIHYN, ESTAFAYNAHU words with the help of 2:130 and knowing BAKARA must have only 4502 ALIF
+ae144e9 Fix ISHAG words with the help of 2:136 and knowing BAKARA must have only 4502 ALIF
+8fe5218 Fix ABIDUN words with the help of 2:138 and knowing BAKARA must have only 4502 ALIF
+0b79c30 Fix AGMALUNA words with the help of 2:139 and knowing BAKARA must have only 4502 ALIF
+020754d Fix SHADATEN, EENTUM words with the help of 2:140 and knowing BAKARA must have only 4502 ALIF
+6ac2cd4 Fix LEHUM words with the help of 2:142 and knowing BAKARA must have only 4502 ALIF
+ea7339f Fix JEALNAKUM words with the help of 2:143 and knowing BAKARA must have only 4502 ALIF
+67972ec Fix TERDDAHA words with the help of 2:144 and knowing BAKARA must have only 4502 ALIF
+66d2c62 Fix HAYRATI words with the help of 2:148 and knowing BAKARA must have only 4502 ALIF
+f563fc1 Fix SABIRIYN words with the help of 2:153 and knowing BAKARA must have only 4502 ALIF
+121d274 Fix EMVAT words with the help of 2:154 and knowing BAKARA must have only 4502 ALIF
+0cfa501 Fix EMVALI words with the help of 2:155 and knowing BAKARA must have only 4502 ALIF
+3e4d355 Fix SABETHUM words with the help of 2:156 and knowing BAKARA must have only 4502 ALIF
+5339ca8 Fix SALAVAT words with the help of 2:157 and knowing BAKARA must have only 4502 ALIF
+df72a1a Fix SHEAEIR words with the help of 2:158 and knowing BAKARA must have only 4502 ALIF
+026f26c Fix BEYYENAH, ENJEYNAHU, LAINUN words with the help of 2:159 and knowing BAKARA must have only 4502 ALIF
+ebd5298 Fix HGALIDIN words with the help of 2:162 and knowing BAKARA must have only 4502 ALIF
+11b4f02 Fix IGHTILAF, ELRIYAH words with the help of 2:164 and knowing BAKARA must have only 4502 ALIF
+93493c4 Fix AMALEHUM, HASARAT, BIGHARIJYN words with the help of 2:167 and knowing BAKARA must have only 4502 ALIF
+9514171 Fix HALAL, GHATATI words with the help of 2:168 and knowing BAKARA must have only 4502 ALIF
+b56ad87 Fix ABAENA, ABAVUHUM words with the help of 2:170 and knowing BAKARA must have only 4502 ALIF
+4ce9815 Fix VEATA, SAILYN words with the help of 2:174 and knowing BAKARA must have only 4502 ALIF
+025546e Fix IGHSAN words with the help of 2:178 and knowing BAKARA must have only 4502 ALIF
+92044e5 Fix ELBAB, YAVLI words with the help of 2:179 and knowing BAKARA must have only 4502 ALIF
+720455a Fix MADUDAT words with the help of 2:184 and knowing BAKARA must have only 4502 ALIF
+4fc6626 Fix HADAKUM words with the help of 2:185 and knowing BAKARA must have only 4502 ALIF
+7f2d62e Fix FELEN, NISAIKUM, BESHIRUHUM, AKIFUN, MESAJID words with the help of 2:187 and knowing BAKARA must have only 4502 ALIF
+06b67da Fix YESELUNEKE, MAVAGYT, VE'TU, EBVABIHA  words with the help of 2:189 and knowing BAKARA must have only 4502 ALIF
+834d778 Fix GATILU, YUGATILUNEKUM  words with the help of 2:190 and knowing BAKARA must have only 4502 ALIF
+cc83aec Fix GATILUHUM, GATELUKUM  words with the help of 2:191 and knowing BAKARA must have only 4502 ALIF
+15566c2 Fix UDVANE words with the help of 2:193 and knowing BAKARA must have only 4502 ALIF
+cb97af6 Fix HURUMAT  words with the help of 2:194 and knowing BAKARA must have only 4502 ALIF
+fede98e Fix SELASEH, differantiate FEIZA EMINTUM and EM EMINTUM with AMENTUM  words with the help of 2:196 and knowing BAKARA must have only 4502 ALIF
+720eadf Fix MALUMAT  words with the help of 2:197 and knowing BAKARA must have only 4502 ALIF
+00558e0 Fix ARAFAT  words with the help of 2:198 and knowing BAKARA must have only 4502 ALIF
+af18fc2 Fix ATINA, MENASIKEKUM words with the help of 2:200,201 and knowing BAKARA must have only 4502 ALIF
+31568ee Fix NESTETAU words with the help of 2:217 and knowing BAKARA must have only 4502 ALIF
+c1c14fb Fix CAHEDU words with the help of 2:218 and knowing BAKARA must have only 4502 ALIF
+29d0e54 Fix IGHVANUKUM words with the help of 2:220 and knowing BAKARA must have only 4502 ALIF
+73147a8 Fix TEVVABYN words with the help of 2:222 and knowing BAKARA must have only 4502 ALIF
+0abd1bd Fix MULAGUHU words with the help of 2:223 and knowing BAKARA must have only 4502 ALIF
+929a621 Fix NISAIHIM, FAU  words with the help of 2:226 and knowing BAKARA must have only 4502 ALIF
+75b2f3b Fix TALAG  words with the help of 2:227 and knowing BAKARA must have only 4502 ALIF
+2a7dfb6 Fix ISLAHEN, MUTALLEGATU words with the help of 2:228 and knowing BAKARA must have only 4502 ALIF
+2ba942d Fix ATEYTUMUHUM words with the help of 2:229 and knowing BAKARA must have only 4502 ALIF
+fdfc8de Fix TERADzAV words with the help of 2:232 and knowing BAKARA must have only 4502 ALIF
+5fdac7b Fix VALIDAT, EVLADEHUN, VALIDEH words with the help of 2:233 and knowing BAKARA must have only 4502 ALIF
+57434ac Fix YAFUV words with the help of 2:237 and knowing BAKARA must have only 4502 ALIF
+1f9f210 Fix GHAFIZU, GANITYN words with the help of 2:238 and knowing BAKARA must have only 4502 ALIF
+1b915ad Fix FEYUDzAIFEHU  words with the help of 2:245 and knowing BAKARA must have only 4502 ALIF
+040c7e4 Fix TUGATIL, DIYARINA ENAINA words with the help of 2:246 and knowing BAKARA must have only 4502 ALIF
+2d6a9fb Fix ESTAFAHU words with the help of 2:247 and knowing BAKARA must have only 4502 ALIF
+bb0fac6 Fix MULAGU, FIETE words with the help of 2:249 and knowing BAKARA must have only 4502 ALIF
+85f05e8 Fix DARAJAT words with the help of 2:253 and knowing BAKARA must have only 4502 ALIF
+90a36e9 Fix KAFIRUN words with the help of 2:254 and knowing BAKARA must have only 4502 ALIF
+551e853 Fix YEUDUHU words with the help of 2:255 and knowing BAKARA must have only 4502 ALIF
+b273704 Fix TAHgUT words with the help of 2:256 and knowing BAKARA must have only 4502 ALIF
+ad98de6 Fix MA'AH words with the help of 2:259 and knowing BAKARA must have only 4502 ALIF
+d1338b4 Fix LIYATMAIN words with the help of 2:260 and knowing BAKARA must have only 4502 ALIF
+a63236e Fix YUDzaIFU words with the help of 2:261 and knowing BAKARA must have only 4502 ALIF
+c443dfe Fix SADAGATIKUM, RIAE words with the help of 2:264 and knowing BAKARA must have only 4502 ALIF
+fb815f6 Fix FEATET words with the help of 2:265 and knowing BAKARA must have only 4502 ALIF
+ce2978e Fix ENHAR words with the help of 2:266 and knowing BAKARA must have only 4502 ALIF
+707826d Fix BIAHgIZIH words with the help of 2:267 and knowing BAKARA must have only 4502 ALIF
+cfd2627 Fix ULU' words with the help of 2:269 and knowing BAKARA must have only 4502 ALIF
+7688cc1 Fix SAYYIATIKUM, SADAGATI words with the help of 2:271 and knowing BAKARA must have only 4502 ALIF
+9982606 Fix HUDAYHUM words with the help of 2:272 and knowing BAKARA must have only 4502 ALIF
+3b59890 Fix BISIYMAHUM words with the help of 2:273 and knowing BAKARA must have only 4502 ALIF
+28e5c95 Fix several words I cant count of now and knowing BAKARA must have only 4502 ALIF
+8abdd29 Fix ENBI_UNI word with the help of 2:31 and knowing BAKARA must have only 4502 ALIF
+aed8295 Fix IHSANA words with the help of 2:83 and knowing BAKARA must have only 4502 ALIF
+c1f8e5c Fix YETLUN words with the help of 2:113 and knowing BAKARA must have only 4502 ALIF
+3f0c564 Fix YUTLUNEH words with the help of 2:121 and knowing BAKARA must have only 4502 ALIF
+df6f1ca Fix ABAIKE words with the help of 2:133 and knowing BAKARA must have only 4502 ALIF
+8efbb89 Fix ELLEYLI words with the help of 2:164 and knowing BAKARA must have only 3202 LAM
+e8a6089 Fix VE'TU' words with the help of 2:189 and knowing BAKARA must have only 4502 ALIF
+09b83dd Fix and differantiate VEATUV with VE'TU  words with the help of 2:43 and knowing BAKARA must have only 4502 ALIF
+2eb1074 Fix FIEH words with the help of 2:249 and 3:13 and knowing BAKARA must have only 4502 ALIF
+f1e6605 Fix MI'EH words with the help of 2:259 and knowing BAKARA must have only 4502 ALIF
+6468a49 Fix ELAYATINA, TE'TINA words with the help of 2:118,266 and knowing BAKARA must have only 4502 ALIF
+5537d5e Fix VEMENAFIU words with the help of 2:219 and knowing BAKARA must have only 4502 ALIF
+dcea098 Fix MEVLANA words with the help of 2:286 and knowing BAKARA must have only 4502 ALIF
+1be6d50 Fix FERIHAN words with the help of 2:283 and knowing BAKARA must have only 4502 ALIF
+f2b9eec Fix TESEMUVE' words with the help of 2:282 and knowing BAKARA must have only 4502 ALIF
+8b7df7d Fix VEBI'SE words with the help of 2:126 and knowing BAKARA must have only 4502 ALIF
+32db8ab Fix SUILE words with the help of 2:108 and knowing BAKARA must have only 4502 ALIF
+b0d446b Fix GHAIFIN words with the help of 2:114 and knowing BAKARA must have only 4502 ALIF
+57002b0 Fix LIELLA words with the help of 2:150 and knowing BAKARA must have only 4502 ALIF
+3a69250 Fix ALU, VEALU words with the help of 2:248 and knowing BAKARA must have only 4502 ALIF
+31efbb7 Fix TEVRAH words with the help of 3:3 and knowing ALI IMRAN must have only 2521 ALIF
+eae9839 Fix MUHKEMAT, RASIHgUN  words with the help of 3:7 and knowing ALI IMRAN must have only 2521 ALIF
+d5ccf93 Fix EVLADUHUM words with the help of 3:10 and knowing ALI IMRAN must have only 2521 ALIF
+9f05fa7 Fix ALI FIRAVNE words with the help of 3:11 and knowing ALI IMRAN must have only 2521 ALIF
+2d8bd72 Fix EBSAR, FIETYN, TUGATILU words with the help of 3:13 and knowing ALI IMRAN must have only 2521 ALIF
+864061a Fix SHAVAT, EL ENAM words with the help of 3:14 and knowing ALI IMRAN must have only 2521 ALIF
+462ad52 Fix EVNEBIUKUM, RIDzVANU words with the help of 3:15 and knowing ALI IMRAN must have only 2521 ALIF
+89d63c5 Fix GANITINE words with the help of 3:17 and knowing ALI IMRAN must have only 2521 ALIF
+28b913e Fix FEIMA, VEU'LU words with the help of 3:18 and knowing ALI IMRAN must have only 2521 ALIF
+8b3a186 Fix ISLAM words with the help of 3:19 and knowing ALI IMRAN must have only 2521 ALIF
+fe79e25 Fix BELAGh words with the help of 3:20 and knowing ALI IMRAN must have only 2521 ALIF
+4759780 Fix hamza placement in VELAHIRAH
+edb06e6 Fix NASIRIN words with the help of 3:22 and knowing ALI IMRAN must have only 2521 ALIF
+60a045d Fix CEMANAHUM words with the help of 3:25 and knowing ALI IMRAN must have only 2521 ALIF
+4abe4e5 Fix TUGAH words with the help of 3:28 and knowing ALI IMRAN must have only 2521 ALIF
+e5ef465 Fix ALE IBRAHYM, ALE IMRAN words with the help of 3:33 and knowing ALI IMRAN must have only 2521 ALIF
+8fa9bf5 Fix YAMERYEM words with the help of 3:37 and knowing ALI IMRAN must have only 2521 ALIF
+ddfb765 Fix GhULAM words with the help of 3:40 and knowing ALI IMRAN must have only 2521 ALIF
+faf5914 Fix ESTAFAKE words with the help of 3:42 and knowing ALI IMRAN must have only 2521 ALIF
+acf820d Fix EGLAMEHUM  words with the help of 3:44 and knowing ALI IMRAN must have only 2521 ALIF
+133e6a3 Fix KEHEYEH, UBRIU, BIIZNI, BIAYAH, VEUHYI, LEAYAH  words with the help of 3:49 and knowing ALI IMRAN must have only 2521 ALIF
+2387a6f Fix SHADIYN  words with the help of 3:53 and knowing ALI IMRAN must have only 2521 ALIF
+9d82b24 Fix MAKIRIYN  words with the help of 3:54 and knowing ALI IMRAN must have only 2521 ALIF
+9b53059 Fix YAISA words with the help of 3:55 and knowing ALI IMRAN must have only 2521 ALIF
+cf871a2 Fix YAEHLU words with the help of 3:64 and knowing ALI IMRAN must have only 2521 ALIF
+fc6e73f Fix HAENTUM words with the help of 3:66 and knowing ALI IMRAN must have only 2521 ALIF
+64a28b2 Fix AHgIRAH words with the help of 3:72 and knowing ALI IMRAN must have only 2521 ALIF
+6bed25f Fix hamza placement in ELAHgIRAH
+6617415 Fix EYMANIHIM, HgALAG words with the help of 3:77 and knowing ALI IMRAN must have only 2521 ALIF
+ba85e96 Fix RABBANIYYIN words with the help of 3:79 and knowing ALI IMRAN must have only 2521 ALIF
+b0ef4e5 Fix EGRARTUM, ATEYTUKUM words with the help of 3:81 and knowing ALI IMRAN must have only 2521 ALIF
+b3c3aff Fix TAIFEH, JAHILIYEH, HAHUNA words with the help of 3:154 and knowing ALI IMRAN must have only 2521 ALIF
+f225ed5 Fix ALEMIYN words with the help of 3:96 and knowing ALI IMRAN must have only 2521 ALIF
+def98c5 Fix IHgVANA words with the help of 3:103 and knowing ALI IMRAN must have only 2521 ALIF
+7d0eb51 Fix GAIMEH, ENAE words with the help of 3:113 and knowing ALI IMRAN must have only 2521 ALIF
+ada6e49 Fix SARIUN words with the help of 3:114 and knowing ALI IMRAN must have only 2521 ALIF
+211ad74 Fix EFVAHIHIM words with the help of 3:118 and knowing ALI IMRAN must have only 2521 ALIF
+9f07240 Fix EDzAFA words with the help of 3:130 and knowing ALI IMRAN must have only 2521 ALIF
+11a80b6 Fix KAZIMYN words with the help of 3:134 and knowing ALI IMRAN must have only 2521 ALIF
+d5a873d Fix FAHISHEH words with the help of 3:135 and knowing ALI IMRAN must have only 2521 ALIF
+096e353 Fix AMILYN words with the help of 3:136 and knowing ALI IMRAN must have only 2521 ALIF
+4d67935 Fix AGIBEH words with the help of 3:137 and knowing ALI IMRAN must have only 2521 ALIF
+c69c3c2 Fix AGABIKUM, SHAKIRYN  words with the help of 3:144 and knowing ALI IMRAN must have only 2521 ALIF
+d4723b2 Fix GATELE words with the help of 3:146 and knowing ALI IMRAN must have only 2521 ALIF
+951042c Fix ME'LAKUM words with the help of 3:150 and knowing ALI IMRAN must have only 2521 ALIF
+4fb4c33 Fix VEMAVEHUM, SULTANE words with the help of 3:151 and knowing ALI IMRAN must have only 2521 ALIF
+4d856c8 Fix VETENAZATUM, ERAKUM  words with the help of 3:152 and knowing ALI IMRAN must have only 2521 ALIF
+8e8569f Fix FEESABEKUM, ESABEKUM, UHgRAKUM  words with the help of 3:153 and knowing ALI IMRAN must have only 2521 ALIF
+477b49d Fix IHgVANIHIM  words with the help of 3:156 and knowing ALI IMRAN must have only 2521 ALIF
+3efd33f Fix VEMA'VEHU  words with the help of 3:162 and knowing ALI IMRAN must have only 2521 ALIF
+7f9763b Fix SABETKUM words with the help of 3:165 and knowing ALI IMRAN must have only 2521 ALIF
+c00a2d5 Fix TEBANAKUM, IMANI words with the help of 3:167 and knowing ALI IMRAN must have only 2521 ALIF
+dc44105 Fix FEAMINU words with the help of 3:179 and knowing ALI IMRAN must have only 2521 ALIF
+ad7f371 Fix ATAHUM, MIRASU words with the help of 3:180 and knowing ALI IMRAN must have only 2521 ALIF
+b922cc5 Fix YE'TIYENA words with the help of 3:183 and knowing ALI IMRAN must have only 2521 ALIF
+770cad5 Fix JAU words with the help of 3:184 and knowing ALI IMRAN must have only 2521 ALIF
+3b042fc Fix FEBI'SE words with the help of 3:187 and knowing ALI IMRAN must have only 2521 ALIF
+0852c84 Fix GIYAMA, BATILA words with the help of 3:191 and knowing ALI IMRAN must have only 2521 ALIF
+d12d8b2 Fix SEYYIATINA, FEAMENNA  words with the help of 3:193 and knowing ALI IMRAN must have only 2521 ALIF
+b352331 Fix BILAD  words with the help of 3:196 and knowing ALI IMRAN must have only 2521 ALIF
+c631fdc Fix LIILA words with the help of 3:158 and knowing ALI IMRAN must have only 2521 ALIF
+db7fcea Fix CEYNAKUM words with the help of 2:49 and knowing BAKARA must have only 4502 ALIF
+c8763a9 Fix BIIZNI words with the help of 2:97 and knowing BAKARA must have only 4502 ALIF
+3dc0cc5 Fix TETLU' words with the help of 2:102 and knowing BAKARA must have only 4502 ALIF
+1e8064c Fix ADzAFA words with the help of 3:130 and knowing ALI IMRAN must have only 2521 ALIF
+1fd4f52 Fix IyMAN and KEMA SUILE words with the help of 2:108 and knowing BAKARA must have only 4502 ALIF
+33987d7 Fix KAZIBYN  words with the help of 29:3 and knowing ANKABOOT must have only 774 ALIF
+866c06d Fix SEYYIAT words with the help of 29:4 and knowing ANKABOOT must have only 774 ALIF
+02bacbd Fix LEATI, YERJU'  words with the help of 29:5 and knowing ANKABOOT must have only 774 ALIF
+888b60b Fix JAHEDE  words with the help of 29:6 and knowing ANKABOOT must have only 774 ALIF
+b85e6ca Fix INSAN, VALIDEYHI  words with the help of 29:8 and knowing ANKABOOT must have only 774 ALIF
+0a6fc6a Fix MUNAFIGYN words with the help of 29:11 and knowing ANKABOOT must have only 774 ALIF
+4d864a9 Fix HgATAYAKUM, BIHAMILYN, KAZIBUN words with the help of 29:12 and knowing ANKABOOT must have only 774 ALIF
+066b3e3 Fix EVSANA words with the help of 29:17 and knowing ANKABOOT must have only 774 ALIF
+9a93f76 Fix YUNSHIU words with the help of 29:20 and knowing ANKABOOT must have only 774 ALIF
+f4d0dd5 Fix VELIGAIHI, YEISU' words with the help of 29:23 and knowing ANKABOOT must have only 774 ALIF
+56aefda Fix ENJAHU words with the help of 29:24 and knowing ANKABOOT must have only 774 ALIF
+a0dbf51 Fix MA'VAKUM words with the help of 29:25 and knowing ANKABOOT must have only 774 ALIF
+2f7b08e Fix FEAMENE words with the help of 29:26 and knowing ANKABOOT must have only 774 ALIF
+d009023 Fix ATEYNAH words with the help of 29:27 and knowing ANKABOOT must have only 774 ALIF
+6562326 Fix 'EYTINA, EINNEKUM  words with the help of 29:29 and knowing ANKABOOT must have only 774 ALIF
+ff1aea9 Fix MUHLIKU' words with the help of 29:31 and knowing ANKABOOT must have only 774 ALIF
+eb78c7d Fix HgABIRYN words with the help of 29:32 and knowing ANKABOOT must have only 774 ALIF
+d2f2943 Fix JASIMYN  words with the help of 29:37 and knowing ANKABOOT must have only 774 ALIF
+4e9d213 Fix VEHAMANE, SABIGIYN, GARUN words with the help of 29:39 and knowing ANKABOOT must have only 774 ALIF
+fe3c673 Fix EMSAL, ALIMUN words with the help of 29:43 and knowing ANKABOOT must have only 774 ALIF
+3ac435e Fix TUJADILUVE' words with the help of 29:46 and knowing ANKABOOT must have only 774 ALIF
+0e9db26 Fix YEHgSHAHUM words with the help of 29:55 and knowing ANKABOOT must have only 774 ALIF
+4f50fc6 Fix YAIBADI, VASIAH words with the help of 29:56 and knowing ANKABOOT must have only 774 ALIF
+625defc Fix NEJJAHUM words with the help of 29:65 and knowing ANKABOOT must have only 774 ALIF
+0ffbfa9 Fix YUBDIU words with the help of 29:19 and knowing ANKABOOT must have only 774 ALIF
+c92c66e Fix ZAIGUH, LENUBEVVIENNEKUM words with the help of 29:57,58 and knowing ANKABOOT must have only 774 ALIF
+f24b1dd Fix AMILIN words with the help of 3:195 and knowing ALI IMRAN must have only 2521 ALIF
+597373d Fix EBNAENA words with the help of 3:61 and knowing ALI IMRAN must have only 2521 ALIF
+3b94611 Fix VELAIN words with the help of 29:10,61,63 and knowing ANKABOOT must have only 774 ALIF
+f15fa43 Fix hamza placement in LEADEME word
+f8e5b9d Fix AFAGI knowing 41:53 must have only 74 letters
+cb42382 Fix ZAHIRA words with the help of 30:7 and knowing RUM must have only 544 ALIF
+638d57c Fix BILIGAI words with the help of 30:8 and knowing RUM must have only 544 ALIF
+d80035a Fix ESAU' words with the help of 30:10 and knowing RUM must have only 544 ALIF
+63cd47c Fix SHURAKAIHIM, SHAFAAU' words with the help of 30:13 and knowing RUM must have only 544 ALIF
+ef690fd Fix VELIGAI words with the help of 30:16 and knowing RUM must have only 544 ALIF
+b035065 Fix SUBHANE words with the help of 30:17 and knowing RUM must have only 544 ALIF
+1e5c369 Fix VELVANIKUM words with the help of 30:22 and knowing RUM must have only 544 ALIF
+820d086 Fix SEYYIETEN words with the help of 30:36 and knowing RUM must have only 544 ALIF
+4f81e46 Fix FEATI words with the help of 30:38 and knowing RUM must have only 544 ALIF
+9433bcb Fix ATAYTUM, LIYERBUVE' words with the help of 30:39 and knowing RUM must have only 544 ALIF
+1eaf272 Fix TEALA words with the help of 30:40 and knowing RUM must have only 544 ALIF
+ce41041 Fix HgILALIH words with the help of 30:48 and knowing RUM must have only 544 ALIF
+879b2fa Fix LGURAN words with the help of 30:58 and knowing RUM must have only 544 ALIF
+24b6d65 Fix BEYYINAT words with the help of 2:185 and knowing BAKARA must have only 4502 ALIF
+192de96 Fix VELVALIDAT, EVLADEKUM words with the help of 2:233 and knowing BAKARA must have only 4502 ALIF
+4a305b3 Fix YUHYI and differantiate FEET, FETHUM, FETAHUM, FEAT and YAIBRAHYM IBRAHYM IBRAHIM words with the help of 2:258 and knowing BAKARA must have only 4502 ALIF
+57b189e Fix REVASIYE words with the help of 31:10 and knowing LUQMAAN must have only 347 ALIF
+9206be3 Fix LUGMAN words with the help of 31:12 and knowing LUQMAAN must have only 347 ALIF
+8e971cd Fix VEFISALUHU, VELIVALIDEYKE words with the help of 31:14 and knowing LUQMAAN must have only 347 ALIF
+9ab7846 Fix ESVAT words with the help of 31:19 and knowing LUQMAAN must have only 347 ALIF
+8b9d52c Fix YUJADILU, ZAHIRAH  words with the help of 31:20 and knowing LUQMAAN must have only 347 ALIF
+fed4e2b Fix EGLAMU words with the help of 31:27 and knowing LUQMAAN must have only 347 ALIF
+c6c753d Fix AYATEH, LEAYAT words with the help of 31:31 and knowing LUQMAAN must have only 347 ALIF
+b0f0c1c Fix EGTERAHU and differantiate ATAYHUM, ATAHUMA, VETAHUM, ATIHIM words with the help of 32:3 and knowing SAJDAH must have only 570 ALIF
+a69e7dd Fix ALIMU words with the help of 32:6 and knowing SAJDAH must have only 570 ALIF
+c886b0a Fix SULALEH words with the help of 32:8 and knowing SAJDAH must have only 570 ALIF
+c1aff01 Fix SEVVAHU, LEF'IDEH words with the help of 32:9 and knowing SAJDAH must have only 570 ALIF
+b87cc6c Fix EINNA, EIZA, BILIGAI words with the help of 32:10 and knowing SAJDAH must have only 570 ALIF
+e7dd96b Fix YETEVEFFEKUM words with the help of 32:11 and knowing SAJDAH must have only 570 ALIF
+43618bf Fix HUDAHA, SHI'NA  words with the help of 32:13 and knowing SAJDAH must have only 570 ALIF
+b4ca1e3 Fix NASINAKUM words with the help of 32:14 and knowing SAJDAH must have only 570 ALIF
+747d25b Fix ENAMUHUM words with the help of 32:27 and knowing SAJDAH must have only 570 ALIF
+fe3af12 Fix LESAHIRU words with the help of 10:2 and knowing JONAH must have only 1319 ALIF
+412feaf Fix DAVAHUM, AHgIRU, SELAMU words with the help of 10:10 and knowing JONAH must have only 1319 ALIF
+b9ab61c Fix HgALAIFE words with the help of 10:14 and knowing JONAH must have only 1319 ALIF
+651e7d1 Fix GURANU words with the help of 10:15 and knowing JONAH must have only 1319 ALIF
+8956a26 Fix EDRAKUM words with the help of 10:16 and knowing JONAH must have only 1319 ALIF
+0957055 Fix ETUNEBBIUNE, SHEFEAUNA words with the help of 10:18 and knowing JONAH must have only 1319 ALIF
+5deb91e Fix EYATINA words with the help of 10:21 and knowing JONAH must have only 1319 ALIF
+1fa7b4c Fix ENZELNAHU, GADIRUN, ETAHA words with the help of 10:24 and knowing JONAH must have only 1319 ALIF
+5bb16f1 Fix YED'U' words with the help of 10:25 and knowing JONAH must have only 1319 ALIF
+1e4cb99 Fix TEBLU' words with the help of 10:30 and knowing JONAH must have only 1319 ALIF
+aeb61ad Fix and differantiate AMENE, AMIN, EMMEN and EMINE words with the help of 10:35 and knowing JONAH must have only 1319 ALIF
+0f175bd Fix and BERIUN, BERIU words with the help of 10:41 and knowing JONAH must have only 1319 ALIF
+2852f7d Fix and YESTE'HgIRUN words with the help of 10:49 and knowing JONAH must have only 1319 ALIF
+c4cad81 Fix and ETAKUM, BEYATA  words with the help of 10:50 and knowing JONAH must have only 1319 ALIF
+b089a72 Fix and EELANA  words with the help of 10:51 and knowing JONAH must have only 1319 ALIF
+fdab125 Fix and YESTENBIUNEKE words with the help of 10:53 and knowing JONAH must have only 1319 ALIF
+70a92d2 Fix and ERAEYTUM, GUL E ALLAHU words with the help of 10:59 and knowing JONAH must have only 1319 ALIF
+9a544e1 Fix and SULTANU words with the help of 10:68 and knowing JONAH must have only 1319 ALIF
+156491c Fix and SAHIRI words with the help of 10:79 and knowing JONAH must have only 1319 ALIF
+7fda3de Fix and VEMELAIYHIM words with the help of 10:83 and knowing JONAH must have only 1319 ALIF
+2a45186 Fix and TEBEVVEA words with the help of 10:87 and knowing JONAH must have only 1319 ALIF
+5249236 Fix and ATEYTE words that proves VELAIN must be with YE not HAMZA with the help of 10:88 and knowing JONAH must have only 1319 ALIF
+3d55aa7 Fix and AMENTU words with the help of 10:90 and knowing JONAH must have only 1319 ALIF
+d4e0859 Fix and FES'ELI words with the help of 10:94 and knowing JONAH must have only 1319 ALIF
+e4dfc7d Fix and METANAHUM words with the help of 10:98 and knowing JONAH must have only 1319 ALIF
+faa700d Fix and LEAMENE words with the help of 10:99 and knowing JONAH must have only 1319 ALIF
+f9f2bf8 Fix and HAKIMYN words with the help of 10:109 and knowing JONAH must have only 1319 ALIF
+fd74c29 Fix and differantiate ELANE and ALANE words with the help of 2:71 and knowing BAKARA must have only 4502 ALIF
+e1f1ee4 Fix MUSHRIKAT words with the help of 2:221 and knowing BAKARA must have only 4502 ALIF
+64069fd Fix and differantiate ASIMU, ISMA, ISMU and ESUMME words with the help of 2:283 and knowing BAKARA must have only 4502 ALIF
+5f7b6bb Fix LEYEUSU, NEZANAHA words with the help of 11:9 and knowing HOOD must have only 1370 ALIF
+1231b28 Fix ELSEYYIET words with the help of 11:10 and knowing HOOD must have only 1370 ALIF
+3d2aa55 Fix MUFTERAYAT words with the help of 11:13 and knowing HOOD must have only 1370 ALIF
+dfb1133 Fix VEBATILU words with the help of 11:16 and knowing HOOD must have only 1370 ALIF
+b1b7379 Fix VEYETLU words with the help of 11:17 and knowing HOOD must have only 1370 ALIF
+5c11f1b Fix EL'ESH'HADU words with the help of 11:18 and knowing HOOD must have only 1370 ALIF
+04eaf4c Fix NARAKE words with the help of 11:27 and knowing HOOD must have only 1370 ALIF
+de400ad Fix KARIHUN words with the help of 11:28 and knowing HOOD must have only 1370 ALIF
+63aebab Fix ES'ELUKUM words with the help of 11:29 and knowing HOOD must have only 1370 ALIF
+777cdb1 Fix HgAZAILU words with the help of 11:31 and knowing HOOD must have only 1370 ALIF
+566cb63 Fix YANUH, JADELTENA, JIDALNA words with the help of 11:32 and knowing HOOD must have only 1370 ALIF
+82c056a Fix TUHgATIBNY words with the help of 11:37 and knowing HOOD must have only 1370 ALIF
+a37f889 Fix MEJRAHA, MERSAHA words with the help of 11:41 and knowing HOOD must have only 1370 ALIF
+36660ad Fix SEAVI words with the help of 11:43 and knowing HOOD must have only 1370 ALIF
+700d9c5 Fix VEYASEMAU, YAERDzU words with the help of 11:44 and knowing HOOD must have only 1370 ALIF
+cae20b5 Fix SALIH words with the help of 11:46 and knowing HOOD must have only 1370 ALIF
+4c33bbb Fix BERAKAT words with the help of 11:48 and knowing HOOD must have only 1370 ALIF
+e6dfe61 Fix YAHUD, ALIHETINA words with the help of 11:53 and knowing HOOD must have only 1370 ALIF
+a15f66d Fix AHgIZU words with the help of 11:56 and knowing HOOD must have only 1370 ALIF
+0b19ce5 Fix SEMUDA' words with the help of 11:68 and knowing HOOD must have only 1370 ALIF
+cc40f82 Fix RA words with the help of 11:70 and knowing HOOD must have only 1370 ALIF
+08dac3e Fix BESHSHERNAHA words with the help of 11:71 and knowing HOOD must have only 1370 ALIF
+22b6147 Fix YAVE'LETA words with the help of 11:72 and knowing HOOD must have only 1370 ALIF
+0ca8db3 Fix EVVAHU words with the help of 11:75 and knowing HOOD must have only 1370 ALIF
+9f0d959 Fix ATIHIM words with the help of 11:76 and knowing HOOD must have only 1370 ALIF
+3e08a3b Fix AVE  words with the help of 11:80 and knowing HOOD must have only 1370 ALIF
+139baf8 Fix YALUT words with the help of 11:81 and knowing HOOD must have only 1370 ALIF
+71ac3f5 Fix ALIYEHA words with the help of 11:82 and knowing HOOD must have only 1370 ALIF
+d718baf Fix SALATUKE, ABAUNA, YASHUAYB, NESHAU' words with the help of 11:87 and knowing HOOD must have only 1370 ALIF
+b1204e9 Fix YASALIH words with the help of 11:62 and knowing HOOD must have only 1370 ALIF
+54667cf Fix ENHAKUM, ISLAHA words with the help of 11:88 and knowing HOOD must have only 1370 ALIF
+23a3c8b Fix LENERAKE, LEREJEMNAKE words with the help of 11:91 and knowing HOOD must have only 1370 ALIF
+9695865 Fix KAZIBUN words with the help of 11:93 and knowing HOOD must have only 1370 ALIF
+1888e33 Fix VEMAIYHI words with the help of 11:97 and knowing HOOD must have only 1370 ALIF
+88ce9ff Fix ZALIMEH and differantiate EHgEZE, EHg'ZE, EHg'ZU, UHgIZE, AHgIZU words with the help of 11:102 and knowing HOOD must have only 1370 ALIF
+8ace878 Fix HASENAT words with the help of 11:114 and knowing HOOD must have only 1370 ALIF
+92b6985 Fix and differantiate EVLE', UVLU' words with the help of 11:116 and knowing HOOD must have only 1370 ALIF
+15d0f1c Fix AMILUN words with the help of 11:121 and knowing HOOD must have only 1370 ALIF
+f59fd97 Fix VEDzAIGU words with the help of 11:12 and knowing HOOD must have only 1370 ALIF
+ddaf335 Fix TEBTEIS, YEVMIIZIN words with the help of 11:36,66 and knowing HOOD must have only 1370 ALIF
+768c29f Fix BI'SA, FAIMU words with the help of 11:99,100 and knowing HOOD must have only 1370 ALIF
+263f0d4 Fix and differantiate GURANEHU, GUR'AN words with the help of 12:2 and knowing JOSEPH must have only 1306 ALIF
+37ddbf2 Fix YAEBETI, SAJIDYN words with the help of 12:4 and knowing JOSEPH must have only 1306 ALIF
+4e52779 Fix RU'YAKE words with the help of 12:5 and knowing JOSEPH must have only 1306 ALIF
+1d7ce60 Fix ALI and ALE words with the help of 12:6 and knowing JOSEPH must have only 1306 ALIF
+2e5e5cf Fix GAILU, GhAYABET, FAILIYN words with the help of 12:10 and knowing JOSEPH must have only 1306 ALIF
+b512c35 Fix YAEBANA, LENASIHUN  words with the help of 12:11 and knowing JOSEPH must have only 1306 ALIF
+4681665 Fix LEHAFIZUN words with the help of 12:12 and knowing JOSEPH must have only 1306 ALIF
+3a8efd8 Fix YABUSHRA, BIDzAAH words with the help of 12:19 and knowing JOSEPH must have only 1306 ALIF
+cd03dad Fix ZAHIDYN, DARAHIM  words with the help of 12:20 and knowing JOSEPH must have only 1306 ALIF
+c61078d Fix MESVAHU words with the help of 12:21 and knowing JOSEPH must have only 1306 ALIF
+d3a22b8 Fix VERAVEDETHU, ELEBVABE words with the help of 12:23 and knowing JOSEPH must have only 1306 ALIF
+abd6935 Fix BURHANE words with the help of 12:24 and knowing JOSEPH must have only 1306 ALIF
+fd21802 Fix and differantiate LEDA , LEDEY and LEDEYYA words with the help of 12:25 and knowing JOSEPH must have only 1306 ALIF
+086f19b Fix RAVEDETNI words with the help of 12:26 and knowing JOSEPH must have only 1306 ALIF
+eb90ab3 Fix LENERAHA, TURAVIDU, FETAHA words with the help of 12:30 and knowing JOSEPH must have only 1306 ALIF
+b6efe5d Fix VEATET words with the help of 12:31 and knowing JOSEPH must have only 1306 ALIF
+eb1f174 Fix SAGhIRYN words with the help of 12:32 and knowing JOSEPH must have only 1306 ALIF
+323c8f9 Fix NEBBIYNA, ARAYN words with the help of 12:36 and knowing JOSEPH must have only 1306 ALIF
+37f3f17 Fix ABAI words with the help of 12:38 and knowing JOSEPH must have only 1306 ALIF
+1698ba9 Fix YASAHIBEY, EERBABU words with the help of 12:39 and knowing JOSEPH must have only 1306 ALIF
+dc6ad99 Fix VEABAUKUM, ENTUM words with the help of 12:40 and knowing JOSEPH must have only 1306 ALIF
+8d2f9f3 Fix FEENSAHU words with the help of 12:42 and knowing JOSEPH must have only 1306 ALIF
+17afbab Fix BEGARAT, SUNBULAT, YABISAT words with the help of 12:43 and knowing JOSEPH must have only 1306 ALIF
+237931f Fix EDzGhASU, EHLAMI  words with the help of 12:44 and knowing JOSEPH must have only 1306 ALIF
+a437266 Fix and differantiate VEUHgRA, VEAHgERA, VEAHgIRU words with the help of 12:46 and knowing JOSEPH must have only 1306 ALIF
+e4460f4 Fix RU'YA words with the help of 12:43 and knowing JOSEPH must have only 1306 ALIF
+d00cd4f Fix FESELHU, ELLATI words with the help of 12:50 and knowing JOSEPH must have only 1306 ALIF
+95864fc Fix RAVED'TUN, HASHA, RAVAD'TUH words with the help of 12:51 and knowing JOSEPH must have only 1306 ALIF
+8f46a02 Fix ELHgAINYN words with the help of 12:52 and knowing JOSEPH must have only 1306 ALIF
+85077f3 Fix and differantiate EMRIHI, EMRUHU, AMURUHU words with the help of 12:32 and knowing JOSEPH must have only 1306 ALIF
+66b5a64 Fix and differantiate MUTTEKEEN words with the help of 12:31 and knowing JOSEPH must have only 1306 ALIF
+e74a4c6 Fix YETEBEVVAU words with the help of 12:56 and knowing JOSEPH must have only 1306 ALIF
+4b00cfa Fix SENURAVIDU, LEFAILUN words with the help of 12:61 and knowing JOSEPH must have only 1306 ALIF
+d0bc31b Fix LIFITYANIHI, BIDzAATEHUM words with the help of 12:62 and knowing JOSEPH must have only 1306 ALIF
+079fb6e Fix ELRAHIMYN words with the help of 12:64 and knowing JOSEPH must have only 1306 ALIF
+ad24329 Fix BIDzAATUHUM words with the help of 12:65 and knowing JOSEPH must have only 1306 ALIF
+425e0f6 Fix and differantiate ATEVHU, ETEVHU, FEATUHUN, VEATUHUN, FEATUHUM, LEATEVHA words with the help of 12:66 and knowing JOSEPH must have only 1306 ALIF
+8e8700c Fix EBVABI words with the help of 12:67 and knowing JOSEPH must have only 1306 ALIF
+dbedb55 Fix GADzAHA, ALLEMNAHU words with the help of 12:68 and knowing JOSEPH must have only 1306 ALIF
+f9ab945 Fix LESARIGUN words with the help of 12:70 and knowing JOSEPH must have only 1306 ALIF
+a8ec252 Fix JI'NA, SARIGIN words with the help of 12:73 and knowing JOSEPH must have only 1306 ALIF
+ef29da2 Fix JEZAUHU words with the help of 12:74 and knowing JOSEPH must have only 1306 ALIF
+8a898ba Fix ESTEY'ESU' words with the help of 12:80 and knowing JOSEPH must have only 1306 ALIF
+4516175 Fix HAFIZIYN words with the help of 12:81 and knowing JOSEPH must have only 1306 ALIF
+c3879db Fix LESADIGUN, VES'ELI words with the help of 12:82 and knowing JOSEPH must have only 1306 ALIF
+d419967 Fix SEFA words with the help of 12:84 and knowing JOSEPH must have only 1306 ALIF
+1656b6a Fix HALIKYN words with the help of 12:85 and knowing JOSEPH must have only 1306 ALIF
+2a3a235 Fix ESHKU' words with the help of 12:86 and knowing JOSEPH must have only 1306 ALIF
+c626168 Fix MUZJAH words with the help of 12:88 and knowing JOSEPH must have only 1306 ALIF
+852158e Fix JAHILUN words with the help of 12:89 and knowing JOSEPH must have only 1306 ALIF
+1cb5eb4 Fix ELGAHU words with the help of 12:96 and knowing JOSEPH must have only 1306 ALIF
+953c001 Fix and differentiate MIN ELHgATIIYN, LEHgATIIYN, KANU' HgATIIYN  words with the help of 12:97 and knowing JOSEPH must have only 1306 ALIF
+2a0047f Fix ESERAKE words with the help of 12:91 and knowing JOSEPH must have only 1306 ALIF
+9c11143 Fix AMINIYN words with the help of 12:99 and knowing JOSEPH must have only 1306 ALIF
+413b362 Fix ATEYTENI words with the help of 12:101 and knowing JOSEPH must have only 1306 ALIF
+7c89bab Fix EFEEMINU', GhASHIYEH words with the help of 12:107 and knowing JOSEPH must have only 1306 ALIF
+d069998 Fix ED'UU' words with the help of 12:108 and knowing JOSEPH must have only 1306 ALIF
+75aa0b3 Fix ELZI'BU words with the help of 12:13 and knowing JOSEPH must have only 1306 ALIF
+1febb28 Fix LETUNEBBIENNEHUM words with the help of 12:15 and knowing JOSEPH must have only 1306 ALIF
+6ac5ae6 Fix BIEYYAMI words with the help of 14:5 and knowing ABRAHAM must have only 585 ALIF
+3466977 Fix ENJAKUM words with the help of 14:6 and knowing ABRAHAM must have only 585 ALIF
+6d76fee Fix ADDzUAFEU', HEDENA, LEHEDEYNAKUM words with the help of 14:21 and knowing ABRAHAM must have only 585 ALIF
+5d6ba43 Fix AZEYTUMUNA words with the help of 14:12 and knowing ABRAHAM must have only 585 ALIF
+12d53f5 Fix EMSALE words with the help of 14:25 and knowing ABRAHAM must have only 585 ALIF
+38a561a Fix HgILAL words with the help of 14:31 and knowing ABRAHAM must have only 585 ALIF
+507ba79 Fix and differantiate ETAKUM, YE'TIKUM, TE'TIKUM, ATIKUM, ATAKUM words with the help of 14:34 and knowing ABRAHAM must have only 585 ALIF
+9481f7d Fix VALIDEYYE words with the help of 14:41 and knowing ABRAHAM must have only 585 ALIF
+f98aa07 Fix EF'IDEH, EF'IDETUH words with the help of 14:43 and knowing ABRAHAM must have only 585 ALIF
+3a2568e Fix MESAKIN words with the help of 14:45 and knowing ABRAHAM must have only 585 ALIF
+5f9991d Fix VERAIH words with the help of 14:17 and knowing ABRAHAM must have only 585 ALIF
+abf6944 Fix DAIBEYNI words with the help of 14:33 and knowing ABRAHAM must have only 585 ALIF
+23b8377 Fix YESTE'HgIRUN words with the help of 15:5 and knowing HIJR must have only 493 ALIF
+429e58f Fix VEZEYYENNAHA words with the help of 15:16 and knowing HIJR must have only 493 ALIF
+d09d6af Fix VEHAFIZNAHA words with the help of 15:17 and knowing HIJR must have only 493 ALIF
+5e50ca3 Fix MEDEDNAHA  words with the help of 15:19 and knowing HIJR must have only 493 ALIF
+e4b7b3f Fix MEAISHE, BIRAZIGYN words with the help of 15:20 and knowing HIJR must have only 493 ALIF
+84d921b Fix HgAZAINUHU words with the help of 15:21 and knowing HIJR must have only 493 ALIF
+7263385 Fix BIHgAZINYN words with the help of 15:22 and knowing HIJR must have only 493 ALIF
+09512cc Fix BIHgAZINYN, FEESGAYNAKUMUHU words with the help of 15:22 and knowing HIJR must have only 493 ALIF
+d95d8f1 Fix ELVARISUN words with the help of 15:26 and knowing HIJR must have only 493 ALIF
+ea8a57e Fix SALSALI words with the help of 15:28 and knowing HIJR must have only 493 ALIF
+7b78723 Fix HgALAGNAHU words with the help of 15:27 and knowing HIJR must have only 493 ALIF
+c56edbc Fix HgALIG words with the help of 15:28 and knowing HIJR must have only 493 ALIF
+a66a176 Fix YAIBLYSU words with the help of 15:32 and knowing HIJR must have only 493 ALIF
+4cf7e98 Fix MUTEGABILYN words with the help of 15:47 and knowing HIJR must have only 493 ALIF
+92e15ed Fix YASSHARNAKE, ELGANITYN words with the help of 15:55 and knowing HIJR must have only 493 ALIF
+8136a29 Fix JINAKE, VEATEYNAKE, EDBARAHUM  words with the help of 15:63,64,65 and knowing HIJR must have only 493 ALIF
+5e12d37 Fix LEATIYEH words with the help of 15:85 and knowing HIJR must have only 493 ALIF
+765a0cd Fix ATEYNAKE words with the help of 15:87 and knowing HIJR must have only 493 ALIF
+10c8f98 Fix and differantiate UHgARA, AHgARA words with the help of 15:96 and knowing HIJR must have only 493 ALIF
+09915d4 Fix KEFEYNAKE, MUSTEHZIIYN words with the help of 15:95 and knowing HIJR must have only 493 ALIF
+d805c29 Fix NEBBY words with the help of 15:49 and knowing HIJR must have only 493 ALIF
+4a8c3f0 Fix EIMEH words with the help of 32:24 and knowing SAJDAH must have only 570 ALIF
+d02a2d7 Fix MAGAIDE, TUBBEVIU words with the help of 3:121 and knowing ALI IMRAN must have only 2521 ALIF
+d32edcd Fix TAIFETAN words with the help of 3:122 and knowing ALI IMRAN must have only 2521 ALIF
+5284527 Fix VELITETMEIN words with the help of 3:126 and knowing ALI IMRAN must have only 2521 ALIF
+8a3e961 Fix HgAIBYN words with the help of 3:127 and knowing ALI IMRAN must have only 2521 ALIF
+1caa705 Fix ABAIHIM words with the help of 13:23 and knowing RAAD must have only 605 ALIF
+668db60 Fix TETMAIN words with the help of 13:28 and knowing RAAD must have only 605 ALIF
+2a1e59d Fix ESTEHZIE words with the help of 13:32 and knowing RAAD must have only 605 ALIF
+fb693c4 Fix DAIMU words with the help of 13:35 and knowing RAAD must have only 605 ALIF
+7c76910 Fix MUTEJAVIRAT, AgNAB  words with the help of 13:4 and knowing RAAD must have only 605 ALIF
+4bbcc53 Fix TURABA, ELAGH'LALU words with the help of 13:5 and knowing RAAD must have only 605 ALIF
+b85fcfc Fix ELMESHULAT words with the help of 13:6 and knowing RAAD must have only 605 ALIF
+e9b6f5a Fix MUAGGIBAT words with the help of 13:11 and knowing RAAD must have only 605 ALIF
+dd7ab79 Fix KEBASITI, BIBALIGhIH  words with the help of 13:14 and knowing RAAD must have only 605 ALIF
+3f2b230 Fix ELGAHHAR words with the help of 13:16 and knowing RAAD must have only 605 ALIF
+5271489 Fix VEZURRIYATIHIM words with the help of 13:23 and knowing RAAD must have only 605 ALIF
+eff0aca Fix LITETLU' words with the help of 13:30 and knowing RAAD must have only 605 ALIF
+c7e5b10 Fix BIZAHIRI words with the help of 13:33 and knowing RAAD must have only 605 ALIF
+323cc89 Fix YEMHU' words with the help of 13:39 and knowing RAAD must have only 605 ALIF
+bb7902d Fix ELKUFFAR words with the help of 13:42 and knowing RAAD must have only 605 ALIF
+a4d684f Fix GURIE words with the help of 7:204 and knowing ARAF must have only 2529 ALIF
+7e0e1fb Fix VELASALI words with the help of 7:205 and knowing ARAF must have only 2529 ALIF
+3e47655 Fix TAIFU words with the help of 7:201 and knowing ARAF must have only 2529 ALIF
+f4eb24e Fix ESMAIHI words with the help of 7:180 and knowing ARAF must have only 2529 ALIF
+b978fe9 Fix ELHgABAISE, VEYENHAHUM words with the help of 7:157 and knowing ARAF must have only 2529 ALIF
+ce12500 Fix GhAFIRYN, SHI'TE, LIMIYGATINA words with the help of 7:155 and knowing ARAF must have only 2529 ALIF
+41b94da Fix ENBAIHA words with the help of 7:101 and knowing ARAF must have only 2529 ALIF
+df77921 Fix TAIRUHUM words with the help of 7:131 and knowing ARAF must have only 2529 ALIF
+3d9beaf Fix BESAIRUMIN words with the help of 7:203 and knowing ARAF must have only 2529 ALIF
+80eccb6 Fix BEIYSI words with the help of 7:165 and knowing ARAF must have only 2529 ALIF
+0cc86d2 Fix HgATIATIKUM words with the help of 7:161 and knowing ARAF must have only 2529 ALIF
+f63f6e6 Fix NAIMUN words with the help of 7:97 and knowing ARAF must have only 2529 ALIF
+5da18ec Fix SHEMAILIHIM words with the help of 7:17 and knowing ARAF must have only 2529 ALIF
+bf7fb9f Fix GhAIBYN words with the help of 7:7 and knowing ARAF must have only 2529 ALIF
+bee429e Fix EHLEKNAHA words with the help of 7:4 and knowing ARAF must have only 2529 ALIF
+0dd2a60 Fix MEVAZIYNUHU words with the help of 7:8 and knowing ARAF must have only 2529 ALIF
+94a8587 Fix MEKKENNAKUM words with the help of 7:10 and knowing ARAF must have only 2529 ALIF
+13aa51b Fix HgALAGNAKUM, SEVVERNAKUM words with the help of 7:11 and knowing ARAF must have only 2529 ALIF
+3692a4d Fix SIRATAKE words with the help of 7:16 and knowing ARAF must have only 2529 ALIF
+b588874 Fix ATIYENNEHUM words with the help of 7:17 and knowing ARAF must have only 2529 ALIF
+0e4df25 Fix SEV'ATIHIMA, NEHAKUMA words with the help of 7:20 and knowing ARAF must have only 2529 ALIF
+0f7a5d3 Fix NASIHYN words with the help of 7:21 and knowing ARAF must have only 2529 ALIF
+febd980 Fix VENADEHUMA words with the help of 7:22 and knowing ARAF must have only 2529 ALIF
+0e6aab2 Fix YUVARIY words with the help of 7:26 and knowing ARAF must have only 2529 ALIF
+67db702 Fix YERAYKUM words with the help of 7:27 and knowing ARAF must have only 2529 ALIF
+1ed8a5d Fix ELFEVAHISHE words with the help of 7:33 and knowing ARAF must have only 2529 ALIF
+6867682 Fix EHgRAHUM words with the help of 7:39 and knowing ARAF must have only 2529 ALIF
+4d54c12 Fix NENSAHUM words with the help of 7:51 and knowing ARAF must have only 2529 ALIF
+5c65c61 Fix JI'NAHUM, BIKITABI words with the help of 7:52 and knowing ARAF must have only 2529 ALIF
+3122dd7 Fix and differantiate SHUFAAE and SHEFAU' words with the help of 7:53 and knowing ARAF must have only 2529 ALIF
+d243384 Fix MUSAHHgARATI words with the help of 7:54 and knowing ARAF must have only 2529 ALIF
+f2d689f Fix ISLAHIHA words with the help of 7:56 and knowing ARAF must have only 2529 ALIF
+d71ef33 Fix SUGNAHU words with the help of 7:57 and knowing ARAF must have only 2529 ALIF
+2e8988b Fix RISALATI words with the help of 7:62 and knowing ARAF must have only 2529 ALIF
+2b33028 Fix ALAE, ALAI words with the help of 7:69 and knowing ARAF must have only 2529 ALIF
+0ed8db4 Fix ETUJADILUNENI words with the help of 7:71 and knowing ARAF must have only 2529 ALIF
+a89b74b Fix KARIHIM words with the help of 7:88 and knowing ARAF must have only 2529 ALIF
+b142eea Fix NEJJAANA, ELFATIHYN words with the help of 7:89 and knowing ARAF must have only 2529 ALIF
+65380dc Fix ASA words with the help of 7:93 and knowing ARAF must have only 2529 ALIF
+70717a5 Fix FEAHgAZNAHUM words with the help of 7:96 and knowing ARAF must have only 2529 ALIF
+97feb33 Fix ESABNAHUM words with the help of 7:100 and knowing ARAF must have only 2529 ALIF
+7906c1a Fix YAFIRAVNE words with the help of 7:104 and knowing ARAF must have only 2529 ALIF
+f8c99c0 Fix MADAINI, HASHIRYN words with the help of 7:111 and knowing ARAF must have only 2529 ALIF
+7bf4a6f Fix ELGhALIBYN words with the help of 7:113 and knowing ARAF must have only 2529 ALIF
+fefece6 Fix VEHARUN words with the help of 7:122 and knowing ARAF must have only 2529 ALIF
+d161a00 Fix and differantiate AZENE, UZUNU, EZINE, EZZENE, UZINE words with the help of 7:123 and knowing ARAF must have only 2529 ALIF
+235806a Fix HgILAFI words with the help of 7:124 and knowing ARAF must have only 2529 ALIF
+dd28199 Fix GAHIRUN words with the help of 7:127 and knowing ARAF must have only 2529 ALIF
+9da8dbe Fix MUFASSALATI words with the help of 7:133 and knowing ARAF must have only 2529 ALIF
+c8f0f5a Fix BALIGhUHU words with the help of 7:135 and knowing ARAF must have only 2529 ALIF
+6de703e Fix FEEGh'RAGNAHUM words with the help of 7:136 and knowing ARAF must have only 2529 ALIF
+fe93679 Fix MESHARIG, VEMAGhARIBEHA, BARAKNA words with the help of 7:137 and knowing ARAF must have only 2529 ALIF
+d7c4635 Fix SELASIYNE, VETMEMNAHA, MIYGAT words with the help of 7:142 and knowing ARAF must have only 2529 ALIF
+9a32590 Fix TERANI words with the help of 7:143 and knowing ARAF must have only 2529 ALIF
+2405076 Fix ATEYTUKE words with the help of 7:144 and knowing ARAF must have only 2529 ALIF
+7029685 Fix SEUVRIKUM words with the help of 7:145 and knowing ARAF must have only 2529 ALIF
+00af07f Fix GhADzBANE words with the help of 7:150 and knowing ARAF must have only 2529 ALIF
+df2bd9f Fix SEYYIAH, SEYYIAT words with the help of 7:153 and knowing ARAF must have only 2529 ALIF
+97b3da7 Fix VEGATTANAHUM, ESTESGAHU, ELGhAMAME words with the help of 7:160 and knowing ARAF must have only 2529 ALIF
+1a8df2f Fix VESELHUM words with the help of 7:163 and knowing ARAF must have only 2529 ALIF
+42a1d42 Fix HgASIIYN words with the help of 7:166 and knowing ARAF must have only 2529 ALIF
+8f9814e Fix VEBEEVNAHUM words with the help of 7:168 and knowing ARAF must have only 2529 ALIF
+4880c4d Fix LERAFANAHU, HEVAHU words with the help of 7:176 and knowing ARAF must have only 2529 ALIF
+989d88a Fix AZANU words with the help of 7:179 and knowing ARAF must have only 2529 ALIF
+dc1b0bb Fix MURSAHA words with the help of 7:187 and knowing ARAF must have only 2529 ALIF
+8d0dcca Fix SAMITUN words with the help of 7:193 and knowing ARAF must have only 2529 ALIF
+1eb3733 Fix and differantiate EMSALUKUM, EMSALEKUM words with the help of 7:194 and knowing ARAF must have only 2529 ALIF
+75f573f Fix VETERAHUM words with the help of 7:198 and knowing ARAF must have only 2529 ALIF
+d86ed33 Fix YAZEKERIYA, YAYAHYA, YAHYA words with the help of 19:7
+e5a66f9 Fix MAALEM words with the help of 96::5
+b19c57d Fix HgATIEH words with the help of 96::16
+3d0dea5 Fix RAHU words with the help of 96:7
+ce669d6 Fix ERAEYTE words with the help of 96:9
+873e050 Fix VEMAYESTURUN  words with the help of 68:1
+40a6faf Fix MAENTE  words with the help of 68:2
+55e5918 Fix NASHIEH, VET'AN words with the help of 73:6
+7fff2b3 Fix MAYEGULUN words with the help of 73:10
+efec92f Fix MELAIKEH words with the help of 74:31
+f714bda Fix ELHgAIDzYN words with the help of 74:45
+8dea14c Fix EMRIY words with the help of 74:52
+15c80bb Fix JEZAUHUM words with the help of 3:87 and knowing ALI IMRAN must have only 2521 ALIF
+ad08c6e Do separation of concern on project structure and make house keeping in some project documents for cleaner working environment
+011e50d Introduce Gematric.js for numerical works
+9551b97 Fix and differantiate ALGAHHARU, ELGAHIRU words with the help of 14:48 and knowing ABRAHAM must have only 585 ALIF
+125042b Fix MUTESHABIHAT words with the help of 3:7 and knowing ALI IMRAN must have only 2521 ALIF
+0d946a7 Fix hamza position in BIAYAT words
+50a2a0b Fix and differantiate GUR'AN, GUR'ANUN, GUR'ANEH words knowing they have different meaning
+338d76f Fix and differantiate KITABE, KITABUN words knowing they have different meaning
+d44ce61 Fix and differantiate AE'TEDEV and FAE'TEDU words knowing they have different meaning
+0de22a9 Fix and revert the syntax of ELGhAMAM words knowing that they have meaning of clouds in evidence 7:160,25:25, 2:57 and 2:210
+8f15b11 Fix TENFAEUH word in 2:123 has wrong syntax because it is not TENFAEUHA which has different meaning
+8ebf44c Fix RAZAGNAHU, YESTEVUNA  words in 16:75 from using 1989 mushaf
+c79d7cf Fix DAVUDA words in 27:15 from using 1989 mushaf
+666f1c2 Fix ESTEFA E ALLAHU sentence in 27:59 from using 1989 mushaf
+d51d8f9 Fix VESULASE, VERUBAAe words with 35:1 from using 1989 mushaf
+79ae23b Fix MUTESHAKISUN word with 39:29 from using 1989 mushaf
+95c4acc Fix NETEBEVVEU word with 39:74 from using 1989 mushaf
+c627cff Fix EZEGNAHU words with the help of 11:10 and 41:50 knowing that JONAH must have only 1319 ALIF
+9aa1d95 Fix and differantiate EL EMSALU and EL EMSALE words knowing they have different meaning
+9f0a0ac Fix and differantiate VESEMUDU and VESEMUDA' words knowing they have different end connections with the help of 1989 mushaf
+2f8ba4e Fix 14:41 L count mistake
+32fd4df Fix KERAMED word with the help of 14:18 and knowing ABRAHAM must have only 585 ALIF
+19de310 Fix EFIDEH words with the help of 14:37 and knowing ABRAHAM must have only 585 ALIF
+1d2324c UI update: better usability, introduce GV per verse detail, responsive design updates
+f3b1c1a Fix KITABI in 13:38 because the word is not KITABU like in 15:4
+07d9d00 Fix VEZILALUHUM words with the help of 13:15 and knowing RAAD must have only 605 ALIF
+3dedb10 Fix LILZAKIRYN word with the help of 11:114 and knowing HOOD must have only 1370 ALIF
+140e579 Fix BITARID words with the help of 11:29 and knowing HOOD must have only 1370 ALIF
