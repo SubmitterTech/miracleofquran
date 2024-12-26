@@ -36,6 +36,8 @@ function Dev() {
   const alms = counts["ALMS"];
   const khyas = counts["KHYAS"];
   const ys = counts["YS"];
+  const q = counts["Q"];
+  const n = counts["N"];
 
 
   // const almlist = useMemo(() => ([]), []);
@@ -50,6 +52,8 @@ function Dev() {
   const almslist = useMemo(() => (['7']), []);
   const khyaslist = useMemo(() => (['19']), []);
   const yslist = useMemo(() => (['36']), []);
+  const qlist = useMemo(() => (['50']), []);
+  const nlist = useMemo(() => (['68']), []);
 
 
   const [checkHM, setCheckHM] = useState(true);
@@ -75,25 +79,25 @@ function Dev() {
 
   const arabicLetters = [
     'ا', 'ء',
-    'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك','ل', 'م', 'ن', 'ه', 'و',
+    'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و',
     'ئ', 'ي'
   ];
 
   useEffect(() => {
     let qmap = {};
     //let tqmap = {};
-    let bsml = '';
+    //let bsml = '';
     Object.values(quranData).forEach((page) => {
       Object.entries(page.sura).forEach(([sno, content]) => {
         if (!qmap[sno]) { qmap[sno] = {}; }
         //if (!tqmap[sno]) { tqmap[sno] = {}; }
         Object.entries(content.encrypted).forEach(([vno, verse]) => {
-          if (sno === '1' && vno === '1') {
-            bsml = verse;
-          }
-          if ((sno !== '1' && sno !== '9') && vno === '1') {
-            qmap[sno]['0'] = bsml;
-          }
+          // if (sno === '1' && vno === '1') {
+          //   bsml = verse;
+          // }
+          // if ((sno !== '1' && sno !== '9') && vno === '1') {
+          //   qmap[sno]['0'] = bsml;
+          // }
           qmap[sno][vno] = verse;
         });
         // Object.entries(content.verses).forEach(([vno, verse]) => {
@@ -207,6 +211,7 @@ function Dev() {
         Object.entries(verseLetterCounts).forEach(([letter, count]) => {
           totalCounts[letter] = (totalCounts[letter] || 0) + count;
         });
+
         return totalCounts;
       }, {});
     }
@@ -404,6 +409,58 @@ function Dev() {
               if (islost) {
                 verseList.push({ sno, vno, verse, hc: 0, c, ns });
               }
+            } else if (qlist.includes(sno)) {
+              const letters = Object.keys(q[sno]);
+              let islost = false;
+              for (let l of letters) {
+                let cCount = 0;
+
+                // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
+                if (l === 'ا') {
+                  cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
+                } else {
+                  cCount = c[l] || 0;
+                }
+
+                // Compare the count of letters with alms[key][l]
+                if (cCount !== q[sno][l][vno]) {
+                  islost = true;
+                  break; // stop checking further if a mismatch is found
+                }
+
+              }
+              if (islost) {
+                verseList.push({ sno, vno, verse, hc: 0, c, ns });
+              }
+            } else if (nlist.includes(sno)) {
+              const letters = Object.keys(n[sno]);
+              let islost = false;
+              for (let l of letters) {
+                let cCount = 0;
+
+                // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
+                if (l === 'ا') {
+                  cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
+                } else {
+                  cCount = c[l] || 0;
+                }
+
+                // Compare the count of letters with alms[key][l]
+                if (cCount !== n[sno][l][vno]) {
+                  islost = true;
+                  break; // stop checking further if a mismatch is found
+                }
+
+              }
+              if (islost) {
+                verseList.push({ sno, vno, verse, hc: 0, c, ns });
+              }
             }
           } else {
             if (filter) {
@@ -470,16 +527,23 @@ function Dev() {
             } else {
               verseList.push({ sno, vno, verse, hc: 0, c, ns });
             }
-
-
           }
         });
       });
     });
 
     setOcc(count);
+    // console.log('----------------------------');
+    // let out = '\n';
+    // verseList.forEach((v) => {
+    //   out += '* ' + v.sno + ':' + v.vno.trim() + '\n';
+
+    // });
+    // console.log(out);
+    // console.log('----------------------------');
+
     setFilteredVerses(verseList);
-  }, [filter, formula, arabicLetterValues, checkHM, alm, alr, almr, alms, khyas, ys, almlist, alrlist, almrlist, almslist, khyaslist, yslist]);
+  }, [filter, formula, arabicLetterValues, checkHM, alm, alr, almr, alms, khyas, ys, q, n, almlist, alrlist, almrlist, almslist, khyaslist, yslist, qlist, nlist]);
 
 
   const handleSelectedVerse = (s, v) => {
@@ -678,6 +742,14 @@ function Dev() {
                       } else if (yslist.includes(sno)) {
                         letters = ['س', 'ي'];
                         countsObj = ys[sno];
+
+                      } else if (qlist.includes(sno)) {
+                        letters = ['ق'];
+                        countsObj = q[sno];
+
+                      } else if (nlist.includes(sno)) {
+                        letters = ['ن'];
+                        countsObj = n[sno];
 
                       } else {
                         // If the Surah is not in either list, we don't proceed
