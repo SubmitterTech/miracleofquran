@@ -103,7 +103,7 @@
 ---
 ![7:2](../pictures/7-2.png)
 
-![84:10](../pictures/7-2.png)
+![84:10](../pictures/84-10.png)
 ![17:71](../pictures/17-71.png)
 ![52:2](../pictures/52-2.png)
 ![78:29](../pictures/78-29.png)
