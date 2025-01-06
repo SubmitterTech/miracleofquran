@@ -1,22 +1,42 @@
-const arabicLetters = 'ئابتثجحخدذرزسشصضطظعغفقكلمنهويء';
+const arabicLetters = 'اءبتثجحخدذرزسشصضطظعغفقكلمنهوئي';
 
 const colors = [
-  '#e11d48', '#cbd5e1', '#e11d48', '#c026d3', '#ea580c', '#d97706',
-  '#a3e635', '#4ade80', '#34d399', '#2dd4bf', '#22d3ee',
-  '#38bdf8', '#60a5fa', '#818cf8', '#a78bfa', '#c084fc',
-  '#e879f9', '#c084fc', '#e879f9', '#f472b6', '#fb7185',
-  '#ef4444', '#f97316', '#eab308', '#84cc16', '#22c55e',
-  '#10b981', '#06b6d4', '#6366f1', '#06b6d4', '#a855f7'
+  '#8b5cf6', //elif
+  '#f97316', //hemze
+  '#a3a3a3', //be
+  '#a3a3a3', //te
+  '#a3a3a3', //se
+  '#a3a3a3', //cim
+  '#84cc16', //ha
+  '#a3a3a3', //hı
+  '#a3a3a3', //dal
+  '#a3a3a3', //zel
+  '#2563eb', //ra
+  '#a3a3a3', //ze
+  '#eab308', //sin
+  '#a3a3a3', //şın
+  '#f59e0b', //sad
+  '#a3a3a3', //dad
+  '#8b5cf6', //tı
+  '#a3a3a3', //zı
+  '#06b6d4', //ayn
+  '#a3a3a3', //gayn
+  '#a3a3a3', //fe
+  '#0ea5e9', //gaf
+  '#65a30d', //kef
+  '#22c55e', //lam
+  '#f43f5e', //mim
+  '#2dd4bf', //nun
+  '#dc2626', //he
+  '#a3a3a3', //vav
+  '#d946ef', //ye(gizli)
+  '#8b5cf6', //ye 
+  '#a855f7' //???
 ];
 
 const colorMap = {};
 for (let i = 0; i < arabicLetters.length; i++) {
   let letter = arabicLetters[i];
-
-  // // Normalize 'ء' to 'ا'
-  // if (letter === 'ء') {
-  //   letter = 'ا';
-  // }
 
   colorMap[letter] = colors[i % colors.length];
 }

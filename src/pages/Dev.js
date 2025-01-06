@@ -37,15 +37,19 @@ function Dev() {
   const khyas = counts["KHYAS"];
   const ys = counts["YS"];
   const q = counts["Q"];
+  const hmasq = counts["HMASQ"];
   const n = counts["N"];
 
 
   // const almlist = useMemo(() => ([]), []);
   // const alrlist = useMemo(() => ([]), []);
   // const almrlist = useMemo(() => ([]), []);
-  // const almslist = useMemo(() => ([]), []);
+  // // const almslist = useMemo(() => ([]), []);
   // const khyaslist = useMemo(() => ([]), []);
   // const yslist = useMemo(() => ([]), []);
+  // const qlist = useMemo(() => ([]), []);
+  // const hmasqlist = useMemo(() => ([]), []);
+  // const nlist = useMemo(() => ([]), []);
   const almlist = useMemo(() => (['2', '3', '29', '30', '31', '32']), []);
   const alrlist = useMemo(() => (['10', '11', '12', '14', '15']), []);
   const almrlist = useMemo(() => (['13']), []);
@@ -53,10 +57,12 @@ function Dev() {
   const khyaslist = useMemo(() => (['19']), []);
   const yslist = useMemo(() => (['36']), []);
   const qlist = useMemo(() => (['50']), []);
+  const hmasqlist = useMemo(() => (['42']), []);
   const nlist = useMemo(() => (['68']), []);
 
 
   const [checkHM, setCheckHM] = useState(true);
+  const [isExactMatchEnabled, setIsExactMatchEnabled] = useState(false);
 
   const [selectedLetters, setSelectedLetters] = useState([]);
 
@@ -116,42 +122,42 @@ function Dev() {
     return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
   }
 
-  function normalizeArabicPrefix(text) {
-    // Normalize Alef variations only at the start of the word
+  // function normalizeArabicPrefix(text) {
+  //   // Normalize Alef variations only at the start of the word
 
 
-    // // Normalize Ta Marbuta to Ha only at the end of the word
-    // text = text.replace(/ة$/, 'ه');
+  //   // // Normalize Ta Marbuta to Ha only at the end of the word
+  //   // text = text.replace(/ة$/, 'ه');
 
-    // // Normalize Hamza variations (keep them only at the beginning)
-    // text = text.replace(/^ؤ/, 'ء');
-    // text = text.replace(/^ئ/, 'ء');
+  //   // // Normalize Hamza variations (keep them only at the beginning)
+  //   // text = text.replace(/^ؤ/, 'ء');
+  //   // text = text.replace(/^ئ/, 'ء');
 
-    // // Remove Tashkeel (diacritics) entirely
-    // text = text.replace(/[\u064B-\u0652]/g, ''); // Unicode range for diacritics
+  //   // // Remove Tashkeel (diacritics) entirely
+  //   // text = text.replace(/[\u064B-\u0652]/g, ''); // Unicode range for diacritics
 
-    // Handle common Arabic prefixes
+  //   // Handle common Arabic prefixes
 
 
-    if (text) {
-      if (text.length > 4) {
-        const prefixes = ['ب', 'ل', 'ال', 'و', 'ف', 'ك'];
-        const prefixRegex = new RegExp(`^(${prefixes.join('|')})`, 'g');
-        text = text.replace(prefixRegex, '');
-      }
+  //   if (text) {
+  //     if (text.length > 4) {
+  //       const prefixes = ['ب', 'ل', 'ال', 'و', 'ف', 'ك'];
+  //       const prefixRegex = new RegExp(`^(${prefixes.join('|')})`, 'g');
+  //       text = text.replace(prefixRegex, '');
+  //     }
 
-      if (text.split('')[0] === 'ا') {
-        text = text.slice(1)
-      }
-    }
+  //     if (text.split('')[0] === 'ا') {
+  //       text = text.slice(1)
+  //     }
+  //   }
 
-    // // Handle sun letters (ignore assimilation but retain normalization)
-    // const sunLetters = 'تثدذرزسشصضطظلن';
-    // const sunRegex = new RegExp(`^ال([${sunLetters}])`, 'g');
-    // text = text.replace(sunRegex, '$1'); // Drop "ال" but keep the assimilated letter
+  //   // // Handle sun letters (ignore assimilation but retain normalization)
+  //   // const sunLetters = 'تثدذرزسشصضطظلن';
+  //   // const sunRegex = new RegExp(`^ال([${sunLetters}])`, 'g');
+  //   // text = text.replace(sunRegex, '$1'); // Drop "ال" but keep the assimilated letter
 
-    return text;
-  }
+  //   return text;
+  // }
 
   const besmele = (quranMap && quranMap['1']) ? quranMap['1']['1'] : null;
   const verseText = (quranMap && quranMap[selectedSura] && quranMap[selectedSura][selectedVerse]) || '';
@@ -224,6 +230,7 @@ function Dev() {
   useEffect(() => {
     let verseList = [];
     let count = 0;
+    let exactCount = 0;
 
     Object.values(quranData).forEach((page) => {
       Object.entries(page.sura).forEach(([sno, content]) => {
@@ -461,24 +468,91 @@ function Dev() {
               if (islost) {
                 verseList.push({ sno, vno, verse, hc: 0, c, ns });
               }
+            } else if (hmasqlist.includes(sno)) {
+              const letters = Object.keys(hmasq[sno]);
+              let islost = false;
+              for (let l of letters) {
+                let cCount = 0;
+
+                // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
+                // If the current letter is Ye, sum both Ye (ي) and hidden Ye (ئ)
+                if (l === 'ا') {
+                  cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
+                } else {
+                  cCount = c[l] || 0;
+                }
+
+                // Compare the count of letters with alms[key][l]
+                if (cCount !== hmasq[sno][l][vno]) {
+                  islost = true;
+                  break; // stop checking further if a mismatch is found
+                }
+
+              }
+              if (islost) {
+                verseList.push({ sno, vno, verse, hc: 0, c, ns });
+              }
             }
           } else {
             if (filter) {
-
-              // Normalize only the prefix of the filter and the verse
-              const normalizedFilter = normalizeArabicPrefix(filter);
-
-              // Create the regex with the escaped filter
-              const regex = getRegex(normalizedFilter);
-
-              // Match the normalized verse using the regex
+              // Substring-based matches as before
+              const regex = getRegex(filter); // your existing function
               const matches = verse.match(regex);
+              const substringMatchCount = matches ? matches.length : 0;
 
-              if (verse.includes(filter)) {
-                count += matches ? matches.length : 0;
-                verseList.push({ sno, vno, verse, hc: matches ? matches.length : 0, c, ns });
+              // Prepare exact match count (only do this if exact match is enabled)
+              let exactMatchesCount = 0;
+              if (isExactMatchEnabled) {
+                const words = verse.split(/\s+/);
+                for (const w of words) {
+                  if (w.trim().toLowerCase() === filter.toLowerCase()) {
+                    exactMatchesCount++;
+                  }
+                }
               }
 
+              // Now decide whether to push to verseList and which counts to update,
+              // depending on whether we want exact matches or substring matches.
+              if (!isExactMatchEnabled) {
+                // Substring-match mode
+                if (verse.includes(filter)) {
+                  // update your total substring-based count
+                  count += substringMatchCount;
+
+                  verseList.push({
+                    sno,
+                    vno,
+                    verse,
+                    // highlight count from substring matches
+                    hc: substringMatchCount,
+                    // no "ec" field in this mode
+                    c,
+                    ns
+                  });
+                }
+              } else {
+                // Exact-match mode
+                if (exactMatchesCount > 0) {
+                  // update your total substring-based count as well, if you still want it
+                  count += substringMatchCount;
+                  // update your total exact-match count
+                  exactCount += exactMatchesCount;
+
+                  verseList.push({
+                    sno,
+                    vno,
+                    verse,
+                    // highlight count from substring matches (still available if you want)
+                    hc: substringMatchCount,
+                    // exact-match count
+                    ec: exactMatchesCount,
+                    c,
+                    ns
+                  });
+                }
+              }
             } else if (formula.trim() !== '') {
               const sf = formula.trim().split(' ');
               const sn = Number(sno);
@@ -533,17 +607,20 @@ function Dev() {
     });
 
     setOcc(count);
-    // console.log('----------------------------');
-    // let out = '\n';
-    // verseList.forEach((v) => {
-    //   out += '* ' + v.sno + ':' + v.vno.trim() + '\n';
+    if (filter !== null && filter !== '') {
+      console.log('----------------------------');
+      let out = '\n';
+      verseList.forEach((v) => {
+        out += '* ' + v.sno + ':' + v.vno.trim() + '\n';
 
-    // });
-    // console.log(out);
-    // console.log('----------------------------');
+      });
+      console.log(out);
+      console.log(exactCount, 'EXACT MATCH');
+      console.log(count, 'TOTAL');
+    }
 
     setFilteredVerses(verseList);
-  }, [filter, formula, arabicLetterValues, checkHM, alm, alr, almr, alms, khyas, ys, q, n, almlist, alrlist, almrlist, almslist, khyaslist, yslist, qlist, nlist]);
+  }, [filter, formula, arabicLetterValues, checkHM, isExactMatchEnabled, alm, alr, almr, alms, khyas, ys, q, hmasq, n, almlist, alrlist, almrlist, almslist, khyaslist, yslist, qlist, hmasqlist, nlist]);
 
 
   const handleSelectedVerse = (s, v) => {
@@ -572,58 +649,111 @@ function Dev() {
 
   const lightMatchWords = useCallback((verse) => {
     if (!filter && selectedLetters.length === 0) {
-      return verse;
+      return verse; // No highlights needed
     }
-    // Stem the filter word
-    const normalizedFilter = normalizeArabicPrefix(filter);
-    //const regex = getRegex(normalizedFilter);
-    // Split the verse into words (preserving spaces)
-    const words = verse.split(/(\s+)/).map((word, index) => {
-      const wordContainsSelectedLetter = selectedLetters.some((letter) =>
-        word.includes(letter)
-      );
-      // Highlight individual letters
-      const highlightLetters = (word, baseColor) => {
-        return word.split('').map((char, charIndex) => {
-          if (selectedLetters.includes(char)) {
-            return (
-              <span key={`${index}-${charIndex}`} style={{ color: colorMap[char] }}>
-                {char}
-              </span>
-            );
-          } else {
-            return (
-              <span key={`${index}-${charIndex}`} style={{ color: baseColor }}>
-                {char}
-              </span>
-            );
-          }
-        });
-      };
-      // Exact match
-      if (word === filter) {
-        return (
-          highlightLetters(word, '#0ea5e9')
+
+    // =========================
+    // HELPER: highlightLetters
+    // =========================
+    const highlightLetters = (text, baseColor, parentIndex = 0) => {
+      return text.split('').map((char, charIndex) => {
+        if (selectedLetters.includes(char)) {
+          return (
+            <span key={`${parentIndex}-${charIndex}`} style={{ color: colorMap[char] }}>
+              {char}
+            </span>
+          );
+        } else {
+          return (
+            <span key={`${parentIndex}-${charIndex}`} style={{ color: baseColor }}>
+              {char}
+            </span>
+          );
+        }
+      });
+    };
+
+    // Check if the filter has more than one word
+    const filterWords = filter !== null ? filter.trim().split(/\s+/) : [];
+    const isMultiWordFilter = filterWords.length > 1;
+
+    if (isMultiWordFilter) {
+      // ==============================================================
+      // MULTI-WORD FILTER LOGIC (MODIFIED TO DISTINGUISH EXACT vs PARTIAL)
+      // ==============================================================
+      const parts = [];
+      let lastIndex = 0;
+
+      // If you need case-insensitive matching, use /.../gi instead of /.../g
+      const regex = new RegExp(filter, 'g');
+
+      verse.replace(regex, (match, offset) => {
+        // Push text before this match (per-letter highlighting)
+        const beforeMatch = verse.slice(lastIndex, offset);
+        if (beforeMatch) {
+          parts.push(highlightLetters(beforeMatch, '', `before-${offset}`));
+        }
+
+        // ---- DETERMINE EXACT vs PARTIAL MATCH ----
+        const isStartBoundary =
+          offset === 0 || /\s/.test(verse[offset - 1]);
+        const isEndBoundary =
+          offset + match.length === verse.length || /\s/.test(verse[offset + match.length] || '');
+
+        // "Exact" means the match is surrounded by whitespace or start/end of string
+        const isExactMatch = isStartBoundary && isEndBoundary;
+
+        // Highlight color:
+        // - EXACT MATCH => BLUE (#0ea5e9)
+        // - PARTIAL MATCH => GREEN (#22c55e)
+        const highlightColor = isExactMatch ? '#0ea5e9' : '#22c55e';
+
+        // Highlight the matched substring (per-letter as well)
+        parts.push(highlightLetters(match, highlightColor, `match-${offset}`));
+
+        lastIndex = offset + match.length;
+        return match;
+      });
+
+      // Push leftover text after the last match
+      if (lastIndex < verse.length) {
+        const remainder = verse.slice(lastIndex);
+        if (remainder) {
+          parts.push(highlightLetters(remainder, '', `after-${lastIndex}`));
+        }
+      }
+
+      return <div dir="rtl">{parts}</div>;
+
+    } else {
+      // ==============================================================
+      // SINGLE-WORD FILTER LOGIC (YOUR ORIGINAL WORD-BY-WORD APPROACH)
+      // ==============================================================
+      const words = verse.split(/(\s+)/).map((word, index) => {
+        const wordContainsSelectedLetter = selectedLetters.some((letter) =>
+          word.includes(letter)
         );
-      }
-      // Common stem match
-      else if (word.includes(normalizedFilter)) {
-        return (
-          highlightLetters(word, '#22c55e')
-        );
-      }
-      // Word contains a selected letter
-      else if (wordContainsSelectedLetter) {
-        return (
-          highlightLetters(word, '')
-        );
-      }
-      // No match
-      else {
-        return <span key={index}>{word}</span>;
-      }
-    });
-    return <div dir="rtl">{words}</div>;
+
+        // EXACT MATCH
+        if (word === filter) {
+          return highlightLetters(word, '#0ea5e9', index); // Blue
+        }
+        // PARTIAL/STEM MATCH
+        else if (word.includes(filter)) {
+          return highlightLetters(word, '#22c55e', index); // Green
+        }
+        // WORD CONTAINS A SELECTED LETTER (but no filter match)
+        else if (wordContainsSelectedLetter) {
+          return highlightLetters(word, '', index);
+        }
+        // NO MATCH AT ALL
+        else {
+          return <span key={index}>{word}</span>;
+        }
+      });
+
+      return <div dir="rtl">{words}</div>;
+    }
   }, [filter, selectedLetters]);
 
   const lastVerseElementRef = useCallback(node => {
@@ -670,6 +800,8 @@ function Dev() {
         t = t + (lc[l] || 0);
       });
       setSosl(t);
+    } else {
+      setSosl(0);
     }
   }, [selectedLetters, lc]);
 
@@ -710,11 +842,11 @@ function Dev() {
             </div>
             <div className={`h-full w-full overflow-auto`}>
               <div className={`text-sm md:text-base text-justify w-full h-full px-1 pb-10`}>
-                <div className={`flex flex-col space-y-1 pt-1 text-neutral-600`}>
+                <div className={`flex flex-col space-y-1 pt-1 pb-12 text-neutral-600`}>
                   {
                     loadedVerses.map(({ sno, vno, verse, c, ns }, index) => {
                       const isbesmele = parseInt(sno) !== 1 && parseInt(sno) !== 9 && parseInt(vno) === 1;
-                      let hastobe;
+                      //let hastobe;
                       let has;
                       let letters = [];
                       let countsObj = {};
@@ -747,6 +879,10 @@ function Dev() {
                         letters = ['ق'];
                         countsObj = q[sno];
 
+                      } else if (hmasqlist.includes(sno)) {
+                        letters = ['ح', 'م', 'ع', 'س', 'ق'];
+                        countsObj = hmasq[sno];
+
                       } else if (nlist.includes(sno)) {
                         letters = ['ن'];
                         countsObj = n[sno];
@@ -756,6 +892,7 @@ function Dev() {
                         letters = [];
                         countsObj = {};
                       }
+                      const hasHM = Object.keys(countsObj).length;
 
                       if (formula) {
 
@@ -781,48 +918,71 @@ function Dev() {
                         });
 
                         // Define color classes for styling
-                        const over = 'text-rose-600';
-                        const under = 'text-orange-500';
-                        const equal = 'text-green-500/40';
+                        const over = 'text-rose-600 text-xl';
+                        const under = 'text-amber-400 text-xl';
+                        //const equal = 'text-green-400/50';
 
-                        // Create JSX elements with conditional styling
-                        hastobe = (
-                          <span className="text-neutral-400">
-                            {letters.map((letter) => (
-                              <span key={`ht-${letter}`}>
-                                {letter}: {ht_counts[letter]}{' '}
-                              </span>
-                            ))}
-                          </span>
-                        );
 
-                        has = (
-                          <span className="text-neutral-400">
-                            {letters.map((letter) => (
-                              <span key={`has-${letter}`}>
-                                {letter}:{' '}
-                                <span
-                                  className={
-                                    actual_counts[letter] > ht_counts[letter]
-                                      ? over
-                                      : actual_counts[letter] < ht_counts[letter]
-                                        ? under
-                                        : equal
-                                  }
-                                >
-                                  {actual_counts[letter]}
-                                </span>{' '}
-                              </span>
-                            ))}
-                          </span>
-                        );
+                        // hastobe = (
+                        //  <span className="text-neutral-500">
+                        //    {letters.map((letter) => (
+                        //      <span key={`ht-${letter}`}>
+                        //        {letter}: {ht_counts[letter]}{' '}
+                        //      </span>
+                        //    ))}
+                        //  </span>
+                        //); 
+
+                        has = (() => {
+                          const allEqual = letters.every((letter) => actual_counts[letter] === ht_counts[letter]);
+                          // If all are equal, return a single OK logo
+                          if (allEqual && Object.keys(ht_counts).length > 0) {
+                            return (
+                              <svg
+                                className="w-7 h-7 text-emerald-500"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M5 13l4 4L19 7"
+                                />
+                              </svg>
+                            );
+                          }
+
+                          // Otherwise, show over/under letters only
+                          return (
+                            <span className="text-neutral-400">
+                              {letters
+                                .filter((letter) => actual_counts[letter] !== ht_counts[letter])
+                                .map((letter) => {
+                                  const countClass = actual_counts[letter] > ht_counts[letter] ? over : under;
+
+                                  return (
+                                    <span key={`has-${letter}`} className={`text-2xl`}>
+                                      {letter}
+                                      <span dir={'ltr'} className={`text-xs`}>
+                                        {'(' + ht_counts[letter] + ')'}
+                                      </span>
+                                      :{' '}
+                                      <span dir={'ltr'} className={countClass}>
+                                        {(actual_counts[letter] - ht_counts[letter]) > 0 ? `+` + (actual_counts[letter] - ht_counts[letter]) : actual_counts[letter] - ht_counts[letter]}
+                                      </span>
+                                      {' '}
+                                    </span>
+                                  );
+                                })}
+                            </span>
+                          );
+                        })();
                       }
-
                       return (
-                        <div
-                          ref={index === loadedVerses.length - 1 ? lastVerseElementRef : null}
-                          key={`verse-${sno}:${vno}-index`}
-                        >
+                        <div ref={index === loadedVerses.length - 1 ? lastVerseElementRef : null} key={`verse-${sno}:${vno}-index`}>
                           {isbesmele && !filter && (
                             <div className="text-start w-full flex justify-between space-x-1 mb-1">
                               <div className="w-full p-2 rounded shadow-md bg-gradient-to-r from-cyan-400 to-neutral-950 text-neutral-100">
@@ -838,43 +998,33 @@ function Dev() {
                             </div>
                           )}
                           <div className="text-start w-full flex justify-between space-x-1">
-                            <div
-                              onClick={() => handleSelectedVerse(sno, vno)}
-                              className={`w-full p-1 rounded shadow-md cursor-pointer ${selectedSura === sno && selectedVerse === vno
-                                ? 'bg-neutral-900 ring-1 ring-neutral-100'
-                                : 'bg-neutral-900'
-                                }`}
-                            >
-                              <div className="flex w-full space-x-1.5">
-                                <div dir="ltr" className="text-sky-500 flex flex-col h-full justify-between w-1/6">
+                            <div className={`w-full rounded shadow-md  ${selectedSura === sno && selectedVerse === vno ? 'bg-neutral-950 ring-1 ring-neutral-100' : 'bg-neutral-950'}`}>
+                              <div className="flex w-full space-x-1.5 h-full items-center">
+                                <div
+                                  onClick={() => handleSelectedVerse(sno, vno)}
+                                  dir="ltr" className="text-sky-500 flex flex-col h-full justify-between w-1/6 p-1 cursor-pointer bg-neutral-900 rounded-l">
                                   {sno}:{vno}
-                                  <div className='text-nowrap text-neutral-400'>{formatDivisible(ns)}</div>
+                                  <div className='text-nowrap text-sm text-neutral-400'>{formatDivisible(ns)}</div>
                                 </div>
-                                <div dir="rtl" className="w-3/4">
+                                <div dir="rtl" className={` ${hasHM > 0 ? `w-3/4` : `w-full p-1.5`}  p-1 cursor-auto`}>
                                   {lightMatchWords(verse)}
                                 </div>
 
-                                <div
-                                  dir="ltr"
-                                  className="text-amber-400/70 text-sm flex items-center justify-center w-10"
-                                >
+                                {/* <div dir="ltr" className="text-teal-400/70 text-sm flex items-center justify-center w-10">
                                   {index + 1}
-                                </div>
+                                </div> */}
 
-                                <div
-                                  dir="ltr"
-                                  className="w-1/3 flex flex-col space-y-1 text-sm"
-                                >
-                                  <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
-                                    <div className="text-neutral-500 text-xs">{`HAS TO BE`}</div>
+                                {hasHM > 0 && <div dir="ltr" className={`min-w-24 flex flex-col text-sm `}>
+                                  {/* <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded text-nowrap space-x-1">
+                                    <div className="text-neutral-500 text-xs ">{`TO BE`}</div>
                                     <div dir="rtl">{hastobe}</div>
-                                  </div>
-                                  <div className="flex w-full items-center justify-between p-2 bg-neutral-950 rounded ">
-                                    <div className="text-neutral-500 text-xs">{`HAS`}</div>
-                                    <div dir="rtl">{has}</div>
+                                  </div> */}
+                                  <div className="flex w-full items-center justify-between p-1.5 h-full text-nowrap border-l border-neutral-600">
+                                    {/* <div className="text-neutral-500 text-xs">{`HAS`}</div> */}
+                                    <div className={`w-full text-base flex justify-center px-1`} dir="rtl">{has}</div>
                                   </div>
                                 </div>
-
+                                }
                               </div>
                             </div>
                           </div>
@@ -913,7 +1063,7 @@ function Dev() {
                       </svg>)}
                   </button>
 
-                  <button className={`flex justify-center`} onClick={() => setFilter('')}>
+                  <button className={`flex justify-center`} onClick={() => setFilter(null)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8`}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -924,16 +1074,26 @@ function Dev() {
                       type="text"
                       dir={`rtl`}
                       className=" w-full p-0.5 px-2 text-start bg-neutral-500/80 rounded shadow-inner placeholder:text-neutral-100/50"
-                      value={filter}
+                      value={filter === null ? '' : filter}
                       onChange={(e) => setFilter(e.target.value)}
                       placeholder={`N / A`}
                     />
                   </div>
+                  <button className={`flex justify-center`} onClick={() => setIsExactMatchEnabled(!isExactMatchEnabled)}>
+                    {isExactMatchEnabled ?
+                      (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-8 h-8`}>
+                        <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z" clipRule="evenodd" />
+                      </svg>)
+                      :
+                      (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8`}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                      </svg>)}
+                  </button>
                 </div>
               </div>
 
             </div>
-            <div className={`overflow-auto h-full w-full pt-2 pr-0.5 pl-1`}>
+            <div className={`overflow-auto h-full w-full pt-2 pr-0.5 pl-1 pb-14`}>
               {selectedVerse ?
                 (
                   <VerseDetail
@@ -1000,8 +1160,8 @@ function Dev() {
           (<div className={`absolute z-20 text-3xl bg-sky-500 p-3 rounded-lg bottom-36 lg:bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
             {formatDivisible(sosl)}
           </div>) :
-          (
-            <div className={`absolute z-20 text-2xl bg-neutral-500 p-3 rounded-lg top-6 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
+          (sosl > 0 &&
+            <div className={`absolute z-20 text-xl bg-neutral-500 px-2 py-1.5 rounded-lg top-6 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-md shadow-black`}>
               {sosl}
             </div>)}
       </div>
