@@ -4,6 +4,20 @@ import React, { useState, useEffect } from 'react';
 const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, arabicLetterValues, surano, verseno, lightMatchWords, single = true }) => {
     // 1. Keep track of total gematrical value in a React state
     const [totalGemValue, setTotalGemValue] = useState(0);
+    const factor = 19;
+
+    const isDivisible = (f, n) => {
+        n = Number(n);
+        return (n > 0 && n % f === 0);
+    };
+
+    const formatDivisible = (count) => {
+        if (isDivisible(factor, count)) {
+            return `${count} (${factor} x ${count / factor})`;
+        }
+        return count;
+    };
+
 
     // 2. Calculate total gem value whenever relevant props change
     useEffect(() => {
@@ -32,13 +46,13 @@ const VerseDetail = ({ quranMap, handleSelectedWord, filter, selectedLetters, ar
                     {tquranMap && tquranMap[surano] && tquranMap[surano][verseno]?.toString()}
                   </div> */}
 
-            <div className={`absolute -top-2 -left-1 z-10 rounded px-1 border border-black text-sm bg-neutral-600`}>
+            <div className={`absolute -top-2 -left-1 z-10 rounded px-1 border border-black text-xs bg-neutral-600`}>
                 {surano + `:` + verseno}
             </div>
-            <div className={`absolute -bottom-1 -right-1 z-10 rounded px-1 border border-black text-sm bg-neutral-600`}>
-                {`GV:`+ totalGemValue}
+            <div className={`absolute -top-3 left-10 z-10 rounded px-1 border border-black text-xs bg-neutral-600`}>
+                {`GV:` + formatDivisible(totalGemValue)}
             </div>
-            <div dir="rtl" className={`w-full flex ${single ? `flex-wrap` : `overflow-x-auto pb-4`} items-center justify-start rounded pt-1`}>
+            <div dir="rtl" className={`w-full flex ${single ? `flex-wrap` : `overflow-x-auto pb-4`} items-center justify-start rounded pt-2`}>
                 {quranMap && quranMap[surano] && quranMap[surano][verseno]?.split(' ').map((word, index) => (
                     <div
                         onClick={() => handleSelectedWord(word.trim())}

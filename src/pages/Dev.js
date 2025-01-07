@@ -1133,7 +1133,7 @@ function Dev() {
             </div>
           </div>
         </div>
-        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative `}>
+        <div className={`col-span-2 row-span-2 w-full h-full bg-neutral-600 relative z-50`}>
           <div dir={'ltr'} className={`h-full w-full flex flex-wrap p-0.5 gap-0.5 absolute `}>
             {arabicLetters.map((letter, index) => (
               <div
@@ -1157,11 +1157,11 @@ function Dev() {
           </div>
         </div>
         {isDivisible(factor, sosl) ?
-          (<div className={`absolute z-20 text-3xl bg-sky-500 p-3 rounded-lg bottom-36 lg:bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
+          (<div className={`absolute z-10 text-3xl bg-sky-500 p-3 rounded-lg bottom-36 lg:bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-lg shadow-black`}>
             {formatDivisible(sosl)}
           </div>) :
           (sosl > 0 &&
-            <div className={`absolute z-20 text-xl bg-neutral-500 px-2 py-1.5 rounded-lg top-6 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-md shadow-black`}>
+            <div className={`absolute z-10 text-xl bg-neutral-500 px-2 py-1.5 rounded-lg top-6 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex select-none items-center justify-center shadow-md shadow-black`}>
               {sosl}
             </div>)}
       </div>

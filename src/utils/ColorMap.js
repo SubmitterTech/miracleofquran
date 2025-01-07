@@ -1,36 +1,36 @@
 const arabicLetters = 'اءبتثجحخدذرزسشصضطظعغفقكلمنهوئي';
 
 const colors = [
-  '#8b5cf6', //elif
+  '#ef4444', //elif
   '#f97316', //hemze
   '#a3a3a3', //be
   '#a3a3a3', //te
   '#a3a3a3', //se
   '#a3a3a3', //cim
-  '#84cc16', //ha
+  '#f59e0b', //ha
   '#a3a3a3', //hı
   '#a3a3a3', //dal
   '#a3a3a3', //zel
-  '#2563eb', //ra
+  '#eab308', //ra
   '#a3a3a3', //ze
-  '#eab308', //sin
+  '#f43f5e', //sin
   '#a3a3a3', //şın
-  '#f59e0b', //sad
+  '#22c55e', //sad
   '#a3a3a3', //dad
-  '#8b5cf6', //tı
+  '#10b981', //tı
   '#a3a3a3', //zı
   '#06b6d4', //ayn
   '#a3a3a3', //gayn
   '#a3a3a3', //fe
   '#0ea5e9', //gaf
-  '#65a30d', //kef
-  '#22c55e', //lam
-  '#f43f5e', //mim
-  '#2dd4bf', //nun
-  '#dc2626', //he
+  '#3b82f6', //kef
+  '#6366f1', //lam
+  '#d946ef', //mim
+  '#a855f7', //nun
+  '#8b5cf6', //he
   '#a3a3a3', //vav
-  '#d946ef', //ye(gizli)
-  '#8b5cf6', //ye 
+  '#14b8a6', //ye(gizli)
+  '#84cc16', //ye 
   '#a855f7' //???
 ];
 
