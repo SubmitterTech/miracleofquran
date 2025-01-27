@@ -402,6 +402,8 @@ function Dev() {
                 // If the current letter is Alif, sum both Hamza (ء) and Alif (ا)
                 if (l === 'ا') {
                   cCount = (c['ء'] || 0) + (c['ا'] || 0);
+                } else if (l === 'ي') {
+                  cCount = (c['ئ'] || 0) + (c['ي'] || 0);
                 } else {
                   cCount = c[l] || 0;
                 }
@@ -739,7 +741,7 @@ function Dev() {
           return highlightLetters(word, '#0ea5e9', index); // Blue
         }
         // PARTIAL/STEM MATCH
-        else if (word.includes(filter)) {
+        else if (word.includes(filter !== null ? filter.trim() : filter)) {
           return highlightLetters(word, '#22c55e', index); // Green
         }
         // WORD CONTAINS A SELECTED LETTER (but no filter match)
