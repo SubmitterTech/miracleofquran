@@ -10049,10 +10049,11 @@
 * 63:4
 ---
 
-373. EL-EBSAR, VE-EBSAREKUM, VEL-EBSAR, EBSARUNA, EBSAR, EBSARIHIN, BIL-EBSAR, VE-EBSARA, EBSARUHA
+373. EL-EBSAR, VE-EBSAREKUM, EBSAREKUM, VEL-EBSAR, EBSARUNA, EBSAR, EBSARIHIN, BIL-EBSAR, VE-EBSARA, EBSARUHA
 ```
 الابصار -> الابصر
 وابصاركم -> وابصركم
+ابصاركم -> ابصركم
 والابصار -> والابصر
 ابصارنا -> ابصرنا
 ابصار -> ابصر
@@ -10702,9 +10703,10 @@
 ---
 ---
 
-406. VETENAZAe'TUM, TENAZAe'TUM, TENAZA-Ug, YETENAZA-UgN, FETENAZA-Ug
+406. VETENAZAe'TUM, VELETENAZAe'TUM, TENAZAe'TUM, TENAZA-Ug, YETENAZA-UgN, FETENAZA-Ug
 ```
 وتنازعتم -> وتنزعتم
+ولتنازعتم -> ولتنزعتم
 تنازعتم -> تنزعتم
 تنازعوا -> تنزعوا
 يتنازعون -> يتنزعون
@@ -10751,7 +10753,7 @@
 اخران -> ءاخران
 فاخران -> فءاخران
 ```
-* 3:153
+* 3:153, 5:106, 5:107
 ---
 
 410. FE-ESEBAKUM, FE-ESEBAHUM, VE-ESEBAHUM
