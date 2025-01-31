@@ -1,4 +1,6 @@
-# “My  Lord,  I  seek  refuge  in  You from the whispers of the devils. And  I  seek  refuge  in  You,  my Lord, lest they come near me.”
+# [47:7] O you who believe, if you support GOD,  He  will  support  you,  and strengthen your foothold.
+
+## “My  Lord,  I  seek  refuge  in  You from the whispers of the devils. And  I  seek  refuge  in  You,  my Lord, lest they come near me.”
 
 0. NUN
 ```
@@ -972,7 +974,7 @@
 * 7:32, 24:26
 ---
 
-43. AMENU
+43. A-MENU
 ```
 امنوا -> ءامنوا
 ```
@@ -3319,29 +3321,18 @@
 * 7:158
 * 9:18
 * 9:19
-* 10:31
-* 10:35
 * 10:83
 * 11:36
 * 11:40
 * 18:88
-* 27:60
-* 27:61
-* 27:62
-* 27:63
-* 27:64
 * 27:89
 * 28:80
 * 37:148
-* 39:9
 * 40:30
 * 40:38
 * 46:17
 * 46:31
 * 47:2
-* 67:20
-* 67:21
-* 67:22
 ---
 ![7:75](../pictures/7-75.png)
 
@@ -3352,7 +3343,7 @@
 ---
 ---
 
-92. AMENTUM
+92. A-MENTUM
 ```
 امنتم -> ءامنتم
 ```
@@ -4156,7 +4147,7 @@
 ---
 ---
 
-126. AMENNA, FEAMENNA
+126. A-MENNA, FEA-MENNA
 ```
 امنا -> ءامنا
 فامنا -> فءامنا
@@ -11092,6 +11083,61 @@
 ---
 ![10:25](../pictures/10-25.png)
 ![2:221](../pictures/2-221.png)
+
+---
+---
+
+430. TEBLU', ETLU', TETLU', LITETLU', NETLU', SAETLU', SALU', LESALU', LIYEBLU', VENEBLU', MURSELU'
+```
+تبلو -> تبلوا
+```
+* 10:30
+```
+اتلو -> اتلوا
+تتلو -> تتلوا
+لتتلو -> لتتلوا
+نتلو -> نتلوا
+```
+* 27:92, 2:102, 13:30, 28:3
+
+<>
+* 10:61
+* 28:45
+* 29:48
+```
+ساتلو -> ساتلوا
+```
+* 18:83
+```
+صالو -> صالوا
+لصالو -> لصالوا
+```
+* 38:59, 83:16
+```
+ليبلو -> ليبلوا
+ونبلو -> ونبلوا
+```
+* 47:4, 47:31
+```
+مرسلو -> مرسلوا
+```
+* 54:27
+---
+![10:30](../pictures/10-30.png)
+
+---
+---
+
+431. EShTERAH
+```
+اشتراه -> اشتريه
+```
+* 2:102
+
+<>
+* 12:21
+---
+![2:102](../pictures/2-102.png)
 
 ---
 ---
