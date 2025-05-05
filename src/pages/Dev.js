@@ -741,7 +741,7 @@ function Dev() {
           return highlightLetters(word, '#0ea5e9', index); // Blue
         }
         // PARTIAL/STEM MATCH
-        else if (word.includes(filter !== null ? filter.trim() : filter)) {
+        else if (word.includes(filter) || (word + ' ').includes(filter) || (' ' + word).includes(filter)) {
           return highlightLetters(word, '#22c55e', index); // Green
         }
         // WORD CONTAINS A SELECTED LETTER (but no filter match)
