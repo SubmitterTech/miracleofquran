@@ -78,12 +78,22 @@
 ---
 
 ![7:69](../pictures/uthmani-mushaf-changes/7-69.png)
-![2:247](../pictures/uthmani-mushaf-changes/7-247.png)
+![2:247](../pictures/uthmani-mushaf-changes/2-247.png)
 
 5. BASTAT
 ```
 بصطة -> بسطة
 ```
 * 7:69
+---
+---
+
+![2:31](../pictures/uthmani-mushaf-changes/2-31.png)
+
+6. ENBIYUNI
+```
+انبءونى -> انبئونى
+```
+* 2:31
 ---
 ---
