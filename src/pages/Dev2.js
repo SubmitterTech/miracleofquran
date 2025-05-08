@@ -94,10 +94,10 @@ function Dev2() {
         setQuranMap(quran);
     }, []);
 
-    // function getRegex(f) {
-    //     const sunLetters = 'تثدذرزسشصضطظن';
-    //     return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
-    // }
+    function getRegex(f) {
+        const sunLetters = 'تثدذرزسشصضطظنخ';
+        return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
+    }
 
 
     const besmele = (quranMap && quranMap['1']) ? quranMap['1']['1'] : null;
@@ -194,7 +194,7 @@ function Dev2() {
                     }
 
                 } else if (filter) {
-                    const regex = filter;//getRegex(filter);
+                    const regex = getRegex(filter);
                     const matches = verse.match(regex) || [];
                     const hc = matches.length;
 
@@ -381,7 +381,7 @@ function Dev2() {
                     return highlightLetters(word, '#0ea5e9', index); // Blue
                 }
                 // PARTIAL/STEM MATCH
-                else if (word.includes(filter) || (word + ' ').includes(filter) || (' ' + word).includes(filter)) {
+                else if ((word.includes(filter) || (word + ' ').includes(filter) || (' ' + word).includes(filter)) && word.match(getRegex(filter?.trim()))) {
                     return highlightLetters(word, '#22c55e', index); // Green
                 }
                 // WORD CONTAINS A SELECTED LETTER (but no filter match)
