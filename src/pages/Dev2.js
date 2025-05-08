@@ -327,7 +327,7 @@ function Dev2() {
             let lastIndex = 0;
 
             // If you need case-insensitive matching, use /.../gi instead of /.../g
-            const regex = new RegExp(filter, 'g');
+            const regex = new RegExp(filter.trim(), 'g');
 
             verse.replace(regex, (match, offset) => {
                 // Push text before this match (per-letter highlighting)
@@ -377,7 +377,7 @@ function Dev2() {
                 );
 
                 // EXACT MATCH
-                if (word === filter) {
+                if (word === filter?.trim()) {
                     return highlightLetters(word, '#0ea5e9', index); // Blue
                 }
                 // PARTIAL/STEM MATCH
