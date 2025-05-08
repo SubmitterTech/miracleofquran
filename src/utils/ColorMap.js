@@ -1,4 +1,4 @@
-const arabicLetters = 'اءبتثجحخدذرزسشصضطظعغفقكلمنهوئي';
+const arabicLetters = 'اءبتثجحخدذرزسشصضطظعغفقكلمنهةوؤئىي';
 
 const colors = [
   '#ef4444', //elif
@@ -28,7 +28,10 @@ const colors = [
   '#d946ef', //mim
   '#a855f7', //nun
   '#8b5cf6', //he
+  '#8b5cf6', //he (te)
   '#a3a3a3', //vav
+  '#a3a3a3', //vav (hemzeli)
+  '#14b8a6', //ye(hemzeli)
   '#14b8a6', //ye(gizli)
   '#84cc16', //ye 
   '#a855f7' //???
