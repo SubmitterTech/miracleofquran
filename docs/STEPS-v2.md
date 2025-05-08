@@ -1,3 +1,35 @@
 # [47:7] O you who believe, if you support GOD,  He  will  support  you,  and strengthen your foothold.
 
 ## “My  Lord,  I  seek  refuge  in  You from the whispers of the devils. And  I  seek  refuge  in  You,  my Lord, lest they come near me.”
+
+
+![96:1-19](../pictures/uthmani-mushaf-changes/96-1-19.png)
+
+0. MA-LEM
+```
+ما لم -> مالم
+```
+* 96:5
+
+<>
+* 2:151
+* 2:236
+* 2:239
+* 3:151
+* 4:113
+* 5:20
+* 6:6
+* 6:81
+* 6:91
+* 7:33
+* 18:68
+* 18:78
+* 18:82
+* 19:43
+* 22:71
+* 23:68
+* 39:47
+* 42:21
+* 48:27
+---
+---

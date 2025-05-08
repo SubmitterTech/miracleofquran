@@ -29,6 +29,13 @@ function Dev2() {
     const batchSize = 38;
     const factor = 19;
 
+    function specialCount(letter, c) {
+        if (letter === 'ا') return ((c['ء'] || 0) + (c['ا'] || 0));
+        if (letter === 'ي') return ((c['ى'] || 0) + (c['ي'] || 0) + (c['ئ'] || 0));
+        if (letter === 'ه') return ((c['ه'] || 0) + (c['ة'] || 0));
+        return c[letter] || 0;
+    };
+
     const letterMapping = useMemo(() => ({
         ALM: ['م', 'ل', 'ا'],
         ALR: ['ر', 'ل', 'ا'],
@@ -50,7 +57,7 @@ function Dev2() {
             });
         });
         return m;
-    }, [ letterMapping]);
+    }, [letterMapping]);
 
     const [checkHM, setCheckHM] = useState(true);
     const [isExactMatchEnabled, setIsExactMatchEnabled] = useState(false);
@@ -65,12 +72,7 @@ function Dev2() {
         );
     };
 
-    const specialCount = (letter, c) => {
-        if (letter === 'ا') return ((c['ء'] || 0) + (c['ا'] || 0));
-        if (letter === 'ي') return ((c['ى'] || 0) + (c['ي'] || 0) + (c['ئ'] || 0));
-        if (letter === 'ه') return ((c['ه'] || 0) + (c['ة'] || 0));
-        return c[letter] || 0;
-    };
+
 
     const arabicLetterValues = useMemo(() =>
     ({
@@ -92,10 +94,10 @@ function Dev2() {
         setQuranMap(quran);
     }, []);
 
-    function getRegex(f) {
-        const sunLetters = 'تثدذرزسشصضطظن';
-        return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
-    }
+    // function getRegex(f) {
+    //     const sunLetters = 'تثدذرزسشصضطظن';
+    //     return new RegExp(`(?<![${sunLetters}])(${f})(?![\\u0600-\\u06FF${(f?.slice(-1) === 'ه' || f?.slice(-1) === 'ن') ? '' : '&&[^ا]'}])`, 'g');
+    // }
 
 
     const besmele = (quranMap && quranMap['1']) ? quranMap['1']['1'] : null;
@@ -192,7 +194,7 @@ function Dev2() {
                     }
 
                 } else if (filter) {
-                    const regex = getRegex(filter);
+                    const regex = filter;//getRegex(filter);
                     const matches = verse.match(regex) || [];
                     const hc = matches.length;
 
@@ -244,12 +246,12 @@ function Dev2() {
 
         setOcc(count);
         if (filter) {
-            console.log('----------------------------');
             console.log(
                 verseList.map(v => `* ${v.sno}:${v.vno.trim()}`).join('\n'),
-                `\n${exactCount} EXACT MATCH`,
+                `\n\n\n${exactCount} EXACT MATCH`,
                 `\n${count} TOTAL`
             );
+            console.log('------');
         }
         setFilteredVerses(verseList);
 
