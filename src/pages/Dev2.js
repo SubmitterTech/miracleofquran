@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 
-import quranUtmani from '../assets/quran.json';
+import quran from '../assets/quran.json';
 import counts from '../assets/counts.json';
 import '../App.css';
 import colorMap from '../utils/ColorMap';
@@ -89,7 +89,7 @@ function Dev2() {
 
     useEffect(() => {
 
-        setQuranMap(quranUtmani);
+        setQuranMap(quran);
     }, []);
 
     function getRegex(f) {
@@ -180,7 +180,7 @@ function Dev2() {
         let count = 0;
         let exactCount = 0;
 
-        for (const [sno, content] of Object.entries(quranUtmani)) {
+        for (const [sno, content] of Object.entries(quran)) {
             const entry = snoMap[sno];
             for (const [vno, verse] of Object.entries(content)) {
                 const c = getLetterCounts(verse);

@@ -8,7 +8,7 @@
 ```
 * 68:1
 ---
-![68:1](../pictures/68-1.png)
+![68:1](../pictures/quran.com-mushaf-changes/68-1.png)
 
 ---
 ---
@@ -97,7 +97,7 @@
 * 84:21
 * 85:21
 ---
-![50:1](../pictures/50-1.png)
+![50:1](../pictures/quran.com-mushaf-changes/50-1.png)
 
 ---
 ---
@@ -184,19 +184,19 @@
 * 83:20
 * 84:7
 ---
-![7:2](../pictures/7-2.png)
+![7:2](../pictures/quran.com-mushaf-changes/7-2.png)
 
-![84:10](../pictures/84-10.png)
-![17:71](../pictures/17-71.png)
-![52:2](../pictures/52-2.png)
-![78:29](../pictures/78-29.png)
-![46:4](../pictures/46-4.png)
-![17:14](../pictures/17-14.png)
-![27:28](../pictures/27-28.png)
-![41:41](../pictures/41-41.png)
-![37:157](../pictures/37-157.png)
-![69:19](../pictures/69-19.png)
-![45:28-29](../pictures/45-28,29.png)
+![84:10](../pictures/quran.com-mushaf-changes/84-10.png)
+![17:71](../pictures/quran.com-mushaf-changes/17-71.png)
+![52:2](../pictures/quran.com-mushaf-changes/52-2.png)
+![78:29](../pictures/quran.com-mushaf-changes/78-29.png)
+![46:4](../pictures/quran.com-mushaf-changes/46-4.png)
+![17:14](../pictures/quran.com-mushaf-changes/17-14.png)
+![27:28](../pictures/quran.com-mushaf-changes/27-28.png)
+![41:41](../pictures/quran.com-mushaf-changes/41-41.png)
+![37:157](../pictures/quran.com-mushaf-changes/37-157.png)
+![69:19](../pictures/quran.com-mushaf-changes/69-19.png)
+![45:28-29](../pictures/quran.com-mushaf-changes/45-28,29.png)
 
 ---
 ---
@@ -222,7 +222,7 @@
 * 7:97
 * 10:50
 ---
-![7:4](../pictures/7-4.png)
+![7:4](../pictures/quran.com-mushaf-changes/7-4.png)
 
 ---
 ---
@@ -253,7 +253,7 @@
 * 29:31
 * 68:29
 ---
-![7:5](../pictures/7-5.png)
+![7:5](../pictures/quran.com-mushaf-changes/7-5.png)
 
 ---
 ---
@@ -271,7 +271,7 @@
 * 101:6
 * 101:8
 ---
-![7:8](../pictures/7-8.png)
+![7:8](../pictures/quran.com-mushaf-changes/7-8.png)
 
 ---
 ---
@@ -295,7 +295,7 @@
 <>
 * 15:20
 ---
-![7:10](../pictures/7-10.png)
+![7:10](../pictures/quran.com-mushaf-changes/7-10.png)
 
 ---
 ---
@@ -365,7 +365,7 @@
 * 15:98
 * 26:219
 ---
-![7:11](../pictures/7-11.png)
+![7:11](../pictures/quran.com-mushaf-changes/7-11.png)
 
 ---
 ---
@@ -379,7 +379,7 @@
 <>
 * 12:32
 ---
-![7:13](../pictures/7-13.png)
+![7:13](../pictures/quran.com-mushaf-changes/7-13.png)
 
 ---
 ---
@@ -390,7 +390,7 @@
 ```
 * 7:16
 ---
-![7:16](../pictures/7-16.png)
+![7:16](../pictures/quran.com-mushaf-changes/7-16.png)
 
 ---
 ---
@@ -437,7 +437,7 @@
 ```
 * 7:17
 ---
-![7:17](../pictures/7-17.png)
+![7:17](../pictures/quran.com-mushaf-changes/7-17.png)
 
 ---
 ---
@@ -533,11 +533,11 @@
 * 71:24
 * 71:28
 ---
-![7:19](../pictures/7-19.png)
+![7:19](../pictures/quran.com-mushaf-changes/7-19.png)
 
-![62:7](../pictures/62-7.png)
-![76:31](../pictures/76-31.png)
-![20:120](../pictures/20-120.png)
+![62:7](../pictures/quran.com-mushaf-changes/62-7.png)
+![76:31](../pictures/quran.com-mushaf-changes/76-31.png)
+![20:120](../pictures/quran.com-mushaf-changes/20-120.png)
 
 ---
 ---
@@ -638,7 +638,7 @@
 ```
 * 7:20
 ---
-![7:20](../pictures/7-20.png)
+![7:20](../pictures/quran.com-mushaf-changes/7-20.png)
 
 ---
 ---
@@ -653,7 +653,7 @@
 * 7:79
 * 28:20
 ---
-![7:21](../pictures/7-21.png)
+![7:21](../pictures/quran.com-mushaf-changes/7-21.png)
 
 ---
 ---
@@ -671,7 +671,7 @@
 ```
 * 7:22
 ---
-![7:22](../pictures/7-22.png)
+![7:22](../pictures/quran.com-mushaf-changes/7-22.png)
 
 ---
 ---
@@ -696,7 +696,7 @@
 * 41:23
 * 42:45
 ----
-![7:23](../pictures/7-23.png)
+![7:23](../pictures/quran.com-mushaf-changes/7-23.png)
 
 ---
 ---
@@ -729,10 +729,10 @@
 * 42:36
 * 43:35
 ---
-![7:24](../pictures/7-24.png)
+![7:24](../pictures/quran.com-mushaf-changes/7-24.png)
 
-![28:60](../pictures/28-60.png)
-![57:20](../pictures/57-20.png)
+![28:60](../pictures/quran.com-mushaf-changes/28-60.png)
+![57:20](../pictures/quran.com-mushaf-changes/57-20.png)
 
 ---
 ---
@@ -864,7 +864,7 @@
 * 58:5
 * 65:11
 ---
-![7:26](../pictures/7-26.png)
+![7:26](../pictures/quran.com-mushaf-changes/7-26.png)
 
 ---
 ---
@@ -900,9 +900,9 @@
 * 26:221
 * 37:65
 ---
-![7:27](../pictures/7-27.png)
+![7:27](../pictures/quran.com-mushaf-changes/7-27.png)
 
-![38:37](../pictures/38-27.png)
+![38:37](../pictures/quran.com-mushaf-changes/38-27.png)
 
 ---
 ---
@@ -940,9 +940,9 @@
 * 43:22
 * 43:23
 ---
-![7:28](../pictures/7-28.png)
+![7:28](../pictures/quran.com-mushaf-changes/7-28.png)
 
-![33:30](../pictures/33-30.png)
+![33:30](../pictures/quran.com-mushaf-changes/33-30.png)
 
 ---
 ---
@@ -961,7 +961,7 @@
 * 16:36
 * 19:75
 ---
-![7:30](../pictures/7-30.png)
+![7:30](../pictures/quran.com-mushaf-changes/7-30.png)
 
 ---
 ---
@@ -1426,12 +1426,12 @@
 * 46:27
 * 57:17
 ---
-![7:32](../pictures/7-32.png)
+![7:32](../pictures/quran.com-mushaf-changes/7-32.png)
 
-![24:26](../pictures/24-26.png)
-![9:38](../pictures/9-38.png)
-![67:2](../pictures/67-2.png)
-![17:59](../pictures/17-59.png)
+![24:26](../pictures/quran.com-mushaf-changes/24-26.png)
+![9:38](../pictures/quran.com-mushaf-changes/9-38.png)
+![67:2](../pictures/quran.com-mushaf-changes/67-2.png)
+![17:59](../pictures/quran.com-mushaf-changes/17-59.png)
 
 ---
 ---
@@ -1466,9 +1466,9 @@
 * 28:35
 * 30:35
 ---
-![7:33](../pictures/7-33.png)
+![7:33](../pictures/quran.com-mushaf-changes/7-33.png)
 
-![53:32](../pictures/53-32.png)
+![53:32](../pictures/quran.com-mushaf-changes/53-32.png)
 
 ---
 ---
@@ -1649,13 +1649,13 @@
 * 43:74
 * 58:17
 ---
-![7:36](../pictures/7-36.png)
+![7:36](../pictures/quran.com-mushaf-changes/7-36.png)
 
-![56:8](../pictures/56-8.png)
-![56:9](../pictures/56-9.png)
-![56:38](../pictures/56-38.png)
-![51:59](../pictures/51-59.png)
-![21:34](../pictures/21-34.png)
+![56:8](../pictures/quran.com-mushaf-changes/56-8.png)
+![56:9](../pictures/quran.com-mushaf-changes/56-9.png)
+![56:38](../pictures/quran.com-mushaf-changes/56-38.png)
+![51:59](../pictures/quran.com-mushaf-changes/51-59.png)
+![21:34](../pictures/quran.com-mushaf-changes/21-34.png)
 
 ---
 ---
@@ -1857,11 +1857,11 @@
 * 30:13
 * 46:6
 ---
-![7:36](../pictures/7-36.png)
+![7:36](../pictures/quran.com-mushaf-changes/7-36.png)
 
-![4:136](../pictures/4-136.png)
-![35:25](../pictures/35-25.png)
-![40:70](../pictures/40-70.png)
+![4:136](../pictures/quran.com-mushaf-changes/4-136.png)
+![35:25](../pictures/quran.com-mushaf-changes/35-25.png)
+![40:70](../pictures/quran.com-mushaf-changes/40-70.png)
 
 ---
 ---
@@ -1886,7 +1886,7 @@
 ```
 * 7:38
 ---
-![7:38](../pictures/7-38.png)
+![7:38](../pictures/quran.com-mushaf-changes/7-38.png)
 
 ---
 ---
@@ -1905,9 +1905,9 @@
 ```
 * 7:39
 ---
-![7:39](../pictures/7-39.png)
+![7:39](../pictures/quran.com-mushaf-changes/7-39.png)
 
-![17:5](../pictures/17-5.png)
+![17:5](../pictures/quran.com-mushaf-changes/17-5.png)
 
 ---
 ---
@@ -1934,11 +1934,11 @@
 * 43:34
 * 54:11
 ---
-![7:40](../pictures/7-40.png)
+![7:40](../pictures/quran.com-mushaf-changes/7-40.png)
 
-![38:50](../pictures/38-50.png)
-![78:19](../pictures/78-19.png)
-![39:73](../pictures/39-73.png)
+![38:50](../pictures/quran.com-mushaf-changes/38-50.png)
+![78:19](../pictures/quran.com-mushaf-changes/78-19.png)
+![39:73](../pictures/quran.com-mushaf-changes/39-73.png)
 
 ---
 ---
@@ -2011,9 +2011,9 @@
 * 98:7
 * 103:3
 ---
-![7:42](../pictures/7-42.png)
+![7:42](../pictures/quran.com-mushaf-changes/7-42.png)
 
-![4:34](../pictures/4-34.png)
+![4:34](../pictures/quran.com-mushaf-changes/4-34.png)
 
 ---
 ---
@@ -2086,11 +2086,11 @@
 * 14:12
 * 14:21
 ---
-![7:43](../pictures/7-43.png)
+![7:43](../pictures/quran.com-mushaf-changes/7-43.png)
 
-![47:15](../pictures/47-15.png)
-![71:12](../pictures/71-12.png)
-![16:15](../pictures/16-15.png)
+![47:15](../pictures/quran.com-mushaf-changes/47-15.png)
+![71:12](../pictures/quran.com-mushaf-changes/71-12.png)
+![16:15](../pictures/quran.com-mushaf-changes/16-15.png)
 
 ---
 ---
@@ -2156,14 +2156,14 @@
 * 51:25
 * 97:5
 ---
-![7:46](../pictures/7-46.png)
+![7:46](../pictures/quran.com-mushaf-changes/7-46.png)
 
-![59:23](../pictures/59-23.png)
-![56:91](../pictures/56-91.png)
-![50:34](../pictures/50-34.png)
-![56:26](../pictures/56-26.png)
-![37:181](../pictures/37-181.png)
-![20:47](../pictures/20-47.png)
+![59:23](../pictures/quran.com-mushaf-changes/59-23.png)
+![56:91](../pictures/quran.com-mushaf-changes/56-91.png)
+![50:34](../pictures/quran.com-mushaf-changes/50-34.png)
+![56:26](../pictures/quran.com-mushaf-changes/56-26.png)
+![37:181](../pictures/quran.com-mushaf-changes/37-181.png)
+![20:47](../pictures/quran.com-mushaf-changes/20-47.png)
 
 ---
 ---
@@ -2188,10 +2188,10 @@
 * 68:43
 * 70:44
 ---
-![7:47](../pictures/7-47.png)
+![7:47](../pictures/quran.com-mushaf-changes/7-47.png)
 
-![41:20](../pictures/41-20.png)
-![68:51](../pictures/68-51.png)
+![41:20](../pictures/quran.com-mushaf-changes/41-20.png)
+![68:51](../pictures/quran.com-mushaf-changes/68-51.png)
 
 ---
 ---
@@ -2258,10 +2258,10 @@
 * 74:10
 * 86:17
 ---
-![7:50](../pictures/7-50.png)
+![7:50](../pictures/quran.com-mushaf-changes/7-50.png)
 
-![4:140](../pictures/4-140.png)
-![9:49](../pictures/9-49.png)
+![4:140](../pictures/quran.com-mushaf-changes/4-140.png)
+![9:49](../pictures/quran.com-mushaf-changes/9-49.png)
 
 ---
 ---
@@ -2272,7 +2272,7 @@
 ```
 * 7:51
 ---
-![7:51](../pictures/7-51.png)
+![7:51](../pictures/quran.com-mushaf-changes/7-51.png)
 
 ---
 ---
@@ -2293,7 +2293,7 @@
 <>
 * 17:12
 ---
-![7:52](../pictures/7-52.png)
+![7:52](../pictures/quran.com-mushaf-changes/7-52.png)
 
 ---
 ---
@@ -2641,12 +2641,12 @@
 * 81:29
 * 83:6
 ---
-![7:54](../pictures/7-54.png)
+![7:54](../pictures/quran.com-mushaf-changes/7-54.png)
 
-![93:2](../pictures/93-2.png)
-![41:38](../pictures/41-38.png)
-![37:138](../pictures/37-138.png)
-![39:67](../pictures/39-67.png)
+![93:2](../pictures/quran.com-mushaf-changes/93-2.png)
+![41:38](../pictures/quran.com-mushaf-changes/41-38.png)
+![37:138](../pictures/quran.com-mushaf-changes/37-138.png)
+![39:67](../pictures/quran.com-mushaf-changes/39-67.png)
 
 ---
 ---
@@ -2660,7 +2660,7 @@
 <>
 * 7:85
 ---
-![7:56](../pictures/7-56.png)
+![7:56](../pictures/quran.com-mushaf-changes/7-56.png)
 
 ---
 ---
@@ -2709,9 +2709,9 @@
 * 16:69
 * 47:15
 ---
-![7:57](../pictures/7-57.png)
+![7:57](../pictures/quran.com-mushaf-changes/7-57.png)
 
-![35:9](../pictures/35-9.png)
+![35:9](../pictures/quran.com-mushaf-changes/35-9.png)
 
 ---
 ---
@@ -2772,10 +2772,10 @@
 * 61:5
 * 71:2
 ---
-![7:59](../pictures/7-59.png)
+![7:59](../pictures/quran.com-mushaf-changes/7-59.png)
 
-![40:41](../pictures/40-41.png)
-![46:31](../pictures/46-31.png)
+![40:41](../pictures/quran.com-mushaf-changes/40-41.png)
+![46:31](../pictures/quran.com-mushaf-changes/46-31.png)
 
 ---
 ---
@@ -2840,13 +2840,13 @@
 * 67:9
 * 67:29
 ---
-![7:60](../pictures/7-60.png)
+![7:60](../pictures/quran.com-mushaf-changes/7-60.png)
 
-![71:24](../pictures/71-24.png)
-![22:12](../pictures/22-12.png)
-![34:8](../pictures/34-8.png)
-![27:81](../pictures/27-81.png)
-![7:61](../pictures/7-61.png)
+![71:24](../pictures/quran.com-mushaf-changes/71-24.png)
+![22:12](../pictures/quran.com-mushaf-changes/22-12.png)
+![34:8](../pictures/quran.com-mushaf-changes/34-8.png)
+![27:81](../pictures/quran.com-mushaf-changes/27-81.png)
+![7:61](../pictures/quran.com-mushaf-changes/7-61.png)
 
 ---
 ---
@@ -2864,8 +2864,8 @@
 * 33:39
 * 72:28
 ---
-![7:62](../pictures/7-62.png)
-![72:23](../pictures/72-23.png)
+![7:62](../pictures/quran.com-mushaf-changes/7-62.png)
+![72:23](../pictures/quran.com-mushaf-changes/72-23.png)
 
 ---
 ---
@@ -2884,8 +2884,8 @@
 * 27:57
 * 29:15
 ---
-![7:64](../pictures/7-64.png)
-![21:9](../pictures/21-9.png)
+![7:64](../pictures/quran.com-mushaf-changes/7-64.png)
+![21:9](../pictures/quran.com-mushaf-changes/21-9.png)
 
 ---
 ---
@@ -2910,9 +2910,9 @@
 * 28:38
 * 29:3
 ---
-![7:66](../pictures/7-66.png)
+![7:66](../pictures/quran.com-mushaf-changes/7-66.png)
 
-![16:39](../pictures/16-39.png)
+![16:39](../pictures/quran.com-mushaf-changes/16-39.png)
 
 ---
 ---
@@ -2958,7 +2958,7 @@
 * 55:75
 * 55:77
 ---
-![7:69](../pictures/7-69.png)
+![7:69](../pictures/quran.com-mushaf-changes/7-69.png)
 
 ---
 ---
@@ -3021,14 +3021,14 @@
 * 52:38
 * 53:23
 ---
-![7:71](../pictures/7-71.png)
+![7:71](../pictures/quran.com-mushaf-changes/7-71.png)
 
-![34:43](../pictures/34-43.png)
+![34:43](../pictures/quran.com-mushaf-changes/34-43.png)
 
-![40:23](../pictures/40-23.png)
-![55:33](../pictures/55-33.png)
-![69:29](../pictures/69-29.png)
-![16:100](../pictures/16-100.png)
+![40:23](../pictures/quran.com-mushaf-changes/40-23.png)
+![55:33](../pictures/quran.com-mushaf-changes/55-33.png)
+![69:29](../pictures/quran.com-mushaf-changes/69-29.png)
+![16:100](../pictures/quran.com-mushaf-changes/16-100.png)
 
 ---
 ---
@@ -3281,10 +3281,10 @@
 * 54:15
 * 55:31
 ---
-![7:73](../pictures/7-73.png)
+![7:73](../pictures/quran.com-mushaf-changes/7-73.png)
 
-![109:1](../pictures/109-1.png)
-![43:49](../pictures/43-49.png)
+![109:1](../pictures/quran.com-mushaf-changes/109-1.png)
+![43:49](../pictures/quran.com-mushaf-changes/43-49.png)
 
 ---
 ---
@@ -3334,11 +3334,11 @@
 * 46:31
 * 47:2
 ---
-![7:75](../pictures/7-75.png)
+![7:75](../pictures/quran.com-mushaf-changes/7-75.png)
 
-![34:37](../pictures/34-37.png)
-![57:28](../pictures/57-28.png)
-![64:8](../pictures/64-8.png)
+![34:37](../pictures/quran.com-mushaf-changes/34-37.png)
+![57:28](../pictures/quran.com-mushaf-changes/57-28.png)
+![64:8](../pictures/quran.com-mushaf-changes/64-8.png)
 
 ---
 ---
@@ -3403,10 +3403,10 @@
 * 61:8
 * 109:1
 ---
-![7:76](../pictures/7-76.png)
+![7:76](../pictures/quran.com-mushaf-changes/7-76.png)
 
-![67:20](../pictures/67-20.png)
-![74:31](../pictures/74-31.png)
+![67:20](../pictures/quran.com-mushaf-changes/67-20.png)
+![74:31](../pictures/quran.com-mushaf-changes/74-31.png)
 
 ---
 ---
@@ -3426,11 +3426,11 @@
 * 11:62
 * 11:89
 ---
-![7:77](../pictures/7-77.png)
+![7:77](../pictures/quran.com-mushaf-changes/7-77.png)
 
-![66:4](../pictures/66-4.png)
-![35:10](../pictures/35-10.png)
-![26:142](../pictures/26-142.png)
+![66:4](../pictures/quran.com-mushaf-changes/66-4.png)
+![35:10](../pictures/quran.com-mushaf-changes/35-10.png)
+![26:142](../pictures/quran.com-mushaf-changes/26-142.png)
 
 ---
 ---
@@ -3447,7 +3447,7 @@
 * 11:94
 * 29:37
 ---
-![7:78](../pictures/7-78.png)
+![7:78](../pictures/quran.com-mushaf-changes/7-78.png)
 
 ---
 ---
@@ -3464,7 +3464,7 @@
 * 27:54
 * 29:28
 ---
-![7:80](../pictures/7-80.png)
+![7:80](../pictures/quran.com-mushaf-changes/7-80.png)
 
 ---
 ---
@@ -3483,7 +3483,7 @@
 * 29:33
 * 37:135
 ---
-![7:83](../pictures/7-83.png)
+![7:83](../pictures/quran.com-mushaf-changes/7-83.png)
 
 ---
 ---
@@ -3526,10 +3526,10 @@
 * 47:10
 * 65:9
 ---
-![7:84](../pictures/7-84.png)
+![7:84](../pictures/quran.com-mushaf-changes/7-84.png)
 
-![11:49](../pictures/11-49.png)
-![28:83](../pictures/28-83.png)
+![11:49](../pictures/quran.com-mushaf-changes/11-49.png)
+![28:83](../pictures/quran.com-mushaf-changes/28-83.png)
 
 ---
 ---
@@ -3585,11 +3585,11 @@
 * 48:2
 * 67:22
 ---
-![7:86](../pictures/7-86.png)
+![7:86](../pictures/quran.com-mushaf-changes/7-86.png)
 
-![37:118](../pictures/37-118.png)
-![48:20](../pictures/48-20.png)
-![6:153](../pictures/6-153.png)
+![37:118](../pictures/quran.com-mushaf-changes/37-118.png)
+![48:20](../pictures/quran.com-mushaf-changes/48-20.png)
+![6:153](../pictures/quran.com-mushaf-changes/6-153.png)
 
 ---
 ---
@@ -3606,7 +3606,7 @@
 * 12:80
 * 95:8
 ---
-![7:87](../pictures/7-87.png)
+![7:87](../pictures/quran.com-mushaf-changes/7-87.png)
 
 ---
 ---
@@ -3628,7 +3628,7 @@
 ```
 * 7:88
 ---
-![7:88](../pictures/7-88.png)
+![7:88](../pictures/quran.com-mushaf-changes/7-88.png)
 
 ---
 ---
@@ -3651,9 +3651,9 @@
 ```
 * 7:89
 ---
-![7:89](../pictures/7-89.png)
+![7:89](../pictures/quran.com-mushaf-changes/7-89.png)
 
-![6:63](../pictures/6-63.png)
+![6:63](../pictures/quran.com-mushaf-changes/6-63.png)
 
 ---
 ---
@@ -3664,7 +3664,7 @@
 ```
 * 7:93
 ---
-![7:93](../pictures/7-93.png)
+![7:93](../pictures/quran.com-mushaf-changes/7-93.png)
 
 ---
 ---
@@ -3711,10 +3711,10 @@
 * 54:42
 ---
 
-![7:95](../pictures/7-95.png)
+![7:95](../pictures/quran.com-mushaf-changes/7-95.png)
 
-![40:40](../pictures/40-40.png)
-![27:90](../pictures/27-90.png)
+![40:40](../pictures/quran.com-mushaf-changes/40-40.png)
+![27:90](../pictures/quran.com-mushaf-changes/27-90.png)
 
 ---
 ---
@@ -3725,7 +3725,7 @@
 ```
 * 7:96
 ---
-![7:96](../pictures/7-96.png)
+![7:96](../pictures/quran.com-mushaf-changes/7-96.png)
 
 ---
 ---
@@ -3739,7 +3739,7 @@
 <>
 * 68:19
 ---
-![7:97](../pictures/7-97.png)
+![7:97](../pictures/quran.com-mushaf-changes/7-97.png)
 
 ---
 ---
@@ -3765,9 +3765,9 @@
 * 58:19
 * 63:9
 ---
-![7:99](../pictures/7-99.png)
+![7:99](../pictures/quran.com-mushaf-changes/7-99.png)
 
-![23:34](../pictures/23-34.png)
+![23:34](../pictures/quran.com-mushaf-changes/23-34.png)
 
 ---
 ---
@@ -3778,7 +3778,7 @@
 ```
 * 7:100
 ---
-![7:100](../pictures/7-100.png)
+![7:100](../pictures/quran.com-mushaf-changes/7-100.png)
 
 ---
 ---
@@ -3809,10 +3809,10 @@
 * 59:5
 * 61:5
 ---
-![7:102](../pictures/7-102.png)
+![7:102](../pictures/quran.com-mushaf-changes/7-102.png)
 
-![63:6](../pictures/63-6.png)
-![51:46](../pictures/51-46.png)
+![63:6](../pictures/quran.com-mushaf-changes/63-6.png)
+![51:46](../pictures/quran.com-mushaf-changes/51-46.png)
 
 ---
 ---
@@ -3831,9 +3831,9 @@
 * 28:32
 * 43:46
 ---
-![7:103](../pictures/7-103.png)
+![7:103](../pictures/quran.com-mushaf-changes/7-103.png)
 
-![10:83](../pictures/10-83.png)
+![10:83](../pictures/quran.com-mushaf-changes/10-83.png)
 
 ---
 ---
@@ -3847,7 +3847,7 @@
 <>
 * 17:102
 ---
-![7:104](../pictures/7-104.png)
+![7:104](../pictures/quran.com-mushaf-changes/7-104.png)
 
 ---
 ---
@@ -3900,9 +3900,9 @@
 * 61:6
 * 61:14
 ---
-![7:105](../pictures/7-105.png)
+![7:105](../pictures/quran.com-mushaf-changes/7-105.png)
 
-![19:58](../pictures/19-58.png)
+![19:58](../pictures/quran.com-mushaf-changes/19-58.png)
 
 ---
 ---
@@ -3982,9 +3982,9 @@
 * 62:6
 * 68:41
 ---
-![7:106](../pictures/7-106.png)
+![7:106](../pictures/quran.com-mushaf-changes/7-106.png)
 
-![67:25](../pictures/67-25.png)
+![67:25](../pictures/quran.com-mushaf-changes/67-25.png)
 
 ---
 ---
@@ -3999,7 +3999,7 @@
 * 15:16
 * 26:33
 ---
-![7:108](../pictures/7-108.png)
+![7:108](../pictures/quran.com-mushaf-changes/7-108.png)
 
 ---
 ---
@@ -4029,7 +4029,7 @@
 * 51:39
 * 51:52
 ---
-![7:109](../pictures/7-109.png)
+![7:109](../pictures/quran.com-mushaf-changes/7-109.png)
 
 ---
 ---
@@ -4044,7 +4044,7 @@
 * 26:36
 * 26:53
 ---
-![7:111](../pictures/7-111.png)
+![7:111](../pictures/quran.com-mushaf-changes/7-111.png)
 
 ---
 ---
@@ -4060,7 +4060,7 @@
 * 26:41
 * 37:116
 ---
-![7:113](../pictures/7-113.png)
+![7:113](../pictures/quran.com-mushaf-changes/7-113.png)
 
 ---
 ---
@@ -4096,7 +4096,7 @@
 * 28:30
 * 28:31
 ---
-![7:115](../pictures/7-115.png)
+![7:115](../pictures/quran.com-mushaf-changes/7-115.png)
 
 ---
 ---
@@ -4118,7 +4118,7 @@
 * 27:84
 * 59:10
 ---
-![7:116](../pictures/7-116.png)
+![7:116](../pictures/quran.com-mushaf-changes/7-116.png)
 
 ---
 ---
@@ -4142,7 +4142,7 @@
 * 26:46
 * 38:72
 ---
-![7:118,119,120](../pictures/7-118,119,120.png)
+![7:118,119,120](../pictures/quran.com-mushaf-changes/7-118,119,120.png)
 
 ---
 ---
@@ -4224,7 +4224,7 @@
 * 37:114
 * 37:120
 ---
-![7:121,122](../pictures/7-121,122.png)
+![7:121,122](../pictures/quran.com-mushaf-changes/7-121,122.png)
 
 ---
 ---
@@ -4239,7 +4239,7 @@
 * 20:71
 * 26:49
 ---
-![7:123](../pictures/7-123.png)
+![7:123](../pictures/quran.com-mushaf-changes/7-123.png)
 
 ---
 ---
@@ -4258,7 +4258,7 @@
 * 20:71
 * 26:49
 ---
-![7:124](../pictures/7-124.png)
+![7:124](../pictures/quran.com-mushaf-changes/7-124.png)
 
 ---
 ---
@@ -4291,7 +4291,7 @@
 * 54:34
 * 54:41
 ---
-![7:130](../pictures/7-130.png)
+![7:130](../pictures/quran.com-mushaf-changes/7-130.png)
 
 ---
 ---
@@ -4302,7 +4302,7 @@
 ```
 * 7:133
 ---
-![7:133](../pictures/7-133.png)
+![7:133](../pictures/quran.com-mushaf-changes/7-133.png)
 
 ---
 ---
@@ -4313,7 +4313,7 @@
 ```
 * 7:135
 ---
-![7:135](../pictures/7-135.png)
+![7:135](../pictures/quran.com-mushaf-changes/7-135.png)
 
 ---
 ---
@@ -4348,7 +4348,7 @@
 * 12:3
 * 23:17
 ---
-![7:136](../pictures/7-136.png)
+![7:136](../pictures/quran.com-mushaf-changes/7-136.png)
 
 ---
 ---
@@ -4386,7 +4386,7 @@
 * 34:18
 * 37:113
 ---
-![7:137](../pictures/7-137.png)
+![7:137](../pictures/quran.com-mushaf-changes/7-137.png)
 
 ---
 ---
@@ -4428,7 +4428,7 @@
 * 42:24
 * 47:3
 ---
-![7:139](../pictures/7-139.png)
+![7:139](../pictures/quran.com-mushaf-changes/7-139.png)
 
 ---
 ---
@@ -4444,7 +4444,7 @@
 * 2:50
 * 20:80
 ---
-![7:141](../pictures/7-141.png)
+![7:141](../pictures/quran.com-mushaf-changes/7-141.png)
 
 ---
 ---
@@ -4489,7 +4489,7 @@
 * 56:50
 * 78:17
 ---
-![7:142](../pictures/7-142.png)
+![7:142](../pictures/quran.com-mushaf-changes/7-142.png)
 
 ---
 ---
@@ -4517,7 +4517,7 @@
 * 25:18
 * 34:41
 ---
-![7:143](../pictures/7-143.png)
+![7:143](../pictures/quran.com-mushaf-changes/7-143.png)
 
 ---
 ---
@@ -4545,7 +4545,7 @@
 * 10:22
 * 39:66
 ---
-![7:144](../pictures/7-144.png)
+![7:144](../pictures/quran.com-mushaf-changes/7-144.png)
 
 ---
 ---
@@ -4559,7 +4559,7 @@
 <>
 * 20:86
 ---
-![7:150](../pictures/7-150.png)
+![7:150](../pictures/quran.com-mushaf-changes/7-150.png)
 
 ---
 ---
@@ -4577,7 +4577,7 @@
 * 23:109
 * 23:118
 ---
-![7:151](../pictures/7-151.png)
+![7:151](../pictures/quran.com-mushaf-changes/7-151.png)
 
 ---
 ---
@@ -4631,7 +4631,7 @@
 * 65:5
 * 66:8
 ---
-![7:153](../pictures/7-153.png)
+![7:153](../pictures/quran.com-mushaf-changes/7-153.png)
 
 ---
 ---
@@ -4656,7 +4656,7 @@
 ```
 * 7:155
 ---
-![7:155](../pictures/7-155.png)
+![7:155](../pictures/quran.com-mushaf-changes/7-155.png)
 
 ---
 ---
@@ -4749,7 +4749,7 @@
 * 40:71
 * 76:4
 ---
-![7:157](../pictures/7-157.png)
+![7:157](../pictures/quran.com-mushaf-changes/7-157.png)
 
 ---
 ---
@@ -4769,7 +4769,7 @@
 * 18:27
 * 42:24
 ---
-![7:158](../pictures/7-158.png)
+![7:158](../pictures/quran.com-mushaf-changes/7-158.png)
 
 ---
 ---
@@ -4835,7 +4835,7 @@
 * 45:16
 * 63:10
 ---
-![7:160](../pictures/7-160.png)
+![7:160](../pictures/quran.com-mushaf-changes/7-160.png)
 
 ---
 ---
@@ -4852,7 +4852,7 @@
 * 23:72
 * 52:40
 ---
-![7:163](../pictures/7-163.png)
+![7:163](../pictures/quran.com-mushaf-changes/7-163.png)
 
 ---
 ---
@@ -4887,7 +4887,7 @@
 
 * 7:168, 11:114, 25:70, 33:29
 ---
-![7:168](../pictures/7-168.png)
+![7:168](../pictures/quran.com-mushaf-changes/7-168.png)
 
 ---
 ---
@@ -4966,7 +4966,7 @@
 * 73:20
 * 98:5
 ---
-![7:170](../pictures/7-170.png)
+![7:170](../pictures/quran.com-mushaf-changes/7-170.png)
 
 ---
 ---
@@ -4992,7 +4992,7 @@
 * 37:17
 * 56:48
 ---
-![7:173](../pictures/7-173.png)
+![7:173](../pictures/quran.com-mushaf-changes/7-173.png)
 
 ---
 ---
@@ -5018,7 +5018,7 @@
 * 28:50
 * 45:23
 ---
-![7:176](../pictures/7-176.png)
+![7:176](../pictures/quran.com-mushaf-changes/7-176.png)
 
 ---
 ---
@@ -5097,7 +5097,7 @@
 * 36:6
 * 46:5
 ---
-![7:179](../pictures/7-179.png)
+![7:179](../pictures/quran.com-mushaf-changes/7-179.png)
 
 ---
 ---
@@ -5108,7 +5108,7 @@
 ```
 * 7:180
 ---
-![7:180](../pictures/7-180.png)
+![7:180](../pictures/quran.com-mushaf-changes/7-180.png)
 
 ---
 ---
@@ -5130,7 +5130,7 @@
 * 18:80
 * 23:75
 ---
-![7:186](../pictures/7-186.png)
+![7:186](../pictures/quran.com-mushaf-changes/7-186.png)
 
 ---
 ---
@@ -5175,7 +5175,7 @@
 * 11:41
 * 79:42
 ---
-![7:187](../pictures/7-187.png)
+![7:187](../pictures/quran.com-mushaf-changes/7-187.png)
 
 ---
 ---
@@ -5256,7 +5256,7 @@
 * 33:51
 * 60:10
 ---
-![7:189](../pictures/7-189.png)
+![7:189](../pictures/quran.com-mushaf-changes/7-189.png)
 
 ---
 ---
@@ -5304,7 +5304,7 @@
 * 23:116
 * 33:28
 ---
-![7:190](../pictures/7-190.png)
+![7:190](../pictures/quran.com-mushaf-changes/7-190.png)
 
 ---
 ---
@@ -5392,7 +5392,7 @@
 * 76:1
 * 82:19
 ---
-![7:191](../pictures/7-191.png)
+![7:191](../pictures/quran.com-mushaf-changes/7-191.png)
 
 ---
 ---
@@ -5403,7 +5403,7 @@
 ```
 * 7:193
 ---
-![7:193](../pictures/7-193.png)
+![7:193](../pictures/quran.com-mushaf-changes/7-193.png)
 
 ---
 ---
@@ -5445,7 +5445,7 @@
 * 66:10
 * 68:50
 ---
-![7:196](../pictures/7-196.png)
+![7:196](../pictures/quran.com-mushaf-changes/7-196.png)
 
 ---
 ---
@@ -5459,7 +5459,7 @@
 <>
 * 42:45
 ---
-![7:198](../pictures/7-198.png)
+![7:198](../pictures/quran.com-mushaf-changes/7-198.png)
 
 ---
 ---
@@ -5477,7 +5477,7 @@
 * 12:33
 * 28:55
 ---
-![7:199](../pictures/7-199.png)
+![7:199](../pictures/quran.com-mushaf-changes/7-199.png)
 
 ---
 ---
@@ -5488,7 +5488,7 @@
 ```
 * 7:201
 ---
-![7:201](../pictures/7-201.png)
+![7:201](../pictures/quran.com-mushaf-changes/7-201.png)
 
 ---
 ---
@@ -5535,7 +5535,7 @@
 * 59:10
 * 59:11
 ---
-![7:202](../pictures/7-202.png)
+![7:202](../pictures/quran.com-mushaf-changes/7-202.png)
 
 ---
 ---
@@ -5548,7 +5548,7 @@
 ```
 * 7:204,  84:21, 87:6, 75:18
 ---
-![7:204](../pictures/7-204.png)
+![7:204](../pictures/quran.com-mushaf-changes/7-204.png)
 
 ---
 ---
@@ -5563,7 +5563,7 @@
 * 13:15
 * 24:36
 ---
-![7:205](../pictures/7-205.png)
+![7:205](../pictures/quran.com-mushaf-changes/7-205.png)
 
 ---
 ---
@@ -5574,7 +5574,7 @@
 ```
 * 7:144
 ---
-![7:144](../pictures/7-144.png)
+![7:144](../pictures/quran.com-mushaf-changes/7-144.png)
 
 ---
 ---
@@ -5706,7 +5706,7 @@
 * 92:13
 * 93:4
 ---
-![7:45](../pictures/7-45.png)
+![7:45](../pictures/quran.com-mushaf-changes/7-45.png)
 
 ---
 ---
@@ -5760,7 +5760,7 @@
 * 49:14
 * 99:6
 ---
-![7:147](../pictures/7-147.png)
+![7:147](../pictures/quran.com-mushaf-changes/7-147.png)
 
 ---
 ---
@@ -5809,7 +5809,7 @@
 * 73:20
 * 98:5
 ---
-![7:156](../pictures/7-156.png)
+![7:156](../pictures/quran.com-mushaf-changes/7-156.png)
 
 ---
 ---
@@ -5851,7 +5851,7 @@
 * 33:7
 * 57:8
 ---
-![7:169](../pictures/7-169.png)
+![7:169](../pictures/quran.com-mushaf-changes/7-169.png)
 
 ---
 ---
@@ -5930,7 +5930,7 @@
 * 100:6
 * 103:2
 ---
-![96:2](../pictures/96-2.png)
+![96:2](../pictures/quran.com-mushaf-changes/96-2.png)
 
 ---
 ---
@@ -5962,7 +5962,7 @@
 * 42:21
 * 48:27
 ---
-![96:5](../pictures/96-2.png)
+![96:5](../pictures/quran.com-mushaf-changes/96-2.png)
 
 ---
 ---
@@ -5978,7 +5978,7 @@
 * 53:13
 * 81:23
 ---
-![96:7](../pictures/96-7.png)
+![96:7](../pictures/quran.com-mushaf-changes/96-7.png)
 
 ---
 ---
@@ -6014,7 +6014,7 @@
 * 59:11
 * 63:1
 ---
-![96:16](../pictures/96-16.png)
+![96:16](../pictures/quran.com-mushaf-changes/96-16.png)
 
 ---
 ---
@@ -6030,7 +6030,7 @@
 * 20:72
 * 26:154
 ---
-![68:1-9](../pictures/68-1,9-words.png)
+![68:1-9](../pictures/quran.com-mushaf-changes/68-1,9-words.png)
 
 ---
 ---
@@ -6046,7 +6046,7 @@
 * 38:17
 * 50:39
 ---
-![73:10](../pictures/73-10-words.png)
+![73:10](../pictures/quran.com-mushaf-changes/73-10-words.png)
 
 ---
 ---
@@ -6062,7 +6062,7 @@
 * 15:23
 * 50:43
 ---
-![36:12](../pictures/36-12.png)
+![36:12](../pictures/quran.com-mushaf-changes/36-12.png)
 
 ---
 ---
@@ -6077,7 +6077,7 @@
 <>
 * 28:20
 ---
-![36:20](../pictures/36-20.png)
+![36:20](../pictures/quran.com-mushaf-changes/36-20.png)
 
 ---
 ---
@@ -6104,7 +6104,7 @@
 * 45:33
 * 46:26
 ---
-![36:30](../pictures/36-30.png)
+![36:30](../pictures/quran.com-mushaf-changes/36-30.png)
 
 ---
 ---
@@ -6125,7 +6125,7 @@
 * 56:16
 * 76:13
 ---
-![36:56](../pictures/36-56.png)
+![36:56](../pictures/quran.com-mushaf-changes/36-56.png)
 
 ---
 ---
@@ -6156,7 +6156,7 @@
 * 57:2
 * 57:17
 ---
-![36:78](../pictures/36-78.png)
+![36:78](../pictures/quran.com-mushaf-changes/36-78.png)
 
 ---
 ---
@@ -6167,7 +6167,7 @@
 ```
 * 19:5
 ---
-![19:5](../pictures/19-5.png)
+![19:5](../pictures/quran.com-mushaf-changes/19-5.png)
 
 ---
 ---
@@ -6179,7 +6179,7 @@
 ```
 * 19:24, 79:16
 ---
-![19:24](../pictures/19-24.png)
+![19:24](../pictures/quran.com-mushaf-changes/19-24.png)
 
 ---
 ---
@@ -6197,7 +6197,7 @@
 * 27:36
 * 74:47
 ---
-![19:30](../pictures/19-30.png)
+![19:30](../pictures/quran.com-mushaf-changes/19-30.png)
 
 ---
 ---
@@ -6208,7 +6208,7 @@
 ```
 * 19:31
 ---
-![19:31](../pictures/19-31.png)
+![19:31](../pictures/quran.com-mushaf-changes/19-31.png)
 
 ---
 ---
@@ -6233,7 +6233,7 @@
 * 33:7
 * 33:40
 ---
-![19:58](../pictures/19-58.png)
+![19:58](../pictures/quran.com-mushaf-changes/19-58.png)
 
 ---
 ---
@@ -6244,7 +6244,7 @@
 ```
 * 19:74
 ---
-![19:74](../pictures/19-74.png)
+![19:74](../pictures/quran.com-mushaf-changes/19-74.png)
 
 ---
 ---
@@ -6266,7 +6266,7 @@
 * 53:54
 * 91:4
 ---
-![2:7](../pictures/2-7.png)
+![2:7](../pictures/quran.com-mushaf-changes/2-7.png)
 
 ---
 ---
@@ -6327,7 +6327,7 @@
 * 65:2
 * 77:17
 ---
-![2:8](../pictures/2-8.png)
+![2:8](../pictures/quran.com-mushaf-changes/2-8.png)
 
 ---
 ---
@@ -6341,7 +6341,7 @@
 <>
 * 4:142
 ---
-![2:9](../pictures/2-9.png)
+![2:9](../pictures/quran.com-mushaf-changes/2-9.png)
 
 ---
 ---
@@ -6352,7 +6352,7 @@
 ```
 * 2:16
 ---
-![2:16](../pictures/2-16.png)
+![2:16](../pictures/quran.com-mushaf-changes/2-16.png)
 
 ---
 ---
@@ -6387,7 +6387,7 @@
 * 57:9
 * 65:11
 ---
-![2:17](../pictures/2-17.png)
+![2:17](../pictures/quran.com-mushaf-changes/2-17.png)
 
 ---
 ---
@@ -6411,7 +6411,7 @@
 <>
 * 13:13
 ---
-![2:19](../pictures/2-19.png)
+![2:19](../pictures/quran.com-mushaf-changes/2-19.png)
 
 ---
 ---
@@ -6422,7 +6422,7 @@
 ```
 * 2:22
 ---
-![2:22](../pictures/2-22.png)
+![2:22](../pictures/quran.com-mushaf-changes/2-22.png)
 
 ---
 ---
@@ -6462,7 +6462,7 @@
 * 70:2
 * 76:4
 ---
-![2:24](../pictures/2-24.png)
+![2:24](../pictures/quran.com-mushaf-changes/2-24.png)
 
 ---
 ---
@@ -6625,7 +6625,7 @@
 * 70:30
 * 78:8
 ---
-![2:25](../pictures/2-25.png)
+![2:25](../pictures/quran.com-mushaf-changes/2-25.png)
 
 ---
 ---
@@ -6657,7 +6657,7 @@
 <>
 * 22:66
 ---
-![2:28](../pictures/2-28.png)
+![2:28](../pictures/quran.com-mushaf-changes/2-28.png)
 
 ---
 ---
@@ -6681,7 +6681,7 @@
 * 67:3
 * 71:15
 ---
-![2:29](../pictures/2-29.png)
+![2:29](../pictures/quran.com-mushaf-changes/2-29.png)
 
 ---
 ---
@@ -6748,7 +6748,7 @@
 * 78:38
 * 97:4
 ---
-![2:31](../pictures/2-31.png)
+![2:31](../pictures/quran.com-mushaf-changes/2-31.png)
 
 ---
 ---
@@ -6769,7 +6769,7 @@
 * 31:27
 * 66:12
 ---
-![2:37](../pictures/2-37.png)
+![2:37](../pictures/quran.com-mushaf-changes/2-37.png)
 
 ---
 ---
@@ -6784,7 +6784,7 @@
 <>
 * 33:35
 ---
-![2:45](../pictures/2-45.png)
+![2:45](../pictures/quran.com-mushaf-changes/2-45.png)
 
 ---
 ---
@@ -6811,7 +6811,7 @@
 * 21:93
 * 23:60
 ---
-![2:46](../pictures/2-46.png)
+![2:46](../pictures/quran.com-mushaf-changes/2-46.png)
 
 ---
 ---
@@ -6837,7 +6837,7 @@
 * 53:26
 * 74:48
 ---
-![2:48](../pictures/2-48.png)
+![2:48](../pictures/quran.com-mushaf-changes/2-48.png)
 
 ---
 ---
@@ -6849,7 +6849,7 @@
 ```
 * 2:49, 20:40
 ---
-![2:49](../pictures/2-49.png)
+![2:49](../pictures/quran.com-mushaf-changes/2-49.png)
 
 ---
 ---
@@ -6904,7 +6904,7 @@
 * 49:11
 * 60:9
 ---
-![2:51](../pictures/2-51.png)
+![2:51](../pictures/quran.com-mushaf-changes/2-51.png)
 
 ---
 ---
@@ -7003,7 +7003,7 @@
 * 45:17
 * 57:27
 ---
-![2:53](../pictures/2-53.png)
+![2:53](../pictures/quran.com-mushaf-changes/2-53.png)
 
 ---
 ---
@@ -7021,7 +7021,7 @@
 * 41:17
 * 51:44
 ---
-![2:55](../pictures/2-55.png)
+![2:55](../pictures/quran.com-mushaf-changes/2-55.png)
 
 ---
 ---
@@ -7032,7 +7032,7 @@
 ```
 * 2:56
 ---
-![2:56](../pictures/2-56.png)
+![2:56](../pictures/quran.com-mushaf-changes/2-56.png)
 
 ---
 ---
@@ -7046,7 +7046,7 @@
 <>
 * 2:210
 ---
-![2:57](../pictures/2-57.png)
+![2:57](../pictures/quran.com-mushaf-changes/2-57.png)
 
 ---
 ---
@@ -7063,7 +7063,7 @@
 * 26:51
 * 29:12
 ---
-![2:58](../pictures/2-58.png)
+![2:58](../pictures/quran.com-mushaf-changes/2-58.png)
 
 ---
 ---
@@ -7264,7 +7264,7 @@
 * 74:16
 * 83:13
 ---
-![2:61](../pictures/2-61.png)
+![2:61](../pictures/quran.com-mushaf-changes/2-61.png)
 
 ---
 ---
@@ -7319,7 +7319,7 @@
 * 39:10
 * 47:31
 ---
-![2:62](../pictures/2-62.png)
+![2:62](../pictures/quran.com-mushaf-changes/2-62.png)
 
 ---
 ---
@@ -7333,7 +7333,7 @@
 <>
 * 7:166
 ---
-![2:65](../pictures/2-65.png)
+![2:65](../pictures/quran.com-mushaf-changes/2-65.png)
 
 ---
 ---
@@ -7410,7 +7410,7 @@
 <>
 * 5:38
 ---
-![2:66](../pictures/2-66.png)
+![2:66](../pictures/quran.com-mushaf-changes/2-66.png)
 
 ---
 ---
@@ -7422,7 +7422,7 @@
 ```
 * 2:69, 33:53
 ---
-![2:69](../pictures/2-69.png)
+![2:69](../pictures/quran.com-mushaf-changes/2-69.png)
 
 ---
 ---
@@ -7440,7 +7440,7 @@
 * 3:7
 * 6:99
 ---
-![2:70](../pictures/2-70.png)
+![2:70](../pictures/quran.com-mushaf-changes/2-70.png)
 
 ---
 ---
@@ -7467,7 +7467,7 @@
 ```
 * 72:9
 ---
-![2:71](../pictures/2-71.png)
+![2:71](../pictures/quran.com-mushaf-changes/2-71.png)
 
 ---
 ---
@@ -7479,7 +7479,7 @@
 ```
 * 2:72, 27:66
 ---
-![2:71](../pictures/2-71.png)
+![2:71](../pictures/quran.com-mushaf-changes/2-71.png)
 
 ---
 ---
@@ -7502,7 +7502,7 @@
 * 11:123
 * 27:93
 ---
-![2:74](../pictures/2-74.png)
+![2:74](../pictures/quran.com-mushaf-changes/2-74.png)
 
 ---
 ---
@@ -7517,7 +7517,7 @@
 * 9:6
 * 48:15
 ---
-![2:75](../pictures/2-75.png)
+![2:75](../pictures/quran.com-mushaf-changes/2-75.png)
 
 ---
 ---
@@ -7644,7 +7644,7 @@
 * 58:13
 * 73:20
 ---
-![2:83](../pictures/2-83.png)
+![2:83](../pictures/quran.com-mushaf-changes/2-83.png)
 
 ---
 ---
@@ -7662,7 +7662,7 @@
 * 5:55
 * 9:112
 ---
-![2:43](../pictures/2-43.png)
+![2:43](../pictures/quran.com-mushaf-changes/2-43.png)
 
 ---
 ---
@@ -7692,7 +7692,7 @@
 * 60:8
 * 60:9
 ---
-![2:84](../pictures/2-84.png)
+![2:84](../pictures/quran.com-mushaf-changes/2-84.png)
 
 ---
 ---
@@ -7741,7 +7741,7 @@
 ```
 * 2:85
 ---
-![2:85](../pictures/2-85.png)
+![2:85](../pictures/quran.com-mushaf-changes/2-85.png)
 
 ---
 ---
@@ -7821,7 +7821,7 @@
 <>
 * 2:253
 ---
-![2:87](../pictures/2-87.png)
+![2:87](../pictures/quran.com-mushaf-changes/2-87.png)
 
 ---
 ---
@@ -7907,7 +7907,7 @@
 * 68:39
 * 74:31
 ---
-![2:93](../pictures/2-93.png)
+![2:93](../pictures/quran.com-mushaf-changes/2-93.png)
 
 ---
 ---
@@ -7923,7 +7923,7 @@
 * 16:97
 * 25:3
 ---
-![2:96](../pictures/2-96.png)
+![2:96](../pictures/quran.com-mushaf-changes/2-96.png)
 
 ---
 ---
@@ -7954,7 +7954,7 @@
 ```
 * 2:98
 ---
-![2:98](../pictures/2-98.png)
+![2:98](../pictures/quran.com-mushaf-changes/2-98.png)
 
 ---
 ---
@@ -7985,7 +7985,7 @@
 * 57:27
 * 59:19
 ---
-![2:99](../pictures/2-99.png)
+![2:99](../pictures/quran.com-mushaf-changes/2-99.png)
 
 ---
 ---
@@ -8011,7 +8011,7 @@
 * 33:23
 * 48:10
 ---
-![2:100](../pictures/2-100.png)
+![2:100](../pictures/quran.com-mushaf-changes/2-100.png)
 
 ---
 ---
@@ -8067,7 +8067,7 @@
 * 15:86
 * 36:81
 ---
-![2:102](../pictures/2-102.png)
+![2:102](../pictures/quran.com-mushaf-changes/2-102.png)
 
 ---
 ---
@@ -8082,7 +8082,7 @@
 <>
 * 4:46
 ---
-![2:104](../pictures/2-104.png)
+![2:104](../pictures/quran.com-mushaf-changes/2-104.png)
 
 ---
 ---
@@ -8111,7 +8111,7 @@
 ```
 * 2:108, 33:14, 81:8
 ---
-![2:108](../pictures/2-108.png)
+![2:108](../pictures/quran.com-mushaf-changes/2-108.png)
 
 ---
 ---
@@ -8148,7 +8148,7 @@
 * 28:32
 * 28:75
 ---
-![2:111](../pictures/2-111.png)
+![2:111](../pictures/quran.com-mushaf-changes/2-111.png)
 
 ---
 ---
@@ -8168,7 +8168,7 @@
 * 22:40
 * 72:18
 ---
-![2:114](../pictures/2-114.png)
+![2:114](../pictures/quran.com-mushaf-changes/2-114.png)
 
 ---
 ---
@@ -8195,7 +8195,7 @@
 * 39:10
 * 53:32
 ---
-![2:115](../pictures/2-115.png)
+![2:115](../pictures/quran.com-mushaf-changes/2-115.png)
 
 ---
 ---
@@ -8265,7 +8265,7 @@
 * 66:5
 * 66:12
 ---
-![2:116](../pictures/2-116.png)
+![2:116](../pictures/quran.com-mushaf-changes/2-116.png)
 
 ---
 ---
@@ -8295,7 +8295,7 @@
 * 48:8
 * 51:38
 ---
-![2:119](../pictures/2-119.png)
+![2:119](../pictures/quran.com-mushaf-changes/2-119.png)
 
 ---
 ---
@@ -8382,7 +8382,7 @@
 * 19:46
 * 21:62
 ---
-![2:124](../pictures/2-124.png)
+![2:124](../pictures/quran.com-mushaf-changes/2-124.png)
 
 ---
 ---
@@ -8419,7 +8419,7 @@
 * 20:91
 * 26:71
 ---
-![2:125](../pictures/2-125.png)
+![2:125](../pictures/quran.com-mushaf-changes/2-125.png)
 
 ---
 ---
@@ -8438,7 +8438,7 @@
 * 65:11
 * 98:2
 ---
-![2:129](../pictures/2-129.png)
+![2:129](../pictures/quran.com-mushaf-changes/2-129.png)
 
 ---
 ---
@@ -8449,7 +8449,7 @@
 ```
 * 2:130
 ---
-![2:130](../pictures/2-1.png)
+![2:130](../pictures/quran.com-mushaf-changes/2-1.png)
 
 ---
 ---
@@ -8524,7 +8524,7 @@
 * 37:113
 * 38:45
 ---
-![2:133](../pictures/2-133.png)
+![2:133](../pictures/quran.com-mushaf-changes/2-133.png)
 
 ---
 ---
@@ -8542,7 +8542,7 @@
 * 109:3
 * 109:5
 ---
-![2:138](../pictures/2-138.png)
+![2:138](../pictures/quran.com-mushaf-changes/2-138.png)
 
 ---
 ---
@@ -8578,7 +8578,7 @@
 * 64:18
 * 65:2
 ---
-![2:140](../pictures/2-140.png)
+![2:140](../pictures/quran.com-mushaf-changes/2-140.png)
 
 ---
 ---
@@ -8594,7 +8594,7 @@
 * 6:62
 * 10:30
 ---
-![2:142](../pictures/2-142.png)
+![2:142](../pictures/quran.com-mushaf-changes/2-142.png)
 
 ---
 ---
@@ -8610,7 +8610,7 @@
 * 27:19
 * 46:15
 ---
-![2:144](../pictures/2-144.png)
+![2:144](../pictures/quran.com-mushaf-changes/2-144.png)
 
 ---
 ---
@@ -8634,7 +8634,7 @@
 * 35:32
 * 55:70
 ---
-![2:148](../pictures/2-148.png)
+![2:148](../pictures/quran.com-mushaf-changes/2-148.png)
 
 ---
 ---
@@ -8726,7 +8726,7 @@
 * 35:27
 * 41:47
 ---
-![2:155](../pictures/2-155.png)
+![2:155](../pictures/quran.com-mushaf-changes/2-155.png)
 
 ---
 ---
@@ -8745,7 +8745,7 @@
 * 4:72
 * 5:106
 ---
-![2:156](../pictures/2-156.png)
+![2:156](../pictures/quran.com-mushaf-changes/2-156.png)
 
 ---
 ---
@@ -8765,7 +8765,7 @@
 * 22:40
 * 23:9
 ---
-![2:157](../pictures/2-157.png)
+![2:157](../pictures/quran.com-mushaf-changes/2-157.png)
 
 ---
 ---
@@ -8784,7 +8784,7 @@
 ```
 * 2:159
 ---
-![2:159](../pictures/2-159.png)
+![2:159](../pictures/quran.com-mushaf-changes/2-159.png)
 
 ---
 ---
@@ -8846,7 +8846,7 @@
 * 98:6
 * 98:8
 ---
-![2:162](../pictures/2-162.png)
+![2:162](../pictures/quran.com-mushaf-changes/2-162.png)
 
 ---
 ---
@@ -8867,7 +8867,7 @@
 * 30:22
 * 45:5
 ---
-![2:164](../pictures/2-164.png)
+![2:164](../pictures/quran.com-mushaf-changes/2-164.png)
 
 ---
 ---
@@ -8891,7 +8891,7 @@
 <>
 * 5:37
 ---
-![2:167](../pictures/2-167.png)
+![2:167](../pictures/quran.com-mushaf-changes/2-167.png)
 
 ---
 ---
@@ -8923,7 +8923,7 @@
 * 6:142
 * 24:21
 ---
-![2:168](../pictures/2-168.png)
+![2:168](../pictures/quran.com-mushaf-changes/2-168.png)
 
 ---
 ---
@@ -8939,7 +8939,7 @@
 * 11:109
 * 36:6
 ---
-![2:170](../pictures/2-170.png)
+![2:170](../pictures/quran.com-mushaf-changes/2-170.png)
 
 ---
 ---
@@ -8954,7 +8954,7 @@
 <>
 * 9:18
 ---
-![2:177](../pictures/2-177.png)
+![2:177](../pictures/quran.com-mushaf-changes/2-177.png)
 
 ---
 ---
@@ -8973,7 +8973,7 @@
 * 16:90
 * 55:60
 ---
-![2:178](../pictures/2-178.png)
+![2:178](../pictures/quran.com-mushaf-changes/2-178.png)
 
 ---
 ---
@@ -9014,7 +9014,7 @@
 * 40:54
 * 65:10
 ---
-![2:179](../pictures/2-179.png)
+![2:179](../pictures/quran.com-mushaf-changes/2-179.png)
 
 ---
 ---
@@ -9029,7 +9029,7 @@
 * 2:203
 * 3:24
 ---
-![2:184](../pictures/2-184.png)
+![2:184](../pictures/quran.com-mushaf-changes/2-184.png)
 
 ---
 ---
@@ -9048,7 +9048,7 @@
 * 22:37
 * 49:17
 ---
-![2:185](../pictures/2-185.png)
+![2:185](../pictures/quran.com-mushaf-changes/2-185.png)
 
 ---
 ---
@@ -9077,7 +9077,7 @@
 * 21:52
 * 22:25
 ---
-![2:187](../pictures/2-187.png)
+![2:187](../pictures/quran.com-mushaf-changes/2-187.png)
 
 ---
 ---
@@ -9088,7 +9088,7 @@
 ```
 * 2:189
 ---
-![2:189](../pictures/2-189.png)
+![2:189](../pictures/quran.com-mushaf-changes/2-189.png)
 
 ---
 ---
@@ -9145,7 +9145,7 @@
 * 61:4
 * 73:20
 ---
-![2:190](../pictures/2-190.png)
+![2:190](../pictures/quran.com-mushaf-changes/2-190.png)
 
 ---
 ---
@@ -9157,7 +9157,7 @@
 ```
 * 2:194, 22:30
 ---
-![2:194](../pictures/2-194.png)
+![2:194](../pictures/quran.com-mushaf-changes/2-194.png)
 
 ---
 ---
@@ -9195,7 +9195,7 @@
 * 65:4
 * 77:30
 ---
-![2:196](../pictures/2-196.png)
+![2:196](../pictures/quran.com-mushaf-changes/2-196.png)
 
 ---
 ---
@@ -9209,7 +9209,7 @@
 <>
 * 22:28
 ---
-![2:197](../pictures/2-197.png)
+![2:197](../pictures/quran.com-mushaf-changes/2-197.png)
 
 ---
 ---
@@ -9220,7 +9220,7 @@
 ```
 * 2:198
 ---
-![2:198](../pictures/2-198.png)
+![2:198](../pictures/quran.com-mushaf-changes/2-198.png)
 
 ---
 ---
@@ -9267,7 +9267,7 @@
 * 18:10
 * 18:62
 ---
-![2:200](../pictures/2-200.png)
+![2:200](../pictures/quran.com-mushaf-changes/2-200.png)
 
 ---
 ---
@@ -9282,7 +9282,7 @@
 * 36:67
 * 51:45
 ---
-![2:217](../pictures/2-217.png)
+![2:217](../pictures/quran.com-mushaf-changes/2-217.png)
 
 ---
 ---
@@ -9333,7 +9333,7 @@
 * 61:11
 * 66:9
 ---
-![2:218](../pictures/2-218.png)
+![2:218](../pictures/quran.com-mushaf-changes/2-218.png)
 
 ---
 ---
@@ -9354,7 +9354,7 @@
 * 40:80
 * 57:25
 ---
-![2:219](../pictures/2-219.png)
+![2:219](../pictures/quran.com-mushaf-changes/2-219.png)
 
 ---
 ---
@@ -9365,7 +9365,7 @@
 ```
 * 2:222
 ---
-![2:222](../pictures/2-222.png)
+![2:222](../pictures/quran.com-mushaf-changes/2-222.png)
 
 ---
 ---
@@ -9387,7 +9387,7 @@
 * 69:20
 * 84:6
 ---
-![2:223](../pictures/2-223.png)
+![2:223](../pictures/quran.com-mushaf-changes/2-223.png)
 
 ---
 ---
@@ -9398,7 +9398,7 @@
 ```
 * 2:226
 ---
-![2:226](../pictures/2-226.png)
+![2:226](../pictures/quran.com-mushaf-changes/2-226.png)
 
 ---
 ---
@@ -9412,7 +9412,7 @@
 <>
 * 2:229
 ---
-![2:227](../pictures/2-227.png)
+![2:227](../pictures/quran.com-mushaf-changes/2-227.png)
 
 ---
 ---
@@ -9439,7 +9439,7 @@
 * 4:35
 * 11:88
 ---
-![2:228](../pictures/2-228.png)
+![2:228](../pictures/quran.com-mushaf-changes/2-228.png)
 
 ---
 ---
@@ -9451,7 +9451,7 @@
 ```
 * 2:232, 4:24
 ---
-![2:232](../pictures/2-232.png)
+![2:232](../pictures/quran.com-mushaf-changes/2-232.png)
 
 ---
 ---
@@ -9491,7 +9491,7 @@
 * 64:14
 * 64:15
 ---
-![2:233](../pictures/2-233.png)
+![2:233](../pictures/quran.com-mushaf-changes/2-233.png)
 
 ---
 ---
@@ -9519,7 +9519,7 @@
 * 79:33
 * 80:32
 ---
-![2:236](../pictures/2-236.png)
+![2:236](../pictures/quran.com-mushaf-changes/2-236.png)
 
 ---
 ---
@@ -9536,7 +9536,7 @@
 * 42:25
 * 42:30
 ---
-![2:237](../pictures/2-237.png)
+![2:237](../pictures/quran.com-mushaf-changes/2-237.png)
 
 ---
 ---
@@ -9571,7 +9571,7 @@
 * 82:10
 * 83:33
 ---
-![2:238](../pictures/2-238.png)
+![2:238](../pictures/quran.com-mushaf-changes/2-238.png)
 
 ---
 ---
@@ -9582,7 +9582,7 @@
 ```
 * 2:243
 ---
-![2:243](../pictures/2-243.png)
+![2:243](../pictures/quran.com-mushaf-changes/2-243.png)
 
 ---
 ---
@@ -9602,7 +9602,7 @@
 * 57:11
 * 64:17
 ---
-![2:245](../pictures/2-245.png)
+![2:245](../pictures/quran.com-mushaf-changes/2-245.png)
 
 ---
 ---
@@ -9613,7 +9613,7 @@
 ```
 * 2:246
 ---
-![2:246](../pictures/2-246.png)
+![2:246](../pictures/quran.com-mushaf-changes/2-246.png)
 
 ---
 ---
@@ -9626,7 +9626,7 @@
 ```
 * 2:247, 3:42
 ---
-![2:247](../pictures/2-247.png)
+![2:247](../pictures/quran.com-mushaf-changes/2-247.png)
 
 ---
 ---
@@ -9670,7 +9670,7 @@
 * 34:9
 * 79:20
 ---
-![2:248](../pictures/2-248.png)
+![2:248](../pictures/quran.com-mushaf-changes/2-248.png)
 
 ---
 ---
@@ -9697,7 +9697,7 @@
 * 46:19
 * 58:11
 ---
-![2:253](../pictures/2-253.png)
+![2:253](../pictures/quran.com-mushaf-changes/2-253.png)
 
 ---
 ---
@@ -9708,7 +9708,7 @@
 ```
 * 2:255
 ---
-![2:255](../pictures/2-255.png)
+![2:255](../pictures/quran.com-mushaf-changes/2-255.png)
 
 ---
 ---
@@ -9730,7 +9730,7 @@
 * 16:36
 * 39:17
 ---
-![2:256](../pictures/2-256.png)
+![2:256](../pictures/quran.com-mushaf-changes/2-256.png)
 
 ---
 ---
@@ -9747,7 +9747,7 @@
 * 33:30
 * 57:18
 ---
-![2:261](../pictures/2-261.png)
+![2:261](../pictures/quran.com-mushaf-changes/2-261.png)
 
 ---
 ---
@@ -9775,7 +9775,7 @@
 * 57:18
 * 58:13
 ---
-![2:264](../pictures/2-264.png)
+![2:264](../pictures/quran.com-mushaf-changes/2-264.png)
 
 ---
 ---
@@ -9788,7 +9788,7 @@
 ```
 * 2:265, 12:31, 18:33
 ---
-![2:265](../pictures/2-265.png)
+![2:265](../pictures/quran.com-mushaf-changes/2-265.png)
 
 ---
 ---
@@ -9800,7 +9800,7 @@
 ```
 * 2:267, 51:16
 ---
-![2:267](../pictures/2-267.png)
+![2:267](../pictures/quran.com-mushaf-changes/2-267.png)
 
 ---
 ---
@@ -9827,7 +9827,7 @@
 * 39:18
 * 46:35
 ---
-![2:269](../pictures/2-269.png)
+![2:269](../pictures/quran.com-mushaf-changes/2-269.png)
 
 ---
 ---
@@ -9852,7 +9852,7 @@
 * 39:24
 * 40:18
 ---
-![2:270](../pictures/2-270.png)
+![2:270](../pictures/quran.com-mushaf-changes/2-270.png)
 
 ---
 ---
@@ -9874,7 +9874,7 @@
 * 32:13
 * 39:18
 ---
-![2:272](../pictures/2-272.png)
+![2:272](../pictures/quran.com-mushaf-changes/2-272.png)
 
 ---
 ---
@@ -9920,7 +9920,7 @@
 * 61:10
 * 62:11
 ---
-![2:282](../pictures/2-282.png)
+![2:282](../pictures/quran.com-mushaf-changes/2-282.png)
 
 ---
 ---
@@ -9931,7 +9931,7 @@
 ```
 * 2:283
 ---
-![2:283](../pictures/2-283.png)
+![2:283](../pictures/quran.com-mushaf-changes/2-283.png)
 
 ---
 ---
@@ -9945,7 +9945,7 @@
 <>
 * 9:51
 ---
-![2:286](../pictures/2-286.png)
+![2:286](../pictures/quran.com-mushaf-changes/2-286.png)
 
 ---
 ---
@@ -9988,7 +9988,7 @@
 * 2:258
 * 65:7
 ---
-![2:251](../pictures/2-251.png)
+![2:251](../pictures/quran.com-mushaf-changes/2-251.png)
 
 ---
 ---
@@ -10010,7 +10010,7 @@
 <>
 * 4:162
 ---
-![3:7](../pictures/3-7.png)
+![3:7](../pictures/quran.com-mushaf-changes/3-7.png)
 
 ---
 ---
@@ -10079,7 +10079,7 @@
 * 67:23
 * 79:9
 ---
-![3:13](../pictures/3-13.png)
+![3:13](../pictures/quran.com-mushaf-changes/3-13.png)
 
 ---
 ---
@@ -10120,7 +10120,7 @@
 * 78:22
 * 78:39
 ---
-![3:14](../pictures/3-14.png)
+![3:14](../pictures/quran.com-mushaf-changes/3-14.png)
 
 ---
 ---
@@ -10148,7 +10148,7 @@
 * 57:27
 * 59:8
 ---
-![3:15](../pictures/3-15.png)
+![3:15](../pictures/quran.com-mushaf-changes/3-15.png)
 
 ---
 ---
@@ -10171,7 +10171,7 @@
 * 49:15
 * 59:8
 ---
-![3:17](../pictures/3-17.png)
+![3:17](../pictures/quran.com-mushaf-changes/3-17.png)
 
 ---
 ---
@@ -10194,7 +10194,7 @@
 * 49:17
 * 61:7
 ---
-![3:19](../pictures/3-19.png)
+![3:19](../pictures/quran.com-mushaf-changes/3-19.png)
 
 ---
 ---
@@ -10224,7 +10224,7 @@
 * 64:12
 * 72:23
 ---
-![3:20](../pictures/3-20.png)
+![3:20](../pictures/quran.com-mushaf-changes/3-20.png)
 
 ---
 ---
@@ -10245,7 +10245,7 @@
 * 30:29
 * 45:34
 ---
-![3:22](../pictures/3-22.png)
+![3:22](../pictures/quran.com-mushaf-changes/3-22.png)
 
 ---
 ---
@@ -10258,7 +10258,7 @@
 ```
 * 3:25, 18:99, 77:38
 ---
-![3:25](../pictures/3-25.png)
+![3:25](../pictures/quran.com-mushaf-changes/3-25.png)
 
 ---
 ---
@@ -10274,7 +10274,7 @@
 * 1:4
 * 43:77
 ---
-![3:26](../pictures/3-26.png)
+![3:26](../pictures/quran.com-mushaf-changes/3-26.png)
 
 ---
 ---
@@ -10285,7 +10285,7 @@
 ```
 * 3:28
 ---
-![3:28](../pictures/3-28.png)
+![3:28](../pictures/quran.com-mushaf-changes/3-28.png)
 
 ---
 ---
@@ -10300,7 +10300,7 @@
 * 3:35
 * 66:12
 ---
-![3:33](../pictures/3-33.png)
+![3:33](../pictures/quran.com-mushaf-changes/3-33.png)
 
 ---
 ---
@@ -10317,7 +10317,7 @@
 * 3:45
 * 19:27
 ---
-![3:37](../pictures/3-37.png)
+![3:37](../pictures/quran.com-mushaf-changes/3-37.png)
 
 ---
 ---
@@ -10345,7 +10345,7 @@
 * 37:101
 * 51:28
 ---
-![3:40](../pictures/3-40.png)
+![3:40](../pictures/quran.com-mushaf-changes/3-40.png)
 
 ---
 ---
@@ -10357,7 +10357,7 @@
 ```
 * 3:44, 31:27
 ---
-![3:44](../pictures/3-44.png)
+![3:44](../pictures/quran.com-mushaf-changes/3-44.png)
 
 ---
 ---
@@ -10382,7 +10382,7 @@
 * 48:8
 * 73:15
 ---
-![3:53](../pictures/3-53.png)
+![3:53](../pictures/quran.com-mushaf-changes/3-53.png)
 
 ---
 ---
@@ -10396,7 +10396,7 @@
 <>
 * 8:30
 ---
-![3:54](../pictures/3-54.png)
+![3:54](../pictures/quran.com-mushaf-changes/3-54.png)
 
 ---
 ---
@@ -10412,7 +10412,7 @@
 * 5:112
 * 5:116
 ---
-![3:55](../pictures/3-55.png)
+![3:55](../pictures/quran.com-mushaf-changes/3-55.png)
 
 ---
 ---
@@ -10437,7 +10437,7 @@
 * 5:77
 * 33:13
 ---
-![3:64](../pictures/3-64.png)
+![3:64](../pictures/quran.com-mushaf-changes/3-64.png)
 
 ---
 ---
@@ -10453,7 +10453,7 @@
 * 4:109
 * 47:38
 ---
-![3:66](../pictures/3-66.png)
+![3:66](../pictures/quran.com-mushaf-changes/3-66.png)
 
 ---
 ---
@@ -10466,7 +10466,7 @@
 ```
 * 3:79, 5:44, 5:63
 ---
-![3:79](../pictures/3-79.png)
+![3:79](../pictures/quran.com-mushaf-changes/3-79.png)
 
 ---
 ---
@@ -10496,7 +10496,7 @@
 * 68:52
 * 81:27
 ---
-![3:96](../pictures/3-96.png)
+![3:96](../pictures/quran.com-mushaf-changes/3-96.png)
 
 ---
 ---
@@ -10514,7 +10514,7 @@
 ```
 * 20:130
 ---
-![3:113](../pictures/3-113.png)
+![3:113](../pictures/quran.com-mushaf-changes/3-113.png)
 
 ---
 ---
@@ -10534,7 +10534,7 @@
 * 21:90
 * 23:61
 ---
-![3:114](../pictures/3-114.png)
+![3:114](../pictures/quran.com-mushaf-changes/3-114.png)
 
 ---
 ---
@@ -10557,7 +10557,7 @@
 * 36:65
 * 61:8
 ---
-![3:118](../pictures/3-118.png)
+![3:118](../pictures/quran.com-mushaf-changes/3-118.png)
 
 ---
 ---
@@ -10569,7 +10569,7 @@
 ```
 * 3:134, 40:18
 ---
-![3:134](../pictures/3-134.png)
+![3:134](../pictures/quran.com-mushaf-changes/3-134.png)
 
 ---
 ---
@@ -10597,7 +10597,7 @@
 * 39:74
 * 41:5
 ---
-![3:136](../pictures/3-136.png)
+![3:136](../pictures/quran.com-mushaf-changes/3-136.png)
 
 ---
 ---
@@ -10622,7 +10622,7 @@
 * 3:149
 * 23:66
 ---
-![3:144](../pictures/3-144.png)
+![3:144](../pictures/quran.com-mushaf-changes/3-144.png)
 
 ---
 ---
@@ -10639,7 +10639,7 @@
 * 41:25
 * 46:18
 ---
-![3:149](../pictures/3-149.png)
+![3:149](../pictures/quran.com-mushaf-changes/3-149.png)
 
 ---
 ---
@@ -10659,7 +10659,7 @@
 * 66:2
 * 66:4
 ---
-![3:150](../pictures/3-150.png)
+![3:150](../pictures/quran.com-mushaf-changes/3-150.png)
 
 ---
 ---
@@ -10689,7 +10689,7 @@
 * 32:20
 * 66:9
 ---
-![3:151](../pictures/3-151.png)
+![3:151](../pictures/quran.com-mushaf-changes/3-151.png)
 
 ---
 ---
@@ -10725,7 +10725,7 @@
 * 11:84
 * 46:23
 ---
-![3:152](../pictures/3-152.png)
+![3:152](../pictures/quran.com-mushaf-changes/3-152.png)
 
 ---
 ---
@@ -10767,7 +10767,7 @@
 * 4:73
 * 42:30
 ---
-![3:153](../pictures/3-153.png)
+![3:153](../pictures/quran.com-mushaf-changes/3-153.png)
 
 ---
 ---
@@ -10802,7 +10802,7 @@
 * 69:35
 * 79:44
 ---
-![3:154](../pictures/3-154.png)
+![3:154](../pictures/quran.com-mushaf-changes/3-154.png)
 
 ---
 ---
@@ -10814,7 +10814,7 @@
 ```
 * 3:167, 28:42
 ---
-![3:167](../pictures/3-167.png)
+![3:167](../pictures/quran.com-mushaf-changes/3-167.png)
 
 ---
 ---
@@ -10828,7 +10828,7 @@
 <>
 * 57:10
 ---
-![3:180](../pictures/3-180.png)
+![3:180](../pictures/quran.com-mushaf-changes/3-180.png)
 
 ---
 ---
@@ -10846,7 +10846,7 @@
 * 5:97
 * 25:64
 ---
-![3:191](../pictures/3-191.png)
+![3:191](../pictures/quran.com-mushaf-changes/3-191.png)
 
 ---
 ---
@@ -10863,7 +10863,7 @@
 * 89:8
 * 89:11
 ---
-![3:196](../pictures/3-196.png)
+![3:196](../pictures/quran.com-mushaf-changes/3-196.png)
 
 ---
 ---
@@ -10890,7 +10890,7 @@
 * 79:9
 * 88:2
 ---
-![3:199](../pictures/3-199.png)
+![3:199](../pictures/quran.com-mushaf-changes/3-199.png)
 
 ---
 ---
@@ -10914,7 +10914,7 @@
 * 62:3
 * 73:20
 ---
-![10:10](../pictures/10-10.png)
+![10:10](../pictures/quran.com-mushaf-changes/10-10.png)
 
 ---
 ---
@@ -10930,7 +10930,7 @@
 * 10:73
 * 35:39
 ---
-![10:14](../pictures/10-14.png)
+![10:14](../pictures/quran.com-mushaf-changes/10-14.png)
 
 ---
 ---
@@ -10941,7 +10941,7 @@
 ```
 * 10:16
 ---
-![10:16](../pictures/10-16.png)
+![10:16](../pictures/quran.com-mushaf-changes/10-16.png)
 
 ---
 ---
@@ -10971,7 +10971,7 @@
 * 39:67
 * 72:3
 ---
-![10:18](../pictures/10-18.png)
+![10:18](../pictures/quran.com-mushaf-changes/10-18.png)
 
 ---
 ---
@@ -10984,7 +10984,7 @@
 ```
 * 10:23, 14:6, 29:24
 ---
-![10:23](../pictures/10-23.png)
+![10:23](../pictures/quran.com-mushaf-changes/10-23.png)
 
 ---
 ---
@@ -11050,7 +11050,7 @@
 * 20:11
 * 28:30
 ---
-![10:24](../pictures/10-24.png)
+![10:24](../pictures/quran.com-mushaf-changes/10-24.png)
 
 ---
 ---
@@ -11082,8 +11082,8 @@
 * 33:73
 * 48:6
 ---
-![10:25](../pictures/10-25.png)
-![2:221](../pictures/2-221.png)
+![10:25](../pictures/quran.com-mushaf-changes/10-25.png)
+![2:221](../pictures/quran.com-mushaf-changes/2-221.png)
 
 ---
 ---
@@ -11124,7 +11124,7 @@
 ```
 * 54:27
 ---
-![10:30](../pictures/10-30.png)
+![10:30](../pictures/quran.com-mushaf-changes/10-30.png)
 
 ---
 ---
@@ -11138,7 +11138,7 @@
 <>
 * 12:21
 ---
-![2:102](../pictures/2-102.png)
+![2:102](../pictures/quran.com-mushaf-changes/2-102.png)
 
 ---
 ---
@@ -11157,7 +11157,7 @@
 * 32:3
 * 46:8
 ---
-![10:38](../pictures/10-38.png)
+![10:38](../pictures/quran.com-mushaf-changes/10-38.png)
 
 ---
 ---
@@ -11178,7 +11178,7 @@
 * 26:216
 * 59:16
 ---
-![10:41](../pictures/10-41.png)
+![10:41](../pictures/quran.com-mushaf-changes/10-41.png)
 
 ---
 ---
@@ -11262,7 +11262,7 @@
 <>
 * 40:50
 ---
-![10:50](../pictures/10-50.png)
+![10:50](../pictures/quran.com-mushaf-changes/10-50.png)
 
 ---
 ---
@@ -11273,7 +11273,7 @@
 ```
 * 10:53
 ---
-![10:53](../pictures/10-53.png)
+![10:53](../pictures/quran.com-mushaf-changes/10-53.png)
 
 ---
 ---
@@ -11287,7 +11287,7 @@
 <>
 * 27:59
 ---
-![10:59](../pictures/10-59.png)
+![10:59](../pictures/quran.com-mushaf-changes/10-59.png)
 
 ---
 ---
@@ -11315,7 +11315,7 @@
 * 37:134
 * 54:34
 ---
-![10:73](../pictures/10-73.png)
+![10:73](../pictures/quran.com-mushaf-changes/10-73.png)
 
 ---
 ---
@@ -11326,7 +11326,7 @@
 ```
 * 10:87
 ---
-![10:87](../pictures/10-87.png)
+![10:87](../pictures/quran.com-mushaf-changes/10-87.png)
 
 ---
 ---
@@ -11389,8 +11389,8 @@
 * 45:23
 * 46:28
 ---
-![10:90](../pictures/10-90.png)
-![7:138](../pictures/7-138.png)
+![10:90](../pictures/quran.com-mushaf-changes/10-90.png)
+![7:138](../pictures/quran.com-mushaf-changes/7-138.png)
 
 ---
 ---
@@ -11415,7 +11415,7 @@
 * 25:59
 * 33:53
 ---
-![10:94](../pictures/10-94.png)
+![10:94](../pictures/quran.com-mushaf-changes/10-94.png)
 
 ---
 ---
@@ -11448,8 +11448,8 @@
 * 56:68
 * 56:71
 ---
-![10:98](../pictures/10-98.png)
-![26:205](../pictures/26-205.png)
+![10:98](../pictures/quran.com-mushaf-changes/10-98.png)
+![26:205](../pictures/quran.com-mushaf-changes/26-205.png)
 
 ---
 ---
@@ -11461,7 +11461,7 @@
 ```
 * 10:99, 28:31
 ---
-![10:99](../pictures/10-99.png)
+![10:99](../pictures/quran.com-mushaf-changes/10-99.png)
 
 ---
 ---
@@ -11479,7 +11479,7 @@
 * 16:70
 * 32:11
 ---
-![10:104](../pictures/10-104.png)
+![10:104](../pictures/quran.com-mushaf-changes/10-104.png)
 
 ---
 ---
@@ -11495,7 +11495,7 @@
 * 26:4
 * 40:71
 ---
-![36:8](../pictures/36-8.png)
+![36:8](../pictures/quran.com-mushaf-changes/36-8.png)
 
 ---
 ---
@@ -11506,7 +11506,7 @@
 ```
 * 36:9
 ---
-![36:9](../pictures/36-9.png)
+![36:9](../pictures/quran.com-mushaf-changes/36-9.png)
 
 ---
 ---
@@ -11520,7 +11520,7 @@
 <>
 * 78:29
 ---
-![36:12](../pictures/36-12.png)
+![36:12](../pictures/quran.com-mushaf-changes/36-12.png)
 
 ---
 ---
@@ -11544,7 +11544,7 @@
 * 2:258
 * 2:260
 ---
-![2:124](../pictures/2-124.png)
+![2:124](../pictures/quran.com-mushaf-changes/2-124.png)
 
 ---
 ---
@@ -11577,7 +11577,7 @@
 * 70:10
 * 75:6
 ---
-![36:21](../pictures/36-21.png)
+![36:21](../pictures/quran.com-mushaf-changes/36-21.png)
 
 ---
 ---
@@ -11605,7 +11605,7 @@
 * 78:40
 * 89:24
 ---
-![36:26](../pictures/36-26.png)
+![36:26](../pictures/quran.com-mushaf-changes/36-26.png)
 
 ---
 ---
@@ -11617,7 +11617,7 @@
 ```
 * 36:29, 21:15
 ---
-![36:29](../pictures/36-29.png)
+![36:29](../pictures/quran.com-mushaf-changes/36-29.png)
 
 ---
 ---
@@ -11633,7 +11633,7 @@
 * 36:37
 * 36:41
 ---
-![36:33](../pictures/36-33.png)
+![36:33](../pictures/quran.com-mushaf-changes/36-33.png)
 
 ---
 ---
@@ -11645,7 +11645,7 @@
 ```
 * 36:39, 27:57
 ---
-![36:39](../pictures/36-39.png)
+![36:39](../pictures/quran.com-mushaf-changes/36-39.png)
 
 ---
 ---
@@ -11663,7 +11663,7 @@
 * 37:20
 * 68:31
 ---
-![36:52](../pictures/36-52.png)
+![36:52](../pictures/quran.com-mushaf-changes/36-52.png)
 
 ---
 ---
@@ -11689,7 +11689,7 @@
 * 56:32
 * 80:31
 ---
-![36:55](../pictures/36-55.png)
+![36:55](../pictures/quran.com-mushaf-changes/36-55.png)
 
 ---
 ---
@@ -11707,7 +11707,7 @@
 <>
 * 77:41
 ---
-![36:56](../pictures/36-56.png)
+![36:56](../pictures/quran.com-mushaf-changes/36-56.png)
 
 ---
 ---
@@ -11718,7 +11718,7 @@
 ```
 * 36:59
 ---
-![36:59](../pictures/36-59.png)
+![36:59](../pictures/quran.com-mushaf-changes/36-59.png)
 
 ---
 ---
@@ -11729,7 +11729,7 @@
 ```
 * 36:67
 ---
-![36:67](../pictures/36-67.png)
+![36:67](../pictures/quran.com-mushaf-changes/36-67.png)
 
 ---
 ---
@@ -11745,7 +11745,7 @@
 * 12:68
 * 21:80
 ---
-![36:69](../pictures/36-69.png)
+![36:69](../pictures/quran.com-mushaf-changes/36-69.png)
 
 ---
 ---
@@ -11766,7 +11766,7 @@
 * 25:49
 * 80:32
 ---
-![36:71](../pictures/36-71.png)
+![36:71](../pictures/quran.com-mushaf-changes/36-71.png)
 
 ---
 ---
@@ -11777,7 +11777,7 @@
 ```
 * 36:72
 ---
-![36:72](../pictures/36-72.png)
+![36:72](../pictures/quran.com-mushaf-changes/36-72.png)
 
 ---
 ---
@@ -11798,7 +11798,7 @@
 * 70:39
 * 76:28
 ---
-![36:77](../pictures/36-77.png)
+![36:77](../pictures/quran.com-mushaf-changes/36-77.png)
 
 ---
 ---
@@ -11809,7 +11809,7 @@
 ```
 * 11:9
 ---
-![11:9](../pictures/11-9.png)
+![11:9](../pictures/quran.com-mushaf-changes/11-9.png)
 
 ---
 ---
@@ -11823,7 +11823,7 @@
 <>
 * 41:50
 ---
-![11:10](../pictures/11-10.png)
+![11:10](../pictures/quran.com-mushaf-changes/11-10.png)
 
 ---
 ---
@@ -11834,7 +11834,7 @@
 ```
 * 11:13
 ---
-![11:13](../pictures/11-13.png)
+![11:13](../pictures/quran.com-mushaf-changes/11-13.png)
 
 ---
 ---
@@ -11854,7 +11854,7 @@
 * 24:8
 * 40:51
 ---
-![11:18](../pictures/11-18.png)
+![11:18](../pictures/quran.com-mushaf-changes/11-18.png)
 
 ---
 ---
@@ -11869,7 +11869,7 @@
 * 12:36
 * 12:78
 ---
-![11:27](../pictures/11-27.png)
+![11:27](../pictures/quran.com-mushaf-changes/11-27.png)
 
 ---
 ---
@@ -11890,7 +11890,7 @@
 * 23:70
 * 43:78
 ---
-![11:28](../pictures/11-28.png)
+![11:28](../pictures/quran.com-mushaf-changes/11-28.png)
 
 ---
 ---
@@ -11928,7 +11928,7 @@
 <>
 * 26:114
 ---
-![11:29](../pictures/11-29.png)
+![11:29](../pictures/quran.com-mushaf-changes/11-29.png)
 
 ---
 ---
@@ -11983,7 +11983,7 @@
 ```
 * 11:32
 ---
-![11:32](../pictures/11-32.png)
+![11:32](../pictures/quran.com-mushaf-changes/11-32.png)
 
 ---
 ---
@@ -11997,7 +11997,7 @@
 <>
 * 23:27
 ---
-![11:37](../pictures/11-37.png)
+![11:37](../pictures/quran.com-mushaf-changes/11-37.png)
 
 ---
 ---
@@ -12008,7 +12008,7 @@
 ```
 * 11:41
 ---
-![11:41](../pictures/11-41.png)
+![11:41](../pictures/quran.com-mushaf-changes/11-41.png)
 
 ---
 ---
@@ -12022,7 +12022,7 @@
 <>
 * 18:96
 ---
-![11:43](../pictures/11-43.png)
+![11:43](../pictures/quran.com-mushaf-changes/11-43.png)
 
 ---
 ---
@@ -12040,7 +12040,7 @@
 ```
 * 11:44
 ---
-![11:44](../pictures/11-44.png)
+![11:44](../pictures/quran.com-mushaf-changes/11-44.png)
 
 ---
 ---
@@ -12052,7 +12052,7 @@
 ```
 * 11:48, 11:73
 ---
-![11:48](../pictures/11-48.png)
+![11:48](../pictures/quran.com-mushaf-changes/11-48.png)
 
 ---
 ---
@@ -12105,7 +12105,7 @@
 * 26:216
 * 59:16
 ---
-![11:54](../pictures/11-54.png)
+![11:54](../pictures/quran.com-mushaf-changes/11-54.png)
 
 ---
 ---
@@ -12116,7 +12116,7 @@
 ```
 * 11:56
 ---
-![11:56](../pictures/11-56.png)
+![11:56](../pictures/quran.com-mushaf-changes/11-56.png)
 
 ---
 ---
@@ -12132,7 +12132,7 @@
 * 29:38
 * 53:51
 ---
-![11:68](../pictures/11-68.png)
+![11:68](../pictures/quran.com-mushaf-changes/11-68.png)
 
 ---
 ---
@@ -12145,7 +12145,7 @@
 ```
 * 11:71, 37:101, 37:112
 ---
-![11:71](../pictures/11-71.png)
+![11:71](../pictures/quran.com-mushaf-changes/11-71.png)
 
 ---
 ---
@@ -12166,7 +12166,7 @@
 ```
 * 11:72
 ---
-![11:72](../pictures/11-72.png)
+![11:72](../pictures/quran.com-mushaf-changes/11-72.png)
 
 ---
 ---
@@ -12178,7 +12178,7 @@
 ```
 * 11:75, 9:114
 ---
-![11:75](../pictures/11-75.png)
+![11:75](../pictures/quran.com-mushaf-changes/11-75.png)
 
 ---
 ---
@@ -12189,7 +12189,7 @@
 ```
 * 11:76
 ---
-![11:76](../pictures/11-76.png)
+![11:76](../pictures/quran.com-mushaf-changes/11-76.png)
 
 ---
 ---
@@ -12206,7 +12206,7 @@
 * 12:69
 * 12:99
 ---
-![11:80](../pictures/11-80.png)
+![11:80](../pictures/quran.com-mushaf-changes/11-80.png)
 
 ---
 ---
@@ -12220,7 +12220,7 @@
 <>
 * 26:167
 ---
-![11:81](../pictures/11-81.png)
+![11:81](../pictures/quran.com-mushaf-changes/11-81.png)
 
 ---
 ---
@@ -12235,7 +12235,7 @@
 <>
 * 15:74
 ---
-![11:82](../pictures/11-82.png)
+![11:82](../pictures/quran.com-mushaf-changes/11-82.png)
 
 ---
 ---
@@ -12254,7 +12254,7 @@
 ```
 * 11:87
 ---
-![11:87](../pictures/11-87.png)
+![11:87](../pictures/quran.com-mushaf-changes/11-87.png)
 
 ---
 ---
@@ -12271,7 +12271,7 @@
 <>
 * 60:9
 ---
-![11:88](../pictures/11-88.png)
+![11:88](../pictures/quran.com-mushaf-changes/11-88.png)
 
 ---
 ---
@@ -12282,7 +12282,7 @@
 ```
 * 11:91
 ---
-![11:91](../pictures/11-91.png)
+![11:91](../pictures/quran.com-mushaf-changes/11-91.png)
 
 ---
 ---
@@ -12297,7 +12297,7 @@
 * 16:118
 * 43:76
 ---
-![11:101](../pictures/11-101.png)
+![11:101](../pictures/quran.com-mushaf-changes/11-101.png)
 
 ---
 ---
@@ -12308,7 +12308,7 @@
 ```
 * 11:102
 ---
-![11:102](../pictures/11-102.png)
+![11:102](../pictures/quran.com-mushaf-changes/11-102.png)
 
 ---
 ---
@@ -12321,7 +12321,11 @@
 ```
 * 11:114, 33:35
 ---
-![11:114](../pictures/11-114.png)
+![11:114](../pictures/quran.com-mushaf-changes/11-114.png)
 
 ---
 ---
+
+# WE TERMINATED THE PROCESS FOR THE quran.com mushaf, it does not recoverable, too much changes had to be applied...
+
+You can find the next attempt here: [STEPS v2](../docs/STEPS-v2.md)

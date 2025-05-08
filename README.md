@@ -4,7 +4,7 @@
 An attempt to visualize the miracle of quran CODE 19. I hope GOD is with us.
 
 # IN SEARCH OF THE CORRECT MUSHAF
-By seeking refuge in GOD, we are striving to obtain a verifiable and accessible mushaf by examining all the mushafs on earth that we can access, using all the counts and evidence of GOD's Messenger of the Covenant. This effort is being advanced by updating verses with the unvowelled Arabic text obtained from the quran.com API, utilizing the counting methodology hints found in the footnote of Quran The Final Testament 41:53 and in the Y.S. (YASEEN) paragraph in Appendix 1. May GOD be our helper; if GOD wills, our sole purpose is to serve GOD.
+By seeking refuge in GOD, we are striving to obtain a verifiable and accessible mushaf by examining all the mushafs on earth that we can access, using all the counts and evidence of GOD's Messenger of the Covenant. This effort is being advanced by updating verses with the unvowelled Arabic text obtained from an uthmani mushaf, utilizing the counting methodology hints found in the footnote of Quran The Final Testament 41:53 and in the Y.S. (YASEEN) paragraph in Appendix 1. May GOD be our helper; if GOD wills, our sole purpose is to serve GOD.
 
 ## METHODOLOGY
 
