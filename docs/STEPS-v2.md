@@ -123,3 +123,15 @@
 * 2:108, 33:14, 81:8
 ---
 ---
+
+![2:145](../pictures/uthmani-mushaf-changes/2-145.png)
+![10:88](../pictures/uthmani-mushaf-changes/10-88.png)
+![33:50](../pictures/uthmani-mushaf-changes/33-50.png)
+
+9. ATEYT
+```
+اتيت -> ءاتيت
+```
+* 2:145
+---
+---
