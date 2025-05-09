@@ -138,10 +138,20 @@
 
 ![2:282](../pictures/uthmani-mushaf-changes/2-282.png)
 
-10. TES'EMU
+10. TES'EMU'
 ```
 تسءموا -> تسئموا
 ```
 * 2:282
+---
+---
+
+![3:66](../pictures/uthmani-mushaf-changes/3-66.png)
+
+11. HAJEJTUM
+```
+حججتم -> حاججتم
+```
+* 3:66
 ---
 ---
